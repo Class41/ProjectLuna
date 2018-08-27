@@ -13,12 +13,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - entities_enemy
+  - entities_turrets
+  - entities_placeables
+  - terrain_walkable
+  - terrain_walls
+  - terrain_decoration
   - 
   - 
   - 
