@@ -1068,8 +1068,8 @@ GameObject:
   m_Component:
   - component: {fileID: 670780095}
   m_Layer: 0
-  m_Name: Endpoints
-  m_TagString: Untagged
+  m_Name: Endpoints and Enemy Prefabs
+  m_TagString: epandprefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

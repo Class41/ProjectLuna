@@ -5,22 +5,29 @@ using UnityEngine.AI;
 
 public class enemy_navigtaion : MonoBehaviour {
 
-    public Transform goal;
+    public Transform _goal;
+    public Transform _parent;
+    public float _stopRadius = 1.0f,
+                 _entityDeathTime = .25f;
 
     void Start()
     {
-        goal = GameObject.Find("path_end").transform;
+        _goal = GameObject.Find("path_end").transform;
+        _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
+        this.transform.parent = _parent;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+        agent.destination = _goal.position;
+    }
 
-        //if (goal.position.x - gameObject.transform.position.x  < 5)
-       // {
-         //   Destroy(gameObject.GetComponent<Rigidbody>());
-        //    Destroy(gameObject.GetComponent<CapsuleCollider>());
-        //    Destroy(gameObject.GetComponent<NavMeshAgent>());
-       // }
+    private void Update()
+    {
+        if (Vector3.Distance(_goal.position, this.gameObject.transform.position) < _stopRadius)
+         {
+            Destroy(gameObject.GetComponent<Rigidbody>());
+            Destroy(gameObject.GetComponent<CapsuleCollider>());
+            Destroy(gameObject.GetComponent<NavMeshAgent>());
 
-
-        
+            Destroy(gameObject, .25f);
+         }
     }
 }

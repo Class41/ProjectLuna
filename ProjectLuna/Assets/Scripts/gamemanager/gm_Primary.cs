@@ -17,7 +17,7 @@ public class gm_Primary : MonoBehaviour
     public Transform _enemySpawnPos;
 
     public float _difficultyMultiplier = 1.0f,
-                        _enemySpawntimeBase = 1;
+                 _enemySpawntimeBase = 1.0f;
 
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
