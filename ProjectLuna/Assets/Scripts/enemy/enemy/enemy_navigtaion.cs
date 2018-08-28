@@ -12,7 +12,7 @@ public class enemy_navigtaion : MonoBehaviour {
 
     void Start()
     {
-        _goal = GameObject.Find("path_end").transform;
+        _goal = GameObject.Find("player_01").transform;
         _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
         this.transform.parent = _parent;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -21,6 +21,9 @@ public class enemy_navigtaion : MonoBehaviour {
 
     private void Update()
     {
+        NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        agent.destination = _goal.position;
+
         if (Vector3.Distance(_goal.position, this.gameObject.transform.position) < _stopRadius)
          {
             Destroy(gameObject.GetComponent<Rigidbody>());
