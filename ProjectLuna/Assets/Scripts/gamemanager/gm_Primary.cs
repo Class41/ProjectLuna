@@ -100,7 +100,22 @@ public class gm_Primary : MonoBehaviour
 
     void Start()
     {
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+
+        _spawnchanceGeneral = .33f;
+        _spawnchanceLieutentant = .33f;
+        _spawnchanceInfantry = .33f;
         spawnWave(50);
+
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
+        //TESTING DATA. REMOVE LATER
     }
 
 

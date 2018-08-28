@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -344,6 +346,10 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy_navigtaion.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy_stats_base.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy_types\general\enemy_general.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy_types\infantry\enemy_infantry.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
   </ItemGroup>
   <ItemGroup>

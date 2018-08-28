@@ -1115,6 +1115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 670780095}
+  - {fileID: 1964699033}
   m_Father: {fileID: 487392364}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1469,9 +1470,9 @@ MonoBehaviour:
   enemies_infantry:
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
   enemies_lieutenants:
-  - {fileID: 1267837364649622, guid: 1bfd6aca1533e944b838082f22bb7cb7, type: 2}
+  - {fileID: 1489426579201700, guid: 58221db76389e6c4f8ca2b21f6dcf077, type: 2}
   enemies_generals:
-  - {fileID: 1172624455143598, guid: b90f4d6a4b23441489a6955f66fee7dd, type: 2}
+  - {fileID: 1895759915049014, guid: e95b2be51a2d7c147b6567fab513f9df, type: 2}
   _spawnchanceInfantry: 1
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0
@@ -2300,6 +2301,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1951986026}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1964699032
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1964699033}
+  m_Layer: 0
+  m_Name: Turrets
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1964699033
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1964699032}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 722011838}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062548583
 GameObject:
   m_ObjectHideFlags: 0
