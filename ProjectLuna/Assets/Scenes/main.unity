@@ -313,7 +313,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 109631139}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -9.01, y: 0.5, z: -5.01}
+  m_LocalPosition: {x: -9.01, y: 0.5, z: -7.04}
   m_LocalScale: {x: 20.000008, y: 1, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1693142066}
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.14333333
+  m_VoxelSize: 0.17
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 84ad77f485133fc4186b44f5861845b8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: b0eef403104900547a120c931f9babaa, type: 2}
 --- !u!1 &197913361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,6 +1460,8 @@ MonoBehaviour:
   _waveTimeBase: 0
   _enemySpawnsBase: 0
   _enemySpawnPos: {fileID: 1164752974}
+  _difficultyMultiplier: 1
+  _enemySpawntimeBase: 0.25
   _goldText: {fileID: 732860674}
   _scoreText: {fileID: 354470995}
   _waveText: {fileID: 197913363}
@@ -1607,8 +1609,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1561461905}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -4.84, y: 0.5, z: 7.93}
-  m_LocalScale: {x: 8.5, y: 1, z: 1.0000005}
+  m_LocalPosition: {x: -4.52, y: 0.5, z: 6.65}
+  m_LocalScale: {x: 6.14, y: 1, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1693142066}
   m_RootOrder: 4
@@ -2138,7 +2140,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1948816877}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.5, z: -5.01}
+  m_LocalPosition: {x: 0, y: 0.5, z: -6.2}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1693142066}

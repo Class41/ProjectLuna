@@ -11,12 +11,13 @@ public class gm_Primary : MonoBehaviour
                _waveTimeNext = 0;
 
     public int _waveTimeBase = 1,
-               _enemySpawnsBase = 1,
-               _enemySpawntimeBase = 1;
+               _enemySpawnsBase = 1;
+               
 
     public Transform _enemySpawnPos;
 
-    public static float difficultyMultiplier = 1.0f;
+    public float _difficultyMultiplier = 1.0f,
+                        _enemySpawntimeBase = 1;
 
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
@@ -77,6 +78,8 @@ public class gm_Primary : MonoBehaviour
                 wave.Add(enemies_generals[(int)(Random.Range(0, enemies_generals.Capacity))]);
             }
         }
+
+        recalcChances();
     }
 
     void spawnWave(int count)
@@ -84,7 +87,7 @@ public class gm_Primary : MonoBehaviour
         buildWave(count);
         for(int i = 1; i <= count; i++)
         {
-            Invoke("spawnMob", i);
+            Invoke("spawnMob", i*_enemySpawntimeBase);
         }
     }
 
