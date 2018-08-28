@@ -9,6 +9,7 @@ public class enemy_navigtaion : MonoBehaviour {
 
     void Start()
     {
+        goal = GameObject.Find("path_end").transform;
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = goal.position;
     }
