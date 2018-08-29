@@ -22,7 +22,6 @@ public class enemy_navigtaion : MonoBehaviour {
 
     private void Update()
     {
-
         if (Vector3.Distance(_goal.position, this.gameObject.transform.position) < _stopRadius)
         {
             Destroy(gameObject.GetComponent<Rigidbody>());

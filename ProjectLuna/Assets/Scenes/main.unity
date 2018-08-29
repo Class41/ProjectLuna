@@ -443,7 +443,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.17
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: d6a9724d37f77a34299be60e0ecc1f17, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 660c1ebce42dd0448b1cefc18a75540e, type: 2}
 --- !u!1 &172184851
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,6 +832,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 343474357}
+  - component: {fileID: 343474358}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -846,13 +847,30 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 343474356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1821172442}
   m_Father: {fileID: 722011838}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &343474358
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 343474356}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2edf645708a43f04b8630efaca9a3770, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &346122757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,7 +2746,7 @@ GameObject:
   - component: {fileID: 1821172445}
   - component: {fileID: 1821172444}
   - component: {fileID: 1821172443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2741,8 +2759,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1821172441}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5100051, z: 0}
   m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 343474357}
@@ -2775,6 +2793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forcemod: 65
+  anim: {fileID: 343474358}
 --- !u!114 &1821172445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2835,7 +2854,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.51
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

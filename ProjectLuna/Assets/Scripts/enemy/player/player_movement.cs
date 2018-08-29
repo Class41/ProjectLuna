@@ -3,6 +3,8 @@
 public class player_movement : MonoBehaviour
 {
     public float _forcemod;
+    public Animator anim;
+
     // Update is called once per frame
     void Update()
     {
@@ -25,5 +27,7 @@ public class player_movement : MonoBehaviour
         {
             gameObject.GetComponent<Rigidbody>().AddForce(Vector3.right * _forcemod, ForceMode.Force);
         }
+
+        anim.SetFloat("Velocity", gameObject.GetComponent<Rigidbody>().velocity.magnitude);
     }
 }
