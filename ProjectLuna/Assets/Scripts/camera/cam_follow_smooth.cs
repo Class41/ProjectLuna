@@ -12,8 +12,8 @@ public class cam_follow_smooth : MonoBehaviour {
                  max_y,
                  min_y,
                  max_z,
-                 min_z
-                ;
+                 min_z;
+
 	// Update is called once per frame
 	void FixedUpdate () {
         Vector3 comboPos = _target.position + _cameraOffset;

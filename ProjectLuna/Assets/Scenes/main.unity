@@ -2535,13 +2535,13 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: 3
+  m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -2591,12 +2591,12 @@ MonoBehaviour:
   _target: {fileID: 2047609445}
   _cameraOffset: {x: 0, y: 14, z: -9}
   _smoothSpeed: 0.125
-  max_x: 12
+  max_x: 14
   min_x: -14
   max_y: 50
   min_y: -50
-  max_z: 9
-  min_z: -29
+  max_z: 9.7
+  min_z: -27.9
 --- !u!1 &1693142065
 GameObject:
   m_ObjectHideFlags: 0
@@ -3230,6 +3230,7 @@ GameObject:
   - component: {fileID: 2047609447}
   - component: {fileID: 2047609446}
   - component: {fileID: 2047609450}
+  - component: {fileID: 2047609451}
   m_Layer: 0
   m_Name: player_01
   m_TagString: Untagged
@@ -3331,6 +3332,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forcemod: 65
+--- !u!114 &2047609451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2047609444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb28f0fe7bc9e541804d93071fbcecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_x: 24.3
+  min_x: -24.3
+  max_y: 50
+  min_y: -50
+  max_z: 24
+  min_z: -24.5
 --- !u!1 &2140951295
 GameObject:
   m_ObjectHideFlags: 0

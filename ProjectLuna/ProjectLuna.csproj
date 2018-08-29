@@ -349,6 +349,7 @@
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
+    <Compile Include="Assets\Scripts\enemy\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\enemy\player\player_movement.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
   </ItemGroup>
