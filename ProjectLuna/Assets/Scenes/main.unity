@@ -2195,9 +2195,9 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.01
-    m_NormalBias: 0.4
+    m_Strength: 0.506
+    m_Bias: 0.95
+    m_NormalBias: 0.85
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
@@ -2608,13 +2608,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 1821172442}
   _cameraOffset: {x: 0, y: 14, z: -9}
-  _smoothSpeed: 0.125
+  _smoothSpeed: 0.04
   max_x: 14
   min_x: -14
   max_y: 50
   min_y: -50
   max_z: 9.7
-  min_z: -27.9
+  min_z: -26.49
 --- !u!1 &1693142065
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,7 +2792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7178d9374323c544baf496dba678e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forcemod: 65
+  _forcemod: 25
   anim: {fileID: 343474358}
 --- !u!114 &1821172445
 MonoBehaviour:
