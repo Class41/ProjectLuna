@@ -131,6 +131,8 @@ MonoBehaviour:
   health: 1150
   armor: 50
   speed: 5.5
+  ui: {fileID: 0}
+  mobtype: 1
 --- !u!136 &136132826434111162
 CapsuleCollider:
   m_ObjectHideFlags: 1

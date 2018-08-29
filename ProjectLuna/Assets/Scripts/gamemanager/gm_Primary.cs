@@ -24,6 +24,8 @@ public class gm_Primary : MonoBehaviour
                                _waveText,
                                _waveTimeText;
 
+    public GameObject _bossUI;
+
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
     public List<GameObject> enemies_generals = new List<GameObject>();
@@ -95,8 +97,17 @@ public class gm_Primary : MonoBehaviour
     {
         if (wave.Count > 0)
         {
-            var var = wave[0];
-            Instantiate(var, _enemySpawnPos.position, _enemySpawnPos.rotation);
+            var entityentry = wave[0];
+
+            var enemy = Instantiate(entityentry, _enemySpawnPos.position, _enemySpawnPos.rotation);
+
+            if(entityentry.GetComponent<enemy_stats_base>().mobtype == MobType.ENEMY_BOSS)
+            {
+                var ui = Instantiate(_bossUI, _enemySpawnPos.position, _enemySpawnPos.rotation);
+                ui.GetComponent<UI_follow>()._parentObject = enemy.transform;
+                ui.transform.SetParent(enemy.transform.parent);
+            }
+
             wave.RemoveAt(0);
         }
     }
@@ -112,7 +123,7 @@ public class gm_Primary : MonoBehaviour
         _spawnchanceGeneral = .33f;
         _spawnchanceLieutentant = .33f;
         _spawnchanceInfantry = .33f;
-        spawnWave(50);
+        spawnWave(10);
 
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER

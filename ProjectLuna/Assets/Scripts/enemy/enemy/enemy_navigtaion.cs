@@ -26,6 +26,7 @@ public class enemy_navigtaion : MonoBehaviour {
         {
             Destroy(gameObject.GetComponent<Rigidbody>());
             Destroy(gameObject.GetComponent<CapsuleCollider>());
+
             Destroy(gameObject, .25f);
         }
         else

@@ -116,6 +116,7 @@ MonoBehaviour:
   health: 2500
   armor: 75
   speed: 4
+  mobtype: 0
 --- !u!114 &114858970994143652
 MonoBehaviour:
   m_ObjectHideFlags: 1
