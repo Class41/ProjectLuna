@@ -93,9 +93,12 @@ public class gm_Primary : MonoBehaviour
 
     void spawnMob()
     {
-        var var = wave[0];
-        Instantiate(var, _enemySpawnPos.position, _enemySpawnPos.rotation);
-        wave.RemoveAt(0);
+        if (wave.Count > 0)
+        {
+            var var = wave[0];
+            Instantiate(var, _enemySpawnPos.position, _enemySpawnPos.rotation);
+            wave.RemoveAt(0);
+        }
     }
 
     void Start()
