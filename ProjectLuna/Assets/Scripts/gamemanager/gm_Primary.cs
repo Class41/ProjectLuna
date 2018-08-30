@@ -11,8 +11,9 @@ public class gm_Primary : MonoBehaviour
                _wave = 0,
                _waveTimeNext = 0;
 
-    public float _calculatedWaveTime = 30,
-                 _calculatedEnemySpawns = 2;
+    public float _calculatedWaveTime,
+                 _calculatedWaveEndTime,
+                 _calculatedEnemySpawns;
 
     public float _difficultyMultiplier,
                  _enemySpawntimeBetweenEnemySpawnsBase,
@@ -125,7 +126,16 @@ public class gm_Primary : MonoBehaviour
 
     void calcWave()
     {
-        _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier*Mathf.Log10(_wave * 5) * _wave) + 5);
+        _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
+
+        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase + 
+                             (_calculatedEnemySpawns % _enemySpawningEnemiesPerSet) *
+                             _enemySpawningTimeBetweenSets + 30.0f;
+
+        _calculatedWaveEndTime = Time.timeSinceLevelLoad + _calculatedWaveTime;
+
+        spawnWave((int)_calculatedEnemySpawns);
+
     }
 
     void Start()
@@ -139,13 +149,8 @@ public class gm_Primary : MonoBehaviour
         _spawnchanceGeneral = .33f;
         _spawnchanceLieutentant = .33f;
         _spawnchanceInfantry = .33f;
-        spawnWave(50);
 
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
+        calcWave(); 
     }
 
 
@@ -155,5 +160,11 @@ public class gm_Primary : MonoBehaviour
         _scoreText.text = _score.ToString();
         _waveText.text = _wave.ToString();
         _waveTimeText.text = _waveTimeNext.ToString();
+
+        if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
+        {
+           _wave++;
+           calcWave();
+        }
     }
 }

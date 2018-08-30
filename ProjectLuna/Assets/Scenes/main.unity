@@ -2123,9 +2123,10 @@ MonoBehaviour:
   _bossUI: {fileID: 1862472799165244, guid: 2ba4d9c5aea5cd040a19ca71880be8f8, type: 2}
   _gold: 0
   _score: 1
-  _wave: 0
+  _wave: 1
   _waveTimeNext: 30
   _calculatedWaveTime: 30
+  _calculatedWaveEndTime: 0
   _calculatedEnemySpawns: 2
   _difficultyMultiplier: 1.4
   _enemySpawntimeBetweenEnemySpawnsBase: 0.25
@@ -2149,8 +2150,8 @@ MonoBehaviour:
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0
   _spawnchance_infantry_delta: 0.05
-  _spawnchance_lieutentant_delta: 0.03
-  _spawnchance_general_delta: 0.02
+  _spawnchance_lieutentant_delta: 0.04
+  _spawnchance_general_delta: 0.01
   _enemySpawnPositions:
   - {fileID: 1164752974}
   - {fileID: 1597463679}
