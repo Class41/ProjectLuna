@@ -15,7 +15,9 @@ public class gm_Primary : MonoBehaviour
                  _calculatedEnemySpawns = 2;
 
     public float _difficultyMultiplier,
-                 _enemySpawntimeBetweenEnemySpawnsBase;
+                 _enemySpawntimeBetweenEnemySpawnsBase,
+                 _enemySpawningEnemiesPerSet,
+                 _enemySpawningTimeBetweenSets;
 
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
@@ -84,9 +86,14 @@ public class gm_Primary : MonoBehaviour
     void spawnWave(int count)
     {
         buildWave(count);
+        float setTime = 0.0f;
+
         for (int i = 1; i <= count; i++)
         {
-            Invoke("spawnMob", i * _enemySpawntimeBetweenEnemySpawnsBase);
+            Invoke("spawnMob", (i * _enemySpawntimeBetweenEnemySpawnsBase) + setTime);
+
+            if (i % _enemySpawningEnemiesPerSet == 0)
+                setTime += _enemySpawningTimeBetweenSets;
         }
     }
 

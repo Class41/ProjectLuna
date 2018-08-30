@@ -17,7 +17,7 @@ public class player_health : MonoBehaviour
 
     private void health_takeDamage(float amount)
     {
-        health -= (amount * (1 - (armor / 100)));
+        health -= (amount * (1 - (armor / 100.0f)));
     }
 
     private void health_heal(float amount)

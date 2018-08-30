@@ -2129,6 +2129,8 @@ MonoBehaviour:
   _calculatedEnemySpawns: 2
   _difficultyMultiplier: 1.4
   _enemySpawntimeBetweenEnemySpawnsBase: 0.25
+  _enemySpawningEnemiesPerSet: 3
+  _enemySpawningTimeBetweenSets: 5
   _goldText: {fileID: 732860674}
   _scoreText: {fileID: 354470995}
   _waveText: {fileID: 197913363}
