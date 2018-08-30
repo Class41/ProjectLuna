@@ -104,8 +104,9 @@ public class gm_Primary : MonoBehaviour
             if(entityentry.GetComponent<enemy_stats_base>().mobtype == MobType.ENEMY_BOSS)
             {
                 var ui = Instantiate(_bossUI, _enemySpawnPos.position, _enemySpawnPos.rotation);
+                enemy.GetComponent<enemy_navigtaion>().ui = ui;
                 ui.GetComponent<UI_follow>()._parentObject = enemy.transform;
-                ui.transform.SetParent(enemy.transform.parent);
+                ui.transform.SetParent(GameObject.Find("Entities").transform);
             }
 
             wave.RemoveAt(0);

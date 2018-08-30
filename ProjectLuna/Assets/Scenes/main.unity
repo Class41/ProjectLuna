@@ -2073,8 +2073,7 @@ MonoBehaviour:
   _scoreText: {fileID: 354470995}
   _waveText: {fileID: 197913363}
   _waveTimeText: {fileID: 15082326}
-  _plebUI: {fileID: 1381544544182102, guid: 183e82a618b355046bb41ac3f00e4b47, type: 2}
-  _bossUI: {fileID: 1375593597114052, guid: 1d2a61515e476f040b96c2cdbf520a84, type: 2}
+  _bossUI: {fileID: 1168389171841708, guid: 1d2a61515e476f040b96c2cdbf520a84, type: 2}
   enemies_infantry:
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
   enemies_lieutenants:

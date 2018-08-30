@@ -353,6 +353,7 @@
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\UI_follow.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\UI_healthbar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />

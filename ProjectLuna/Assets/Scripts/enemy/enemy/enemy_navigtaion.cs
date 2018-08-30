@@ -11,6 +11,8 @@ public class enemy_navigtaion : MonoBehaviour {
     public float _stopRadius = 1.0f,
                  _entityDeathTime = .25f;
 
+    public GameObject ui;
+
     void Start()
     {
         _goal = GameObject.Find("player_01").transform;
