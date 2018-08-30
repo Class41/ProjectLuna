@@ -2120,26 +2120,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c577cb8b24ef724cb71d3737b938d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bossUI: {fileID: 1862472799165244, guid: 2ba4d9c5aea5cd040a19ca71880be8f8, type: 2}
   _gold: 0
   _score: 1
   _wave: 0
   _waveTimeNext: 30
-  _waveTimeBase: 0
-  _enemySpawnsBase: 0
-  _enemySpawnPositions:
-  - {fileID: 1164752974}
-  - {fileID: 1597463679}
-  - {fileID: 1299941951}
-  - {fileID: 12618992}
-  - {fileID: 2091906629}
-  - {fileID: 2091906629}
-  _difficultyMultiplier: 1
-  _enemySpawntimeBase: 0.25
+  _calculatedWaveTime: 30
+  _calculatedEnemySpawns: 2
+  _difficultyMultiplier: 1.4
+  _enemySpawntimeBetweenEnemySpawnsBase: 0.25
   _goldText: {fileID: 732860674}
   _scoreText: {fileID: 354470995}
   _waveText: {fileID: 197913363}
   _waveTimeText: {fileID: 15082326}
-  _bossUI: {fileID: 1168389171841708, guid: 1d2a61515e476f040b96c2cdbf520a84, type: 2}
   enemies_infantry:
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
@@ -2156,7 +2149,14 @@ MonoBehaviour:
   _spawnchance_infantry_delta: 0.05
   _spawnchance_lieutentant_delta: 0.03
   _spawnchance_general_delta: 0.02
-  wave: []
+  _enemySpawnPositions:
+  - {fileID: 1164752974}
+  - {fileID: 1597463679}
+  - {fileID: 1299941951}
+  - {fileID: 12618992}
+  - {fileID: 2091906629}
+  - {fileID: 2091906629}
+  waveEntityList: []
 --- !u!1 &1325064548
 GameObject:
   m_ObjectHideFlags: 0

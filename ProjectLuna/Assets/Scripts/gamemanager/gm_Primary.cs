@@ -4,28 +4,23 @@ using UnityEngine;
 
 public class gm_Primary : MonoBehaviour
 {
+    public GameObject _bossUI;
 
     public int _gold = 0,
                _score = 1,
                _wave = 0,
                _waveTimeNext = 0;
 
-    public int _waveTimeBase = 1,
-               _enemySpawnsBase = 1;
+    public float _calculatedWaveTime = 30,
+                 _calculatedEnemySpawns = 2;
 
-
-    public List<Transform> _enemySpawnPositions = new List<Transform>();
-
-
-    public float _difficultyMultiplier = 1.0f,
-                 _enemySpawntimeBase = 1.0f;
+    public float _difficultyMultiplier,
+                 _enemySpawntimeBetweenEnemySpawnsBase;
 
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
                                _waveText,
                                _waveTimeText;
-
-    public GameObject _bossUI;
 
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
@@ -39,7 +34,8 @@ public class gm_Primary : MonoBehaviour
                  _spawnchance_lieutentant_delta = 0.03f,
                  _spawnchance_general_delta = 0.02f;
 
-    public List<GameObject> wave = new List<GameObject>();
+    public List<Transform> _enemySpawnPositions = new List<Transform>();
+    public List<GameObject> waveEntityList = new List<GameObject>();
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     void recalcChances()
@@ -70,15 +66,15 @@ public class gm_Primary : MonoBehaviour
 
             if (rng <= _spawnchanceInfantry)
             {
-                wave.Add(enemies_infantry[(int)(Random.Range(0, enemies_infantry.Capacity))]);
+                waveEntityList.Add(enemies_infantry[(int)(Random.Range(0, enemies_infantry.Capacity))]);
             }
             else if (rng < _spawnchanceInfantry + _spawnchanceLieutentant && rng >= _spawnchanceInfantry)
             {
-                wave.Add(enemies_lieutenants[(int)(Random.Range(0, enemies_lieutenants.Capacity))]);
+                waveEntityList.Add(enemies_lieutenants[(int)(Random.Range(0, enemies_lieutenants.Capacity))]);
             }
             else if (rng < _spawnchanceInfantry + _spawnchanceLieutentant + _spawnchanceGeneral && rng >= _spawnchanceInfantry + _spawnchanceLieutentant)
             {
-                wave.Add(enemies_generals[(int)(Random.Range(0, enemies_generals.Capacity))]);
+                waveEntityList.Add(enemies_generals[(int)(Random.Range(0, enemies_generals.Capacity))]);
             }
         }
 
@@ -90,15 +86,15 @@ public class gm_Primary : MonoBehaviour
         buildWave(count);
         for (int i = 1; i <= count; i++)
         {
-            Invoke("spawnMob", i * _enemySpawntimeBase);
+            Invoke("spawnMob", i * _enemySpawntimeBetweenEnemySpawnsBase);
         }
     }
 
     void spawnMob()
     {
-        if (wave.Count > 0)
+        if (waveEntityList.Count > 0)
         {
-            var entityentry = wave[0];
+            var entityentry = waveEntityList[0];
 
             int randomVal = Random.Range(0, _enemySpawnPositions.Count - 1);
 
@@ -116,8 +112,13 @@ public class gm_Primary : MonoBehaviour
                 ui.transform.SetParent(GameObject.Find("Entities").transform);
             }
 
-            wave.RemoveAt(0);
+            waveEntityList.RemoveAt(0);
         }
+    }
+
+    void calcWave()
+    {
+        _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier*Mathf.Log10(_wave * 5) * _wave) + 5);
     }
 
     void Start()
