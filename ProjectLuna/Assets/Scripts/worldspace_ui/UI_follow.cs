@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UI_follow : MonoBehaviour {
+public class UI_follow : MonoBehaviour
+{
 
     public Transform _parentObject;
     public Transform _camera;
@@ -12,11 +13,12 @@ public class UI_follow : MonoBehaviour {
     private void Start()
     {
         _camera = GameObject.Find("Main Camera").transform;
-       transform.LookAt(new Vector3(_camera.position.x, _camera.position.y * -1, _camera.position.z * -1));
+        transform.LookAt(new Vector3(_camera.position.x, _camera.position.y * -1, _camera.position.z * -1));
         _UIRotation = transform.rotation;
     }
 
-    void FixedUpdate () {
+    void FixedUpdate()
+    {
         if (transform.position != null && _parentObject != null)
         {
             Vector3 comboPos = _parentObject.position + new Vector3(0, 3, 0);
@@ -28,5 +30,5 @@ public class UI_follow : MonoBehaviour {
         {
             Destroy(gameObject);
         }
-	}
+    }
 }

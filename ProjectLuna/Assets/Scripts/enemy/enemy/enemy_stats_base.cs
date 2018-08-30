@@ -9,7 +9,8 @@ public enum MobType
     ENEMY_BOSS
 }
 
-public class enemy_stats_base : MonoBehaviour {
+public class enemy_stats_base : MonoBehaviour
+{
 
     public float health,
                  maxHealth,
@@ -22,7 +23,7 @@ public class enemy_stats_base : MonoBehaviour {
 
     private void health_takeDamage(float amount)
     {
-        health -= amount * (1-((armor/100) * .5f));
+        health -= amount * (1 - ((armor / 100) * .5f));
     }
 
     private void health_heal(float amount)
@@ -38,7 +39,7 @@ public class enemy_stats_base : MonoBehaviour {
 
     private void Update()
     {
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }

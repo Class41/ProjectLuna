@@ -117,6 +117,7 @@ MonoBehaviour:
   _parent: {fileID: 0}
   _stopRadius: 1
   _entityDeathTime: 0.25
+  ui: {fileID: 0}
 --- !u!114 &114894582139506506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1150
+  maxHealth: 0
   armor: 50
   speed: 5.5
   ui: {fileID: 0}
@@ -140,7 +142,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489426579201700}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2

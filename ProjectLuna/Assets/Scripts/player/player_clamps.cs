@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 
-public class player_clamps : MonoBehaviour {
+public class player_clamps : MonoBehaviour
+{
 
 
     public float max_x,
@@ -10,7 +11,8 @@ public class player_clamps : MonoBehaviour {
                  max_z,
                  min_z;
 
-	void Update () {
+    void Update()
+    {
         Vector3 clampedSmoothedPos = new Vector3(
                                                 Mathf.Clamp(transform.position.x, min_x, max_x),
                                                 Mathf.Clamp(transform.position.y, min_y, max_y),

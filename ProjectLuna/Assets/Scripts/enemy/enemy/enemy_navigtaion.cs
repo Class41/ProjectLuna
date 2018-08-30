@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class enemy_navigtaion : MonoBehaviour {
+public class enemy_navigtaion : MonoBehaviour
+{
 
     public Transform _goal;
     public Transform _parent;

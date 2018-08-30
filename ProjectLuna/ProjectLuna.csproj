@@ -351,6 +351,7 @@
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
+    <Compile Include="Assets\Scripts\player\player_health.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\UI_follow.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\UI_healthbar.cs" />

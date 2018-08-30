@@ -12,9 +12,10 @@ public class gm_Primary : MonoBehaviour
 
     public int _waveTimeBase = 1,
                _enemySpawnsBase = 1;
-               
 
-    public Transform _enemySpawnPos;
+
+    public List<Transform> _enemySpawnPositions = new List<Transform>();
+
 
     public float _difficultyMultiplier = 1.0f,
                  _enemySpawntimeBase = 1.0f;
@@ -87,9 +88,9 @@ public class gm_Primary : MonoBehaviour
     void spawnWave(int count)
     {
         buildWave(count);
-        for(int i = 1; i <= count; i++)
+        for (int i = 1; i <= count; i++)
         {
-            Invoke("spawnMob", i*_enemySpawntimeBase);
+            Invoke("spawnMob", i * _enemySpawntimeBase);
         }
     }
 
@@ -99,11 +100,17 @@ public class gm_Primary : MonoBehaviour
         {
             var entityentry = wave[0];
 
-            var enemy = Instantiate(entityentry, _enemySpawnPos.position, _enemySpawnPos.rotation);
+            int randomVal = Random.Range(0, _enemySpawnPositions.Count - 1);
 
-            if(entityentry.GetComponent<enemy_stats_base>().mobtype == MobType.ENEMY_BOSS)
+            var enemy = Instantiate(entityentry, _enemySpawnPositions[randomVal].position,
+                                                 _enemySpawnPositions[randomVal].rotation);
+
+            if (entityentry.GetComponent<enemy_stats_base>().mobtype == MobType.ENEMY_BOSS)
             {
-                var ui = Instantiate(_bossUI, _enemySpawnPos.position, _enemySpawnPos.rotation);
+                var ui = Instantiate(_bossUI,
+                                     _enemySpawnPositions[randomVal].position,
+                                     _enemySpawnPositions[randomVal].rotation);
+
                 enemy.GetComponent<enemy_navigtaion>().ui = ui;
                 ui.GetComponent<UI_follow>()._parentObject = enemy.transform;
                 ui.transform.SetParent(GameObject.Find("Entities").transform);
@@ -124,7 +131,7 @@ public class gm_Primary : MonoBehaviour
         _spawnchanceGeneral = .33f;
         _spawnchanceLieutentant = .33f;
         _spawnchanceInfantry = .33f;
-        spawnWave(10);
+        spawnWave(50);
 
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
