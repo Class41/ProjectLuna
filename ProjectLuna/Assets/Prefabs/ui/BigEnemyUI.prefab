@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentObject: {fileID: 0}
   _camera: {fileID: 0}
-  _UIRotation: {x: 0.52194595, y: -0.0033283813, z: 0.0020366907, w: 0.85296965}
+  _UIRotation: {x: -9, y: -0.0056565166, z: 0.0024753124, w: -16}
   _smoothSpeed: 0.125
 --- !u!114 &114404710229023644
 MonoBehaviour:
