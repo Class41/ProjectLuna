@@ -17,7 +17,8 @@ public class player_health : MonoBehaviour
 
     private void health_takeDamage(float amount)
     {
-        health -= amount * (1 - (armor / 100));
+        health -= (amount * (1 - (armor / 100)));
+        Debug.Log((amount * (1 - (armor / 100))));
     }
 
     private void health_heal(float amount)
@@ -27,13 +28,20 @@ public class player_health : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
+        //TODO: Replace with actual useful damage stuff
+        if(collision.gameObject.name.Contains("enemy"))
+        {
+            health_takeDamage(150);
+        }
     }
 
 
     // Update is called once per frame
     void Update()
     {
-
+        if(health <= 0)
+        {
+            //Todo: functionality for player death etc
+        }
     }
 }

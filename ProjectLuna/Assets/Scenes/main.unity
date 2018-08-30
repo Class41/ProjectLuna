@@ -2921,7 +2921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7178d9374323c544baf496dba678e55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _forcemod: 25
+  _forcemod: 35
   anim: {fileID: 343474358}
 --- !u!114 &1821172445
 MonoBehaviour:
@@ -3007,7 +3007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5000
   max_health: 0
-  armor: 5
+  armor: 10
 --- !u!1 &1840783042
 GameObject:
   m_ObjectHideFlags: 0
