@@ -11,6 +11,8 @@ public class gm_Primary : MonoBehaviour
                _wave = 0,
                _waveTimeNext = 0;
 
+    public float usedTime = 0;
+
     public float _calculatedWaveTime,
                  _calculatedWaveEndTime,
                  _calculatedEnemySpawns;
@@ -116,6 +118,7 @@ public class gm_Primary : MonoBehaviour
                                      _enemySpawnPositions[randomVal].rotation);
 
                 enemy.GetComponent<enemy_navigtaion>().ui = ui;
+                ui.GetComponent<UI_enemyline>()._parentObject = enemy;
                 ui.GetComponent<UI_follow>()._parentObject = enemy.transform;
                 ui.transform.SetParent(GameObject.Find("Entities").transform);
             }
@@ -156,6 +159,7 @@ public class gm_Primary : MonoBehaviour
 
     void Update()
     {
+        _waveTimeNext = (int)(Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
         _goldText.text = _gold.ToString();
         _scoreText.text = _score.ToString();
         _waveText.text = _wave.ToString();
@@ -164,6 +168,7 @@ public class gm_Primary : MonoBehaviour
         if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
         {
            _wave++;
+            usedTime += _calculatedWaveTime;
            calcWave();
         }
     }

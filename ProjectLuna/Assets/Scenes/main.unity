@@ -864,7 +864,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2edf645708a43f04b8630efaca9a3770, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -2120,11 +2120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c577cb8b24ef724cb71d3737b938d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bossUI: {fileID: 1862472799165244, guid: 2ba4d9c5aea5cd040a19ca71880be8f8, type: 2}
+  _bossUI: {fileID: 1079997635159976, guid: 2ba4d9c5aea5cd040a19ca71880be8f8, type: 2}
   _gold: 0
   _score: 1
   _wave: 1
   _waveTimeNext: 30
+  usedTime: 0
   _calculatedWaveTime: 30
   _calculatedWaveEndTime: 0
   _calculatedEnemySpawns: 2
