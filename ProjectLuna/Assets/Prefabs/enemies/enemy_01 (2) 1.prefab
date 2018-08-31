@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2500
-  maxHealth: 0
+  maxHealth: 2500
   armor: 75
   speed: 4
   ui: {fileID: 0}
@@ -135,6 +135,7 @@ MonoBehaviour:
   _stopRadius: 1
   _entityDeathTime: 0.25
   ui: {fileID: 0}
+  gm: {fileID: 0}
 --- !u!136 &136711784756331238
 CapsuleCollider:
   m_ObjectHideFlags: 1

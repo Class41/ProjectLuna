@@ -6,14 +6,17 @@ public class enemy_general : enemy_stats_base {
 
     private enemy_navigtaion nav;
 
-    public void OnTriggerEnter(Collider other)
+    public void Start()
     {
         nav = gameObject.GetComponent<enemy_navigtaion>();
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
 
         if(other.name == "Bullet_01")
         {
 
         }
     }
-
 }
