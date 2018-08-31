@@ -11,7 +11,8 @@ public class gm_Primary : MonoBehaviour
                _wave = 0,
                _waveTimeNext = 0;
 
-    public float usedTime = 0;
+    public float usedTime = 0,
+                 timeAtStartOfwave = 0;
 
     public float _calculatedWaveTime,
                  _calculatedWaveEndTime,
@@ -26,6 +27,8 @@ public class gm_Primary : MonoBehaviour
                                _scoreText,
                                _waveText,
                                _waveTimeText;
+
+    public GameObject _uiWavePanel;
 
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
@@ -129,6 +132,7 @@ public class gm_Primary : MonoBehaviour
 
     void calcWave()
     {
+        _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
         _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
 
         _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase + 
@@ -153,11 +157,12 @@ public class gm_Primary : MonoBehaviour
         _spawnchanceLieutentant = .33f;
         _spawnchanceInfantry = .33f;
 
-        calcWave(); 
+        calcWave();
+        timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
     }
 
 
-    void Update()
+    void LateUpdate()
     {
         _waveTimeNext = (int)(Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
         _goldText.text = _gold.ToString();
@@ -170,6 +175,7 @@ public class gm_Primary : MonoBehaviour
            _wave++;
             usedTime += _calculatedWaveTime;
            calcWave();
+           timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
         }
     }
 }
