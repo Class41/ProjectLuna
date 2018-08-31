@@ -212,6 +212,7 @@ public class gm_Primary : MonoBehaviour
         if (interpolingPoints && m_CurrentClipInfo[0].clip.name == "idlewithscore")
         {
             _score++;
+            _spinnywheel.SetInteger("scorecountremaining", endingPoints - _score);
 
             if (_score >= endingPoints)
             {
