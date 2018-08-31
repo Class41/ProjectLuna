@@ -30,7 +30,8 @@ public class gm_Primary : MonoBehaviour
                                _waveTimeText;
 
     public GameObject _uiWavePanel;
-    public Animator _spinnywheel;
+    public Animator _spinnywheel,
+                    _pauseMenu;
 
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
@@ -176,6 +177,11 @@ public class gm_Primary : MonoBehaviour
     {
         interpolingPoints = true;
     }
+    
+    public void exitGame()
+    {
+        Application.Quit();
+    }
 
     void Start()
     {
@@ -206,6 +212,20 @@ public class gm_Primary : MonoBehaviour
             if (_gold >= endingCoin)
             {
                 interpolingCoins = false;
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            _pauseMenu.SetBool("menuopened", !_pauseMenu.GetBool("menuopened"));
+            
+            if(_pauseMenu.GetBool("menuopened"))
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
             }
         }
 
