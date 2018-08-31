@@ -8,12 +8,12 @@ AnimatorController:
   m_Name: player_01
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Velocity
-    m_Type: 1
+  - m_Name: movekeydown
+    m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -55,8 +55,8 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
-    m_ConditionEvent: Velocity
+  - m_ConditionMode: 1
+    m_ConditionEvent: movekeydown
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102457899721994954}
@@ -79,8 +79,8 @@ AnimatorStateTransition:
   m_PrefabInternal: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Velocity
+  - m_ConditionMode: 2
+    m_ConditionEvent: movekeydown
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102722489049684816}
@@ -88,9 +88,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.3224884
+  m_TransitionDuration: 0.58137107
   m_TransitionOffset: 0
-  m_ExitTime: 0.7580645
+  m_ExitTime: 0.0000000057090395
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
