@@ -17,7 +17,10 @@ public class UI_enemyline : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        _line.SetPosition(0, gameObject.transform.position + _uiDisplacement);
-        _line.SetPosition(1, _parentObject.transform.position + _parentDisplacement);
+        if (_parentObject != null)
+        {
+            _line.SetPosition(0, gameObject.transform.position + _uiDisplacement);
+            _line.SetPosition(1, _parentObject.transform.position + _parentDisplacement);
+        }
     }
 }
