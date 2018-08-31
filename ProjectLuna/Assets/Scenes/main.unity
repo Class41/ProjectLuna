@@ -596,7 +596,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 197913361}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 251504067}
@@ -1434,7 +1434,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 593175747}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 251504067}
@@ -2353,7 +2353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bossUI: {fileID: 1079997635159976, guid: 2ba4d9c5aea5cd040a19ca71880be8f8, type: 2}
   _gold: 0
-  _score: 1
+  _score: 0
   _wave: 1
   _waveTimeNext: 30
   usedTime: 0
@@ -2370,6 +2370,7 @@ MonoBehaviour:
   _waveText: {fileID: 197913363}
   _waveTimeText: {fileID: 15082326}
   _uiWavePanel: {fileID: 1199012991}
+  _spinnywheel: {fileID: 1441307068}
   enemies_infantry:
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
   - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
@@ -2394,6 +2395,12 @@ MonoBehaviour:
   - {fileID: 2091906629}
   - {fileID: 2091906629}
   waveEntityList: []
+  endingCoin: 0
+  endingPoints: 0
+  interpolingCoins: 0
+  interpolingPoints: 0
+  goldIntertime: 1.2
+  scoreIntertime: 2.1
 --- !u!1 &1325064548
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,7 +21,8 @@ public class gm_Primary : MonoBehaviour
     public float _difficultyMultiplier,
                  _enemySpawntimeBetweenEnemySpawnsBase,
                  _enemySpawningEnemiesPerSet,
-                 _enemySpawningTimeBetweenSets;
+                 _enemySpawningTimeBetweenSets,
+                 _enemyLastKillTime;
 
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
@@ -29,6 +30,7 @@ public class gm_Primary : MonoBehaviour
                                _waveTimeText;
 
     public GameObject _uiWavePanel;
+    public Animator _spinnywheel;
 
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
@@ -145,6 +147,36 @@ public class gm_Primary : MonoBehaviour
 
     }
 
+    public int endingCoin,
+               endingPoints;
+
+    public bool interpolingCoins = false,
+                interpolingPoints = false;
+    public float goldIntertime, 
+                 scoreIntertime;
+
+    public void EnemyDeath(int value_coins, int value_points)
+    {
+        _enemyLastKillTime = Time.timeSinceLevelLoad;
+        endingCoin += value_coins;
+        endingPoints += value_points;
+        _spinnywheel.SetBool("coinsgained", true);
+
+        Invoke("setGoldInter", goldIntertime);
+        Invoke("setScoreInter", scoreIntertime);
+
+    }
+
+    public void setGoldInter()
+    {
+        interpolingCoins = true;
+    }
+
+    public void setScoreInter()
+    {
+        interpolingPoints = true;
+    }
+
     void Start()
     {
         //TESTING DATA. REMOVE LATER
@@ -159,16 +191,42 @@ public class gm_Primary : MonoBehaviour
 
         calcWave();
         timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
-    }
 
+    }
 
     void LateUpdate()
     {
+        AnimatorClipInfo[] m_CurrentClipInfo;
+        m_CurrentClipInfo = _spinnywheel.GetCurrentAnimatorClipInfo(0);
+
+        if (interpolingCoins && m_CurrentClipInfo[0].clip.name == "idlewithgold")
+        {
+            _gold++;
+
+            if (_gold >= endingCoin)
+            {
+                interpolingCoins = false;
+            }
+        }
+
+        if (interpolingPoints && m_CurrentClipInfo[0].clip.name == "idlewithscore")
+        {
+            _score++;
+
+            if (_score >= endingPoints)
+            {
+                interpolingPoints = false;
+                _spinnywheel.SetBool("coinsgained", false);
+            }
+        }
+
         _waveTimeNext = (int)(Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
         _goldText.text = _gold.ToString();
         _scoreText.text = _score.ToString();
         _waveText.text = _wave.ToString();
         _waveTimeText.text = _waveTimeNext.ToString();
+
+        _spinnywheel.SetFloat("timesincelastkill", Time.timeSinceLevelLoad - _enemyLastKillTime);
 
         if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
         {
