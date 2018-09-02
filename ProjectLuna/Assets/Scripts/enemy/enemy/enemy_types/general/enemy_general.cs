@@ -1,20 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class enemy_general : enemy_stats_base {
+public class enemy_general : enemy_stats_base
+{
 
-    private enemy_navigtaion nav;
+    private enemy_navigtaion _nav;
 
     public void Start()
     {
-        nav = gameObject.GetComponent<enemy_navigtaion>();
+        _nav = gameObject.GetComponent<enemy_navigtaion>();
     }
 
     public void OnTriggerEnter(Collider other)
     {
 
-        if(other.name == "Bullet_01")
+        if (other.name == "Bullet_01")
         {
 
         }

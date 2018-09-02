@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public enum MobType
@@ -12,34 +10,34 @@ public enum MobType
 public class enemy_stats_base : MonoBehaviour
 {
 
-    public float health,
-                 maxHealth,
-                 armor,
-                 speed;
+    public float _health,
+                 _maxHealth,
+                 _armor,
+                 _speed;
 
-    public GameObject ui;
+    public GameObject _ui;
 
-    public MobType mobtype;
+    public MobType _mobtype;
 
-    private void health_takeDamage(float amount)
+    private void HealthTakeDamage(float amount)
     {
-        health -= amount * (1 - ((armor / 100) * .5f));
+        _health -= amount * (1 - ((_armor / 100) * .5f));
     }
 
-    private void health_heal(float amount)
+    private void HealthHeal(float amount)
     {
-        health += amount;
+        _health += amount;
     }
 
     private void Start()
     {
-        maxHealth = health;
-        gameObject.GetComponent<NavMeshAgent>().speed = speed;
+        _maxHealth = _health;
+        gameObject.GetComponent<NavMeshAgent>().speed = _speed;
     }
 
     private void Update()
     {
-        if (health <= 0)
+        if (_health <= 0)
         {
             Destroy(gameObject);
         }

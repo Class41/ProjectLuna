@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class gm_Primary : MonoBehaviour
@@ -11,8 +10,8 @@ public class gm_Primary : MonoBehaviour
                _wave = 0,
                _waveTimeNext = 0;
 
-    public float usedTime = 0,
-                 timeAtStartOfwave = 0;
+    public float _usedTime = 0,
+                 _timeAtStartOfwave = 0;
 
     public float _calculatedWaveTime,
                  _calculatedWaveEndTime,
@@ -45,11 +44,11 @@ public class gm_Primary : MonoBehaviour
                  _spawnchance_lieutentant_delta = 0.03f,
                  _spawnchance_general_delta = 0.02f;
 
-    public List<Transform> _enemySpawnPositions = new List<Transform>();
+    public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
-    void recalcChances()
+    private void RecalcEnemySpawnChances()
     {
         if (_spawnchanceInfantry != 0)
         {
@@ -69,7 +68,7 @@ public class gm_Primary : MonoBehaviour
 
     }
 
-    void buildWave(int count)
+    private void BuildEnemyWaveWave(int count)
     {
         for (int i = 0; i < count; i++)
         {
@@ -77,53 +76,53 @@ public class gm_Primary : MonoBehaviour
 
             if (rng <= _spawnchanceInfantry)
             {
-                waveEntityList.Add(enemies_infantry[(int)(Random.Range(0, enemies_infantry.Capacity))]);
+                waveEntityList.Add(enemies_infantry[Random.Range(0, enemies_infantry.Capacity)]);
             }
             else if (rng < _spawnchanceInfantry + _spawnchanceLieutentant && rng >= _spawnchanceInfantry)
             {
-                waveEntityList.Add(enemies_lieutenants[(int)(Random.Range(0, enemies_lieutenants.Capacity))]);
+                waveEntityList.Add(enemies_lieutenants[Random.Range(0, enemies_lieutenants.Capacity)]);
             }
             else if (rng < _spawnchanceInfantry + _spawnchanceLieutentant + _spawnchanceGeneral && rng >= _spawnchanceInfantry + _spawnchanceLieutentant)
             {
-                waveEntityList.Add(enemies_generals[(int)(Random.Range(0, enemies_generals.Capacity))]);
+                waveEntityList.Add(enemies_generals[Random.Range(0, enemies_generals.Capacity)]);
             }
         }
 
-        recalcChances();
+        RecalcEnemySpawnChances();
     }
 
-    void spawnWave(int count)
+    private void SpawnEnemyWave(int count)
     {
-        buildWave(count);
+        BuildEnemyWaveWave(count);
         float setTime = 0.0f;
 
         for (int i = 1; i <= count; i++)
         {
-            Invoke("spawnMob", (i * _enemySpawntimeBetweenEnemySpawnsBase) + setTime);
+            Invoke("SpawnMob", (i * _enemySpawntimeBetweenEnemySpawnsBase) + setTime);
 
             if (i % _enemySpawningEnemiesPerSet == 0)
                 setTime += _enemySpawningTimeBetweenSets;
         }
     }
 
-    void spawnMob()
+    void SpawnMob()
     {
         if (waveEntityList.Count > 0)
         {
             var entityentry = waveEntityList[0];
 
-            int randomVal = Random.Range(0, _enemySpawnPositions.Count - 1);
+            int randomVal = Random.Range(0, enemySpawnPositions.Count - 1);
 
-            var enemy = Instantiate(entityentry, _enemySpawnPositions[randomVal].position,
-                                                 _enemySpawnPositions[randomVal].rotation);
+            var enemy = Instantiate(entityentry, enemySpawnPositions[randomVal].position,
+                                                 enemySpawnPositions[randomVal].rotation);
 
-            if (entityentry.GetComponent<enemy_stats_base>().mobtype == MobType.ENEMY_BOSS)
+            if (entityentry.GetComponent<enemy_stats_base>()._mobtype == MobType.ENEMY_BOSS)
             {
                 var ui = Instantiate(_bossUI,
-                                     _enemySpawnPositions[randomVal].position,
-                                     _enemySpawnPositions[randomVal].rotation);
+                                     enemySpawnPositions[randomVal].position,
+                                     enemySpawnPositions[randomVal].rotation);
 
-                enemy.GetComponent<enemy_navigtaion>().ui = ui;
+                enemy.GetComponent<enemy_navigtaion>()._ui = ui;
                 ui.GetComponent<UI_enemyline>()._parentObject = enemy;
                 ui.GetComponent<UI_follow>()._parentObject = enemy.transform;
                 ui.transform.SetParent(GameObject.Find("Entities").transform);
@@ -133,19 +132,18 @@ public class gm_Primary : MonoBehaviour
         }
     }
 
-    void calcWave()
+    private void StartWaveCalculations()
     {
         _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
         _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
 
-        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase + 
+        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase +
                              (_calculatedEnemySpawns % _enemySpawningEnemiesPerSet) *
                              _enemySpawningTimeBetweenSets + 30.0f;
 
         _calculatedWaveEndTime = Time.timeSinceLevelLoad + _calculatedWaveTime;
 
-        spawnWave((int)_calculatedEnemySpawns);
-
+        SpawnEnemyWave((int)_calculatedEnemySpawns);
     }
 
     public int endingCoin,
@@ -153,7 +151,7 @@ public class gm_Primary : MonoBehaviour
 
     public bool interpolingCoins = false,
                 interpolingPoints = false;
-    public float goldIntertime, 
+    public float goldIntertime,
                  scoreIntertime;
 
     public void EnemyDeath(int value_coins, int value_points)
@@ -163,22 +161,22 @@ public class gm_Primary : MonoBehaviour
         endingPoints += value_points;
         _spinnywheel.SetBool("coinsgained", true);
 
-        Invoke("setGoldInter", goldIntertime);
-        Invoke("setScoreInter", scoreIntertime);
+        Invoke("SetGoldInter", goldIntertime);
+        Invoke("SetScoreInter", scoreIntertime);
 
     }
 
-    public void setGoldInter()
+    public void SetGoldInter()
     {
         interpolingCoins = true;
     }
 
-    public void setScoreInter()
+    public void SetScoreInter()
     {
         interpolingPoints = true;
     }
-    
-    public void exitGame()
+
+    public void ExitGame()
     {
         Application.Quit();
     }
@@ -195,8 +193,8 @@ public class gm_Primary : MonoBehaviour
         _spawnchanceLieutentant = .33f;
         _spawnchanceInfantry = .33f;
 
-        calcWave();
-        timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
+        StartWaveCalculations();
+        _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
 
     }
 
@@ -215,11 +213,11 @@ public class gm_Primary : MonoBehaviour
             }
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             _pauseMenu.SetBool("menuopened", !_pauseMenu.GetBool("menuopened"));
-            
-            if(_pauseMenu.GetBool("menuopened"))
+
+            if (_pauseMenu.GetBool("menuopened"))
             {
                 Time.timeScale = 0;
             }
@@ -241,7 +239,7 @@ public class gm_Primary : MonoBehaviour
             }
         }
 
-        _waveTimeNext = (int)(Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
+        _waveTimeNext = (int)(Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
         _goldText.text = _gold.ToString();
         _scoreText.text = _score.ToString();
         _waveText.text = _wave.ToString();
@@ -251,10 +249,10 @@ public class gm_Primary : MonoBehaviour
 
         if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
         {
-           _wave++;
-            usedTime += _calculatedWaveTime;
-           calcWave();
-           timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - usedTime));
+            _wave++;
+            _usedTime += _calculatedWaveTime;
+            StartWaveCalculations();
+            _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
         }
     }
 }
