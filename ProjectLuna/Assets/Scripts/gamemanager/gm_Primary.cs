@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class gm_Primary : MonoBehaviour
 {
-    public GameObject _bossUI;
+    public GameObject _bossUI,
+                      _debugConsole,
+                      _fpsAndPCStats;
+
 
     public int _gold = 0,
                _score = 1,
@@ -211,6 +214,12 @@ public class gm_Primary : MonoBehaviour
             {
                 interpolingCoins = false;
             }
+        }
+
+        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Return))
+        {
+            _debugConsole.SetActive(!_debugConsole.activeSelf);
+            _fpsAndPCStats.SetActive(!_fpsAndPCStats.activeSelf);
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))

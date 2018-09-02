@@ -61,6 +61,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogIndexList.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogItem.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogLogcatListener.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogManager.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Color Picker\CUIColorPicker.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\CustomizeGraphy.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToMultipleOf3.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToPowerOf2.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\UpdateTextWithSliderValue.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Advanced\AdvancedData.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Graph\Graph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyDebugger.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Shader\ShaderGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IModifiableState.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IMovable.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\ExtensionMethods.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\NumString.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\Singleton.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
@@ -126,21 +163,25 @@
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\Debugging\IngameDebugConsole\README.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
     <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
@@ -161,12 +202,14 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
