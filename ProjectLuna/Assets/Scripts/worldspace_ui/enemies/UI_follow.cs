@@ -17,7 +17,7 @@ public class UI_follow : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (transform.position != null && _parentObject != null)
+        if (_parentObject != null)
         {
             Vector3 comboPos = _parentObject.position + new Vector3(0, 3, 0);
             Vector3 smoothedPos = Vector3.Lerp(transform.position, comboPos, _smoothSpeed);

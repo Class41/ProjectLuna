@@ -7,7 +7,7 @@ public class enemy_navigtaion : MonoBehaviour
     public Transform _goal;
     public Transform _parent;
 
-    public Rigidbody _goalRigid;
+    public Animator _goalAnim;
 
     NavMeshAgent _agent;
     public float _stopRadius = 1.0f,
@@ -21,7 +21,7 @@ public class enemy_navigtaion : MonoBehaviour
     void Start()
     {
         _goal = GameObject.Find("player_01").transform;
-        _goalRigid = GameObject.Find("player_01").GetComponent<Rigidbody>();
+        _goalAnim = GameObject.Find("Player").GetComponent<Animator>();
         _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
         _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
         this.transform.parent = _parent;
@@ -44,7 +44,7 @@ public class enemy_navigtaion : MonoBehaviour
             }
             Destroy(gameObject, .25f);
         }
-        else if(Vector3.Magnitude(_goalRigid.velocity) > 0)
+        else if(_goalAnim.GetBool("movekeydown"))
         {
             _agent.destination = _goal.position;
         }

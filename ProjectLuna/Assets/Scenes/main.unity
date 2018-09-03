@@ -99,15 +99,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
+    agentRadius: 1.13
+    agentHeight: 1
     agentSlope: 16.7
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.37666667
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.17
+  m_VoxelSize: 0.27333334
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 95f59bb3ad3d71f419ac09edff60ca1e, type: 2}
 --- !u!1 &172184851
@@ -3166,11 +3166,11 @@ MonoBehaviour:
   _spinnywheel: {fileID: 1441307068}
   _pauseMenu: {fileID: 1822359901}
   enemies_infantry:
-  - {fileID: 1541029533670482, guid: e62a6529760618845b9af3eab1590c5c, type: 2}
+  - {fileID: 1445685523229336, guid: c1ec340223ac647418efa4546c11a222, type: 2}
   enemies_lieutenants:
-  - {fileID: 1489426579201700, guid: 58221db76389e6c4f8ca2b21f6dcf077, type: 2}
+  - {fileID: 1735313563335254, guid: 2a6a437313051ef4684d2febcfd85331, type: 2}
   enemies_generals:
-  - {fileID: 1753935241051256, guid: e95b2be51a2d7c147b6567fab513f9df, type: 2}
+  - {fileID: 1860687533456670, guid: f77541b279ed607419bf1d032bf12f03, type: 2}
   _spawnchanceInfantry: 1
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0
@@ -4134,8 +4134,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _target: {fileID: 1821172442}
+  _targetRigidBody: {fileID: 0}
   _cameraOffset: {x: 0, y: 14, z: -9}
   _smoothSpeed: 0.04
+  _velocitySensitivity: 0.63
   _max_x: 500
   _min_x: -500
   _max_y: 500
