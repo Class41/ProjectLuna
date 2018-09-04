@@ -3205,9 +3205,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeEntities: []
   availableEntitiesList:
-  - {fileID: 1650509002134590, guid: 3fbe729903c774b4384c92bf5d263af6, type: 2}
+  - {fileID: 1554552468464184, guid: 6727cc8b7058a0148b8a11bb6f9a0b1e, type: 2}
   _selectedEntity: {fileID: 0}
   _player: {fileID: 1821172441}
+  _entContainer: {fileID: 1380598566}
   _currentCamera: {fileID: 1688314902}
   _lastSelectedWorldPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &1325064548

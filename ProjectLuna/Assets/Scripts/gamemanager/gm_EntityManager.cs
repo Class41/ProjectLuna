@@ -8,7 +8,8 @@ public class gm_EntityManager : MonoBehaviour
     public List<GameObject> availableEntitiesList = new List<GameObject>();
 
     public GameObject _selectedEntity,
-                      _player;
+                      _player,
+                      _entContainer;
 
     public Camera _currentCamera;
 
@@ -37,7 +38,7 @@ public class gm_EntityManager : MonoBehaviour
 
     public void spawnEntity(GameObject ent, GameObject creator = null)
     {
-        GameObject spawnedEnt = Instantiate(ent, _lastSelectedWorldPoint, ent.transform.rotation) as GameObject;
+        GameObject spawnedEnt = Instantiate(ent, _lastSelectedWorldPoint, ent.transform.rotation, _entContainer.transform) as GameObject;
 
         if (creator != null)
             spawnedEnt.GetComponent<world_entitybase>()._creator = creator.transform;

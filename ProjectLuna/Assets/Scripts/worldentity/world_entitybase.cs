@@ -3,19 +3,20 @@ using System.Collections.Generic;
 
 public class world_entitybase : MonoBehaviour
 {
-    public float _expiration,
-                 _durability,
-                 _distanceMaxFromCreator;
-
-    public Vector3 _position;
+    public float _expiration = Mathf.Infinity,
+                 _durability = 1,
+                 _distanceMaxFromCreator = 1;
 
     public Transform _creator;
 
     public List<string> acceptableSpawnTags = new List<string>();
 
-    private void Start()
+    protected void EntitySpawningDistanceRestrictCheck()
     {
-        
+        if(Vector3.Distance(_creator.position, gameObject.transform.position) > _distanceMaxFromCreator)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Update()
