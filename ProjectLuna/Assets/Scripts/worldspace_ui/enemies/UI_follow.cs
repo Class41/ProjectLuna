@@ -15,7 +15,7 @@ public class UI_follow : MonoBehaviour
         transform.rotation = _UIRotation;
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (_parentObject != null)
         {

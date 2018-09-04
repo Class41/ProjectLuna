@@ -3,16 +3,18 @@ using UnityEngine;
 
 public class gm_Primary : MonoBehaviour
 {
+    [Header("UI References")]
     public GameObject _bossUI,
                       _debugConsole,
                       _fpsAndPCStats;
 
-
+    [Header("Essential Game Values")]
     public int _gold = 0,
                _score = 1,
                _wave = 0,
                _waveTimeNext = 0;
 
+    [Header("Wave Times")]
     public float _usedTime = 0,
                  _timeAtStartOfwave = 0;
 
@@ -20,21 +22,26 @@ public class gm_Primary : MonoBehaviour
                  _calculatedWaveEndTime,
                  _calculatedEnemySpawns;
 
+    [Header("Difficulty Values")]
     public float _difficultyMultiplier,
                  _enemySpawntimeBetweenEnemySpawnsBase,
                  _enemySpawningEnemiesPerSet,
                  _enemySpawningTimeBetweenSets,
                  _enemyLastKillTime;
 
+    [Header("UI References")]
     public UnityEngine.UI.Text _goldText,
                                _scoreText,
                                _waveText,
                                _waveTimeText;
 
     public GameObject _uiWavePanel;
+
+    [Header("UI Element References")]
     public Animator _spinnywheel,
                     _pauseMenu;
 
+    [Header("Enemy Spawn Controlpanel")]
     public List<GameObject> enemies_infantry = new List<GameObject>();
     public List<GameObject> enemies_lieutenants = new List<GameObject>();
     public List<GameObject> enemies_generals = new List<GameObject>();
@@ -47,6 +54,7 @@ public class gm_Primary : MonoBehaviour
                  _spawnchance_lieutentant_delta = 0.03f,
                  _spawnchance_general_delta = 0.02f;
 
+    [Header("Enemy Spawn Positions and Wave Details")]
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
 

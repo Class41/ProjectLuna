@@ -14,7 +14,7 @@ public class UI_healthbar : MonoBehaviour
     }
 
     //update the healthbar values per-frame
-    void Update()
+    void OnGUI()
     {
         float barLength = _rectMaxWidth * (1 - (_enemyStats._health / _enemyStats._maxHealth));
 
