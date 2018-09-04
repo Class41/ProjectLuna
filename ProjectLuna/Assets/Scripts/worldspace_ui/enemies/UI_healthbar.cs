@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class UI_healthbar : MonoBehaviour
 {
@@ -10,17 +7,16 @@ public class UI_healthbar : MonoBehaviour
     public float _rectMaxWidth = 600;
     public RectTransform _rectData;
 
-    // Use this for initialization
     void Start()
     {
         _enemyStats = gameObject.GetComponent<UI_follow>()._parentObject.GetComponent<enemy_stats_base>();
         _rectData = gameObject.transform.GetChild(1).GetChild(1).gameObject.GetComponent<RectTransform>();
     }
 
-    // Update is called once per frame
-    void Update()
+    //update the healthbar values per-frame
+    void OnGUI()
     {
-        float barLength = _rectMaxWidth * (1 - (_enemyStats.health / _enemyStats.maxHealth));
+        float barLength = _rectMaxWidth * (1 - (_enemyStats._health / _enemyStats._maxHealth));
 
         _rectData.offsetMax = new Vector2(-barLength, -23);
         _rectData.offsetMin = new Vector2(0, -50);
