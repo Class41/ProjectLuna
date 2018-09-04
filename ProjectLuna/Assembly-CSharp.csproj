@@ -153,12 +153,15 @@
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\player\player_health.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
+    <Compile Include="Assets\Scripts\worldentity\entity_torchplaceable\ent_torch.cs" />
+    <Compile Include="Assets\Scripts\worldentity\world_entitybase.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_enemyline.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
