@@ -2867,6 +2867,25 @@ Transform:
   m_Father: {fileID: 1325064549}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &952623195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 61408f5295ef52a459e238ec69f21af2,
+    type: 3}
+  m_PrefabInternal: {fileID: 1853795734}
+--- !u!64 &952623196
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 952623195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 61408f5295ef52a459e238ec69f21af2, type: 3}
 --- !u!1 &958948451
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,7 +4714,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 1
   orthographic size: 6
@@ -4733,7 +4752,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688314899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
@@ -5004,7 +5023,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1821172444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5029,12 +5048,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcb28f0fe7bc9e541804d93071fbcecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  max_x: 24.3
-  min_x: -24.3
-  max_y: 50
-  min_y: -50
-  max_z: 24
-  min_z: -24.5
+  max_x: 999
+  min_x: -999
+  max_y: 999
+  min_y: -999
+  max_z: 999
+  min_z: -999
 --- !u!23 &1821172446
 MeshRenderer:
   m_ObjectHideFlags: 0
