@@ -16,6 +16,11 @@ public class player_health : MonoBehaviour
     private void HealthTakeDamage(float amount)
     {
         _health -= (amount * (1 - (_armor / 100.0f)));
+
+        if (_health <= 0)
+        {
+            //Todo: functionality for player death etc
+        }
     }
 
     private void HealthHeal(float amount)
@@ -36,9 +41,6 @@ public class player_health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_health <= 0)
-        {
-            //Todo: functionality for player death etc
-        }
+
     }
 }

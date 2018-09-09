@@ -30,7 +30,7 @@ public class enemy_navigtaion : MonoBehaviour
     }
 
     //currently, this is a distance-based system. SWITCH TO COLLISION BASED AFTER WE ADD MODELS & ANIMATIONS!
-    private void Update()
+    private void FixedUpdate()
     {
         if (Vector3.Distance(_goal.position, this.gameObject.transform.position) < _stopRadius)
         {

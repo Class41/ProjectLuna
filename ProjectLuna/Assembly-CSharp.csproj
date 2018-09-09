@@ -155,6 +155,7 @@
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\player\player_health.cs" />
@@ -165,6 +166,7 @@
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_enemyline.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
+    <Compile Include="Assets\Scripts\worldtriggers\trigger_quadrant.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
     <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />

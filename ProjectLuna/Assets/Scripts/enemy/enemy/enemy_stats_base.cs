@@ -22,6 +22,11 @@ public class enemy_stats_base : MonoBehaviour
     private void HealthTakeDamage(float amount)
     {
         _health -= amount * (1 - ((_armor / 100) * .5f));
+
+        if (_health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void HealthHeal(float amount)
@@ -33,13 +38,5 @@ public class enemy_stats_base : MonoBehaviour
     {
         _maxHealth = _health;
         gameObject.GetComponent<NavMeshAgent>().speed = _speed;
-    }
-
-    private void Update()
-    {
-        if (_health <= 0)
-        {
-            Destroy(gameObject);
-        }
     }
 }
