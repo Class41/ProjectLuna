@@ -8,13 +8,14 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Material_001
-  m_Shader: {fileID: 4800000, guid: d9cef6aa4bfe9ea4eab7f889250c2485, type: 3}
+  m_Shader: {fileID: 4800000, guid: 650dd9526735d5b46b79224bc6e94025, type: 3}
   m_ShaderKeywords: _ALPHATEST_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - SHADOWCASTER
   m_SavedProperties:
@@ -73,7 +74,7 @@ Material:
     - _Blend: 3
     - _BumpScale: 1
     - _Cull: 2
-    - _Cutoff: 0.703
+    - _Cutoff: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _Exposure: 0
