@@ -8,6 +8,7 @@ TagManager:
   - worldtrigger
   - player
   - enemy
+  - invisbarrierwall
   layers:
   - Default
   - TransparentFX

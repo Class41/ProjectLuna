@@ -5,9 +5,27 @@ public class player_movement : MonoBehaviour
     public float _forcemod;
     public Animator _anim;
 
-    // Update is called once per frame
+    public Material _barrierMat;
+    public float _barrierVisibility = 0,
+                 _barrierDisappearTime = 0;
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if(collision.transform.CompareTag("invisbarrierwall"))
+        {
+            _barrierVisibility = .25f;
+        }
+    }
+
     void Update()
     {
+
+        if(_barrierVisibility > 0)
+        {
+            _barrierMat.SetFloat("Vector1_B528FB43", _barrierVisibility);
+            _barrierVisibility = Mathf.Lerp(_barrierVisibility, 0.0f, _barrierDisappearTime);
+        }
+
         _anim.SetBool("movekeydown", false);
         if (Input.GetKey(KeyCode.W))
         {

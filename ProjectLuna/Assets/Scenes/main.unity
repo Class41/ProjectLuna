@@ -2128,6 +2128,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8f302b93d2a61d646ae90f80d4287a3f, type: 3}
+      propertyPath: m_TagString
+      value: invisbarrierwall
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 8f302b93d2a61d646ae90f80d4287a3f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8f302b93d2a61d646ae90f80d4287a3f, type: 3}
@@ -6760,6 +6764,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _forcemod: 35
   _anim: {fileID: 343474358}
+  _barrierMat: {fileID: 2100000, guid: 7295dea2e55194d40a628cfc9016cf4a, type: 2}
+  _barrierVisibility: 0
+  _barrierDisappearTime: 0.2
 --- !u!114 &1821172445
 MonoBehaviour:
   m_ObjectHideFlags: 0
