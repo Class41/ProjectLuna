@@ -31,7 +31,7 @@ public class player_health : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //TODO: Replace with actual useful damage stuff
-        if (collision.gameObject.name.Contains("enemy"))
+        if (collision.gameObject.CompareTag("enemy"))
         {
             HealthTakeDamage(150);
         }
