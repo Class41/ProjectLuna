@@ -23,7 +23,13 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__d9cef6aa4bfe9ea4eab7f889250c2485__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
   - __PanelContainer__rootVisualContainer__d2be59ea59f746444abf36e5b40cc17e__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
   - __PanelContainer__rootVisualContainer__d2be59ea59f746444abf36e5b40cc17e__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
+  - __PanelContainer__rootVisualContainer__6ab318787e5c5854ebdc7e112c1b9d01__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedViewTransform
+  - __PanelContainer__rootVisualContainer__6ab318787e5c5854ebdc7e112c1b9d01__MaterialGraphView__UnityEditor.Experimental.UIElements.GraphView.GraphView+PersistedSelection
   m_Values:
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
   - '{}'
   - '{}'
   - '{}'
@@ -32,5 +38,3 @@ MonoBehaviour:
   - '{}'
   - '{"position":{"x":0.0,"y":0.0,"z":0.0},"scale":{"x":1.0,"y":1.0,"z":1.0}}'
   - '{"m_Version":0,"m_SelectedElements":[]}'
-  - '{}'
-  - '{}'
