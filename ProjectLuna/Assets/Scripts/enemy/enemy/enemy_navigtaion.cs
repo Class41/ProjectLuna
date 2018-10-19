@@ -21,7 +21,7 @@ public class enemy_navigtaion : MonoBehaviour
     void Start()
     {
         _goal = GameObject.Find("player_01").transform;
-        _goalAnim = GameObject.Find("Player").GetComponent<Animator>();
+        _goalAnim = GameObject.Find("player_01").GetComponent<Animator>();
         _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
         _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
         this.transform.parent = _parent;
