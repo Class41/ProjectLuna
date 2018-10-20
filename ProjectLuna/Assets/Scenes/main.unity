@@ -3963,6 +3963,8 @@ MonoBehaviour:
   _barrierMat: {fileID: 2100000, guid: 7295dea2e55194d40a628cfc9016cf4a, type: 2}
   _barrierVisibility: 0
   _barrierDisappearTime: 0.2
+  _plyRigidbody: {fileID: 0}
+  _plyTranform: {fileID: 0}
 --- !u!114 &1275419298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4006,7 +4008,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!95 &1275419301 stripped
 Animator:
