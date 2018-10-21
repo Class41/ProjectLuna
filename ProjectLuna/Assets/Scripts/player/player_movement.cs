@@ -36,31 +36,32 @@ public class player_movement : MonoBehaviour
         }
 
         _anim.SetBool("movekeydown", false);
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S))
         {
             _plyRigidbody.AddForce(Vector3.forward * _forcemod * Time.deltaTime * 100, ForceMode.Force);          
             _anim.SetBool("movekeydown", true);
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))
         {
             _plyRigidbody.AddForce(Vector3.back * _forcemod * Time.deltaTime * 100, ForceMode.Force);
             _anim.SetBool("movekeydown", true);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
         {
             _plyRigidbody.AddForce(Vector3.left * _forcemod * Time.deltaTime * 100, ForceMode.Force);
             _anim.SetBool("movekeydown", true);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
         {
             _plyRigidbody.AddForce(Vector3.right * _forcemod * Time.deltaTime * 100, ForceMode.Force);
             _anim.SetBool("movekeydown", true);
         }
 
         if (_plyRigidbody.velocity.magnitude > 1)
-            _plyTranform.forward = new Vector3(_plyRigidbody.velocity.normalized.x, 0, _plyRigidbody.velocity.normalized.z);
+             _plyTranform.forward = Vector3.Slerp(_plyTranform.forward , new Vector3(_plyRigidbody.velocity.normalized.x, 0, _plyRigidbody.velocity.normalized.z), 10.0f * Time.deltaTime);
+            
     }
 }
