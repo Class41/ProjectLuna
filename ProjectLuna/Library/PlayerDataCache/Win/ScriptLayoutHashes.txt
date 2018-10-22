@@ -2,6 +2,7 @@ Win
 PlayerPath?
 X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Build/Windows/ProjectLuna.exe
 SceneListBegin?
+Assets/Scenes/menu.unity
 Assets/Scenes/main.unity
 SceneListEnd?
 71961c90b9e05ecb48b5969e15e1c70a Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer
@@ -257,3 +258,4 @@ be3793efdd72cdd3aa963814d025d4c7 Assembly-CSharp.dll:Tayx.Graphy.CustomizationSc
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Tayx.Graphy.Audio.AudioMonitor
 2388eb9e99b86b3813e7b6dbfe4b3e0c Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
+ac714b3c60ebfbae2b681ec52ff15206 Assembly-CSharp.dll:.ui_funccontroller

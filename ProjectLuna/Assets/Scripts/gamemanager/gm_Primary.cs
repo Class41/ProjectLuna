@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gm_Primary : MonoBehaviour
 {
@@ -192,6 +193,10 @@ public class gm_Primary : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("menu");
+    }
     void Start()
     {
         //TESTING DATA. REMOVE LATER

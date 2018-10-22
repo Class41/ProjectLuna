@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
+    <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\player\player_health.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
