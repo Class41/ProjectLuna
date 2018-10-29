@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Enemy stats base class
+ *  
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 
 public enum MobType

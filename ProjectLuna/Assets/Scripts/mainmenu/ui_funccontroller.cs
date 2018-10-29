@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls button functionality on the main menu scene
+ *  
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;

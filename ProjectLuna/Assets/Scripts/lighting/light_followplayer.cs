@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls the movement of the light which follows the player around
+ *  
+ */
+
+using UnityEngine;
 
 public class light_followplayer : MonoBehaviour
 {

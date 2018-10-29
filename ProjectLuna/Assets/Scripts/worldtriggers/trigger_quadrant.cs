@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Keep track of player's quadrant position
+ *  
+ */
+
+using UnityEngine;
 
 public class trigger_quadrant : MonoBehaviour
 {

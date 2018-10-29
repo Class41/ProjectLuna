@@ -1,4 +1,10 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls healthbar data / moves healthbar on damage.
+ *  
+ */
+ using UnityEngine;
 
 public class UI_healthbar : MonoBehaviour
 {

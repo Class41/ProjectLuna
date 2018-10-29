@@ -1,4 +1,11 @@
-﻿using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Keeps track of spawned world entities (point and click)
+ *  
+ */
+
+using System.Collections.Generic;
 using UnityEngine;
 
 public class gm_EntityManager : MonoBehaviour

@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Smooths camera movement while following player and leads player's movements.
+ *  
+ */
+
+using UnityEngine;
 
 public class cam_follow_smooth : MonoBehaviour
 {

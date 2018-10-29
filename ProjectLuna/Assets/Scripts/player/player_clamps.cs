@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Limits player's movement (currently not being used)
+ *  
+ */
+
+using UnityEngine;
 
 public class player_clamps : MonoBehaviour
 {

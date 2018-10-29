@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Player health and damage handler
+ *  
+ */
+
+using UnityEngine;
 
 public class player_health : MonoBehaviour
 {

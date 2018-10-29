@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Base class for droppable/spawnable world entities
+ *  
+ */
+
+using UnityEngine;
 using System.Collections.Generic;
 
 public class world_entitybase : MonoBehaviour

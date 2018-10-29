@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls enemy movement and movement logic
+ *  
+ */
+
+using UnityEngine;
 using UnityEngine.AI;
 
 public class enemy_navigtaion : MonoBehaviour

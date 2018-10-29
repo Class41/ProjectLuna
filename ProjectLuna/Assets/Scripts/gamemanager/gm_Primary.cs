@@ -1,4 +1,11 @@
-﻿using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls core game mechanics such as UI, enemy spawns, difficulty and time.
+ *  
+ */
+
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -229,7 +236,7 @@ public class gm_Primary : MonoBehaviour
             }
         }
 
-        if(Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.Return))
         {
             _debugConsole.SetActive(!_debugConsole.activeSelf);
             _fpsAndPCStats.SetActive(!_fpsAndPCStats.activeSelf);

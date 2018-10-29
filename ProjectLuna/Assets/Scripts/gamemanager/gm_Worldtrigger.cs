@@ -1,4 +1,11 @@
-﻿using System.Collections;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls world trigger behavior
+ *  
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

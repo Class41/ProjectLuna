@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls UI timer fill
+ *  
+ */
+
+using UnityEngine;
 using UnityEngine.UI;
 
 public class ui_timecountdown : MonoBehaviour
