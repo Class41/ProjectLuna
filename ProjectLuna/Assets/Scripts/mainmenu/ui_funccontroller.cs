@@ -14,6 +14,11 @@ public class ui_funccontroller : MonoBehaviour
 {
     public Animator _menuAnim;
 
+    public void Start()
+    {
+        Time.timeScale = 1;
+    }
+
     public void LoadGame()
     {
         SceneManager.LoadScene("main");
