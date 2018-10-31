@@ -2488,15 +2488,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50b7c0ddc74ede74ab6bbfd8be512ac7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50b7c0ddc74ede74ab6bbfd8be512ac7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 50b7c0ddc74ede74ab6bbfd8be512ac7, type: 3}
       propertyPath: m_LocalScale.z
-      value: 80.00003
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 50b7c0ddc74ede74ab6bbfd8be512ac7, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4041,12 +4041,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _forcemod: 35
+  _attackAvailable: 0
+  _attackCD: 0.3
   _anim: {fileID: 1275419301}
   _barrierMat: {fileID: 2100000, guid: 7295dea2e55194d40a628cfc9016cf4a, type: 2}
   _barrierVisibility: 0
   _barrierDisappearTime: 0.2
   _plyRigidbody: {fileID: 0}
   _plyTranform: {fileID: 0}
+  _attacking: 0
 --- !u!114 &1275419298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4505,15 +4508,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 321c18d087dd5024f9ed892a10b7f26c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 321c18d087dd5024f9ed892a10b7f26c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 321c18d087dd5024f9ed892a10b7f26c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 321c18d087dd5024f9ed892a10b7f26c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5788,15 +5791,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae5cd1c0b4e3c3d42949bf6acce9e26f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae5cd1c0b4e3c3d42949bf6acce9e26f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ae5cd1c0b4e3c3d42949bf6acce9e26f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2300000, guid: ae5cd1c0b4e3c3d42949bf6acce9e26f, type: 3}
@@ -5858,15 +5861,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb9ebb50ba6f243438ba707d2aff1cfa, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb9ebb50ba6f243438ba707d2aff1cfa, type: 3}
       propertyPath: m_LocalScale.y
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bb9ebb50ba6f243438ba707d2aff1cfa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bb9ebb50ba6f243438ba707d2aff1cfa, type: 3}
       propertyPath: m_StaticEditorFlags
