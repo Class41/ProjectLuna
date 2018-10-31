@@ -43,11 +43,4 @@ public class player_health : MonoBehaviour
             HealthTakeDamage(150);
         }
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }

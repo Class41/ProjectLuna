@@ -19,7 +19,22 @@ public class player_movement : MonoBehaviour
     public Rigidbody _plyRigidbody;
     public Transform _plyTranform;
 
-    public bool _attacking;
+    public bool _attacking = false, _shortColliderStatus = false;
+    public player_weapon_sword _weaponBoxScript;
+
+    public void ToggleShortCollider()
+    {
+        if(_shortColliderStatus)
+        {
+            _weaponBoxScript.DisableStrikeCloseCollider();
+            _shortColliderStatus = !_shortColliderStatus;
+        }
+        else
+        {
+            _weaponBoxScript.EnableStrikeCloseCollider();
+            _shortColliderStatus = !_shortColliderStatus;
+        }
+    }
 
     private void OnCollisionStay(Collision collision)
     {
