@@ -148,9 +148,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75b36841294a0b459d62edab2af0044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1500
-  _maxHealth: 1500
+  _health: 1250
+  _maxHealth: 1250
   _armor: 45
   _speed: 5
+  _scoreOnDeath: 75
+  _goldOnDeath: 18
   _ui: {fileID: 0}
+  _gm: {fileID: 0}
   _mobtype: 1

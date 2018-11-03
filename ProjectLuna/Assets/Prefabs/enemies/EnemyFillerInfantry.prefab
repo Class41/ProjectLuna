@@ -152,5 +152,8 @@ MonoBehaviour:
   _maxHealth: 500
   _armor: 20
   _speed: 3.5
+  _scoreOnDeath: 50
+  _goldOnDeath: 10
   _ui: {fileID: 0}
+  _gm: {fileID: 0}
   _mobtype: 0

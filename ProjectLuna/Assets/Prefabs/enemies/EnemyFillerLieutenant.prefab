@@ -126,11 +126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19361a0ac1237c447bebd2738d46b0e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 1000
-  _maxHealth: 1000
+  _health: 750
+  _maxHealth: 750
   _armor: 50
   _speed: 5
+  _scoreOnDeath: 25
+  _goldOnDeath: 5
   _ui: {fileID: 0}
+  _gm: {fileID: 0}
   _mobtype: 0
 --- !u!195 &195366174951629020
 NavMeshAgent:

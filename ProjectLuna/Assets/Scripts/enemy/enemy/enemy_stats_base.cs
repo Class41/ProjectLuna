@@ -22,18 +22,27 @@ public class enemy_stats_base : MonoBehaviour
                  _armor,
                  _speed;
 
+   public int _scoreOnDeath,
+              _goldOnDeath;
+
     public GameObject _ui;
+    public gm_Primary _gm;
 
     public MobType _mobtype;
 
+    public void EnemyDie()
+    {
+        _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
+        Destroy(gameObject, .25f);
+    }
+
     public void HealthTakeDamage(float amount)
     {
-        Debug.Log("I've been hit for " + amount);
         _health -= amount * (1 - ((_armor / 100) * .5f));
 
         if (_health <= 0)
         {
-            Destroy(gameObject);
+            EnemyDie();
         }
     }
 
@@ -46,5 +55,6 @@ public class enemy_stats_base : MonoBehaviour
     {
         _maxHealth = _health;
         gameObject.GetComponent<NavMeshAgent>().speed = _speed;
+        _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
     }
 }
