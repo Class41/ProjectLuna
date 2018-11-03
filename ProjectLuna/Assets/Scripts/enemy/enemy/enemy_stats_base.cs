@@ -26,8 +26,9 @@ public class enemy_stats_base : MonoBehaviour
 
     public MobType _mobtype;
 
-    private void HealthTakeDamage(float amount)
+    public void HealthTakeDamage(float amount)
     {
+        Debug.Log("I've been hit for " + amount);
         _health -= amount * (1 - ((_armor / 100) * .5f));
 
         if (_health <= 0)
@@ -36,7 +37,7 @@ public class enemy_stats_base : MonoBehaviour
         }
     }
 
-    private void HealthHeal(float amount)
+    public void HealthHeal(float amount)
     {
         _health += amount;
     }

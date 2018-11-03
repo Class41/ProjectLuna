@@ -960,7 +960,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189331301}
   m_LocalRotation: {x: 0, y: -0, z: 0.93326735, w: -0.35918248}
-  m_LocalPosition: {x: -0.442, y: -0.407, z: 0}
+  m_LocalPosition: {x: -0.4282, y: -0.402, z: -0.005}
   m_LocalScale: {x: 1.26, y: 1.45, z: 1.0000062}
   m_Children: []
   m_Father: {fileID: 1363409078}
@@ -977,7 +977,7 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.14, y: 0.09, z: 0.1}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.02
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.06}
@@ -1582,13 +1582,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 364204290}
-  m_LocalRotation: {x: 0, y: 0, z: 0.994151, w: 0.10799937}
-  m_LocalPosition: {x: 0.908, y: -0.759, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.94602877, w: 0.32408264}
+  m_LocalPosition: {x: 0.868, y: -0.784, z: -0}
   m_LocalScale: {x: 1.2600043, y: 1.4500039, z: 1.0000088}
   m_Children: []
   m_Father: {fileID: 1363409078}
   m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 167.6}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 142.18}
 --- !u!208 &364204292
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -2101,8 +2101,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496890961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 21.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.96}
+  m_LocalScale: {x: 1, y: 0.82, z: 1.42}
   m_Children: []
   m_Father: {fileID: 1275419295}
   m_RootOrder: 3
@@ -2118,7 +2118,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 25, y: 54.18, z: 23.71}
+  m_Size: {x: 42.78, y: 54.18, z: 23.71}
   m_Center: {x: 0, y: 18, z: 0}
 --- !u!114 &496890964
 MonoBehaviour:
@@ -4572,11 +4572,11 @@ MonoBehaviour:
   _spinnywheel: {fileID: 1441307068}
   _pauseMenu: {fileID: 1822359901}
   enemies_infantry:
-  - {fileID: 1445685523229336, guid: c1ec340223ac647418efa4546c11a222, type: 3}
+  - {fileID: 5025818770009348485, guid: c1ec340223ac647418efa4546c11a222, type: 3}
   enemies_lieutenants:
   - {fileID: 1735313563335254, guid: 2a6a437313051ef4684d2febcfd85331, type: 3}
   enemies_generals:
-  - {fileID: 1860687533456670, guid: f77541b279ed607419bf1d032bf12f03, type: 3}
+  - {fileID: 1374244124111418463, guid: 6b129d31cfb092c46bc48b8020b2f73a, type: 3}
   _spawnchanceInfantry: 1
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0
@@ -6171,7 +6171,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1804460929}
   m_LocalRotation: {x: 0, y: -0, z: 0.9191354, w: -0.39394182}
-  m_LocalPosition: {x: -0.852, y: -0.815, z: -0}
+  m_LocalPosition: {x: -0.855, y: -0.829, z: -0}
   m_LocalScale: {x: 2.03, y: 1.18, z: 1.0000075}
   m_Children: []
   m_Father: {fileID: 1363409078}
@@ -6188,7 +6188,7 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.14, y: 0.09, z: 0.1}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.02
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.06}

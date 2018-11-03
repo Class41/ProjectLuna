@@ -129,7 +129,7 @@ MonoBehaviour:
   _health: 1000
   _maxHealth: 1000
   _armor: 50
-  _speed: 5.5
+  _speed: 5
   _ui: {fileID: 0}
   _mobtype: 0
 --- !u!195 &195366174951629020
