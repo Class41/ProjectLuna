@@ -22,21 +22,42 @@ public class enemy_stats_base : MonoBehaviour
                  _armor,
                  _speed;
 
+   public int _scoreOnDeath,
+              _goldOnDeath;
+
     public GameObject _ui;
+    public gm_Primary _gm;
 
     public MobType _mobtype;
+    
+    /// <summary>
+    /// <para>Called to kill the entity</para>
+    /// </summary>
+    public void EnemyDie()
+    {
+        _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
+        Destroy(gameObject, .25f);
+    }
 
-    private void HealthTakeDamage(float amount)
+    /// <summary>
+    /// <para>Called to make entity take damage</para>
+    /// </summary>
+    /// <param name="amount">how much damage to take (raw)</param>
+    public void HealthTakeDamage(float amount)
     {
         _health -= amount * (1 - ((_armor / 100) * .5f));
 
         if (_health <= 0)
         {
-            Destroy(gameObject);
+            EnemyDie();
         }
     }
 
-    private void HealthHeal(float amount)
+    /// <summary>
+    /// <para>Called to heal entity</para>
+    /// </summary>
+    /// <param name="amount"></param>
+    public void HealthHeal(float amount)
     {
         _health += amount;
     }
@@ -45,5 +66,6 @@ public class enemy_stats_base : MonoBehaviour
     {
         _maxHealth = _health;
         gameObject.GetComponent<NavMeshAgent>().speed = _speed;
+        _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
     }
 }
