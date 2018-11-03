@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 124
+  controlID: 89
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 49
+  controlID: 90
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 50
+  controlID: 91
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -360,20 +360,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/enemies
+    - Assets/Scripts/camera
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/enemies
+  - Assets/Scripts/camera
   m_LastFoldersGridSize: -1
   m_LastProjectPath: X:\_Unity\SCHOOL\CS_GDEV_GROUP\ProjectLuna\ProjectLuna
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 119}
-    m_SelectedIDs: d62c0000
-    m_LastClickedID: 11478
-    m_ExpandedIDs: 00000000c62c0000dc2c0000ee2f000090310000d2310000f0310000d8320000d4330000703400008a340000ca3e0000cc3e0000ce3e0000d03e000000ca9a3b
+    m_SelectedIDs: da2c0000
+    m_LastClickedID: 11482
+    m_ExpandedIDs: 00000000c02c0000d62c0000e82f00008a310000cc310000ea310000d2320000ce3300006c34000086340000ca3e0000cc3e0000ce3e0000d03e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -401,7 +401,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c62c0000dc2c0000ee2f000090310000d2310000f0310000d8320000d43300008a340000ca3e0000cc3e0000ce3e0000d03e0000
+    m_ExpandedIDs: 00000000c02c0000d62c0000e82f00008a310000cc310000ea310000d2320000ce3300006c34000086340000ca3e0000cc3e0000ce3e0000d03e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -578,7 +578,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -1.9284164, y: -35.61742, z: 28.787928}
     speed: 2
-    m_Value: {x: 1.2805617, y: -0.9409845, z: 0.8290104}
+    m_Value: {x: -1.9284164, y: -35.61742, z: 28.787928}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -608,11 +608,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.4487017, y: 0.003988824, z: -0.002003688, w: -0.8936705}
     speed: 2
-    m_Value: {x: -0.28807095, y: -0.6607659, z: 0.30609354, w: -0.6218603}
+    m_Value: {x: -0.4487017, y: 0.003988824, z: -0.002003688, w: -0.8936705}
   m_Size:
     m_Target: 85.970505
     speed: 2
-    m_Value: 3.1528552
+    m_Value: 85.970505
   m_Ortho:
     m_Target: 0
     speed: 2

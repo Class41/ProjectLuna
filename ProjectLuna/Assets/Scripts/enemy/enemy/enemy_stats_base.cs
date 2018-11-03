@@ -29,13 +29,20 @@ public class enemy_stats_base : MonoBehaviour
     public gm_Primary _gm;
 
     public MobType _mobtype;
-
+    
+    /// <summary>
+    /// <para>Called to kill the entity</para>
+    /// </summary>
     public void EnemyDie()
     {
         _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
         Destroy(gameObject, .25f);
     }
 
+    /// <summary>
+    /// <para>Called to make entity take damage</para>
+    /// </summary>
+    /// <param name="amount">how much damage to take (raw)</param>
     public void HealthTakeDamage(float amount)
     {
         _health -= amount * (1 - ((_armor / 100) * .5f));
@@ -46,6 +53,10 @@ public class enemy_stats_base : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <para>Called to heal entity</para>
+    /// </summary>
+    /// <param name="amount"></param>
     public void HealthHeal(float amount)
     {
         _health += amount;

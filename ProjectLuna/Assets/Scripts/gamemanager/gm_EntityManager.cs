@@ -43,6 +43,11 @@ public class gm_EntityManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <para>Creates world entity and sets the parent of the created entity</para>
+    /// </summary>
+    /// <param name="ent">What gameobject to spawn</param>
+    /// <param name="creator">Parent of the newly spawned gameobject</param>
     public void spawnEntity(GameObject ent, GameObject creator = null)
     {
         GameObject spawnedEnt = Instantiate(ent, _lastSelectedWorldPoint, ent.transform.rotation, _entContainer.transform) as GameObject;
