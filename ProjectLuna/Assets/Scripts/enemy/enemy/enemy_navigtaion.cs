@@ -17,7 +17,7 @@ public class enemy_navigtaion : MonoBehaviour
     public Animator _goalAnim;
 
     NavMeshAgent _agent;
-    public float _stopRadius = 1.0f,
+    private float _stopRadius = 3.0f,
                  _entityDeathTime = .25f;
 
     public GameObject _ui;
@@ -33,7 +33,6 @@ public class enemy_navigtaion : MonoBehaviour
         _selfStatus = gameObject.GetComponent<enemy_stats_base>();
         this.transform.parent = _parent;
         _agent = GetComponent<NavMeshAgent>();
-        _agent.destination = _goal.position;
     }
 
     private void FixedUpdate()
