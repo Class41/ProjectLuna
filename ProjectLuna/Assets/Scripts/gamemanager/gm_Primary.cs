@@ -67,6 +67,9 @@ public class gm_Primary : MonoBehaviour
     public List<GameObject> waveEntityList = new List<GameObject>();
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
+    /// <summary>
+    /// <para>Calculates enemy spawn chances based on their tier</para>
+    /// </summary>
     private void RecalcEnemySpawnChances()
     {
         if (_spawnchanceInfantry != 0)
@@ -87,6 +90,10 @@ public class gm_Primary : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// builds a parameterized number of enemies based on current spawn chances for enemies
+    /// </summary>
+    /// <param name="count"></param>
     private void BuildEnemyWaveWave(int count)
     {
         for (int i = 0; i < count; i++)
@@ -110,6 +117,10 @@ public class gm_Primary : MonoBehaviour
         RecalcEnemySpawnChances();
     }
 
+    /// <summary>
+    /// <para>Spawns the built enemy wave</para>
+    /// </summary>
+    /// <param name="count"></param>
     private void SpawnEnemyWave(int count)
     {
         BuildEnemyWaveWave(count);
@@ -124,6 +135,9 @@ public class gm_Primary : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <para>Spawns an entity from the wave list</para>
+    /// </summary>
     void SpawnMob()
     {
         if (waveEntityList.Count > 0)
@@ -151,6 +165,9 @@ public class gm_Primary : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// <para>Calculates how many enemies should spawn per wave and calculates wave time</para>
+    /// </summary>
     private void StartWaveCalculations()
     {
         _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
@@ -173,6 +190,11 @@ public class gm_Primary : MonoBehaviour
     public float goldIntertime,
                  scoreIntertime;
 
+    /// <summary>
+    /// <para>Called by dying entities to give player gold and score</para>
+    /// </summary>
+    /// <param name="value_coins"></param>
+    /// <param name="value_points"></param>
     public void EnemyDeath(int value_coins, int value_points)
     {
         _enemyLastKillTime = Time.timeSinceLevelLoad;
@@ -185,25 +207,38 @@ public class gm_Primary : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// <para>Sets if we are interpolating gold on the UI</para>
+    /// </summary>
     public void SetGoldInter()
     {
         interpolingCoins = true;
     }
 
+    /// <summary>
+    /// <para>Sets if we are interpolating score on the UI</para>
+    /// </summary>
     public void SetScoreInter()
     {
         interpolingPoints = true;
     }
 
+    /// <summary>
+    /// <para>Called by the UI to exit the game</para>
+    /// </summary>
     public void ExitGame()
     {
         Application.Quit();
     }
 
+    /// <summary>
+    /// <para>Called by the UI to exit to menu</para>
+    /// </summary>
     public void LoadMenu()
     {
         SceneManager.LoadScene("menu");
     }
+
     void Start()
     {
         //TESTING DATA. REMOVE LATER
