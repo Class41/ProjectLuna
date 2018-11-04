@@ -109,7 +109,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goal: {fileID: 0}
   _parent: {fileID: 0}
+  _selfRigid: {fileID: 0}
   _goalAnim: {fileID: 0}
+  _selfAnim: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
 --- !u!114 &114246006160470526
