@@ -4803,7 +4803,7 @@ MonoBehaviour:
   _spinnywheel: {fileID: 1441307068}
   _pauseMenu: {fileID: 1822359901}
   enemies_infantry:
-  - {fileID: 5025818770009348485, guid: c1ec340223ac647418efa4546c11a222, type: 3}
+  - {fileID: 789933633305070407, guid: dc23e5f112dbccb40903e244d1125967, type: 3}
   enemies_lieutenants:
   - {fileID: 1735313563335254, guid: 2a6a437313051ef4684d2febcfd85331, type: 3}
   enemies_generals:
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 2048
-  m_UseGeometry: 0
+  m_UseGeometry: 1
   m_DefaultArea: 0
   m_IgnoreNavMeshAgent: 1
   m_IgnoreNavMeshObstacle: 1
