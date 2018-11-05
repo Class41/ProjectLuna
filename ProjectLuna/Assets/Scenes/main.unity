@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.06605516, g: 0.09086836, b: 0.23115131, a: 1}
+  m_IndirectSpecularColor: {r: 0.48695493, g: 0.22642241, b: 4.1754413, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -55,7 +55,7 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 5
+    m_Resolution: 3
     m_BakeResolution: 10
     m_AtlasSize: 2048
     m_AO: 1
@@ -4351,9 +4351,9 @@ MonoBehaviour:
   enemies_infantry:
   - {fileID: 789933633305070407, guid: dc23e5f112dbccb40903e244d1125967, type: 3}
   enemies_lieutenants:
-  - {fileID: 1735313563335254, guid: 2a6a437313051ef4684d2febcfd85331, type: 3}
+  - {fileID: 8994299609659512049, guid: 9b017c48e52c296458dfdb8c7d7f4f40, type: 3}
   enemies_generals:
-  - {fileID: 1374244124111418463, guid: 6b129d31cfb092c46bc48b8020b2f73a, type: 3}
+  - {fileID: 8994299609659512049, guid: 9b017c48e52c296458dfdb8c7d7f4f40, type: 3}
   _spawnchanceInfantry: 1
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0
@@ -4368,6 +4368,8 @@ MonoBehaviour:
   - {fileID: 2091906629}
   - {fileID: 628952569}
   waveEntityList: []
+  puzzlePositions: []
+  puzzleEntityList: []
   endingCoin: 0
   endingPoints: 0
   interpolingCoins: 0

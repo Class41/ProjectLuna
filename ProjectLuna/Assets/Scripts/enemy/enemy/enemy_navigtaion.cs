@@ -29,7 +29,7 @@ public class enemy_navigtaion : MonoBehaviour
     {
         _goal = GameObject.Find("player_01").transform;
         _goalAnim = GameObject.Find("player_01").GetComponent<Animator>();
-        //_selfAnim = gameObject.GetComponent<Animator>();
+        _selfAnim = gameObject.GetComponent<Animator>();
         _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
         _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
         _selfStatus = gameObject.GetComponent<enemy_stats_base>();
@@ -39,8 +39,8 @@ public class enemy_navigtaion : MonoBehaviour
 
     private void Update()
     {
-      //  bool walking = (true) ? true : false;
-      //  _selfAnim.SetBool("Moving", walking);
+      bool walking = (_agent.velocity.magnitude > .5) ? true : false;
+      _selfAnim.SetBool("Moving", walking);
     }
 
     private void FixedUpdate()
