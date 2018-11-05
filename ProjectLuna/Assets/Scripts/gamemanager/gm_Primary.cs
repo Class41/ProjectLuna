@@ -66,6 +66,10 @@ public class gm_Primary : MonoBehaviour
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
 
+    [Header("Puzzle Pieces")]
+    public List<Transform> puzzlePositions = new List<Transform>();
+    public List<GameObject> puzzleEntityList = new List<GameObject>();
+
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     /// <summary>
     /// <para>Calculates enemy spawn chances based on their tier</para>

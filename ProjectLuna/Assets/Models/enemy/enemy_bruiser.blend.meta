@@ -70,11 +70,14 @@ ModelImporter:
     2100004: Material_004
     2100006: Material_003
     2100008: Material_002
+    2100010: Material_006
+    2100012: Material_005
     4300000: Cube
     7400000: Default Take
     7400002: RUN
     7400004: SWING
     7400006: Walk
+    7400008: IDLE
     9500000: //RootNode
     13700000: Cube
   externalObjects: {}
