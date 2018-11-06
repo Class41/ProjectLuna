@@ -6,9 +6,11 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: Material_007
+    2100002: Material_008
     2300000: //RootNode
     3300000: //RootNode
     4300000: Grid
+    4300002: Grid_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
