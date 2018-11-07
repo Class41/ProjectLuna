@@ -1,46 +1,54 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Player health and damage handler
+ *  
+ */
+
 using UnityEngine;
 
 public class player_health : MonoBehaviour
 {
 
-    public float health,
-                 max_health,
-                 armor;
+    public float _health,
+                 _max_health,
+                 _armor;
 
     // Use this for initialization
     void Start()
     {
-        max_health = health;
+        _max_health = _health;
     }
 
-    private void health_takeDamage(float amount)
+    /// <summary>
+    /// <para>Call when player needs to take damage (raw)</para>
+    /// </summary>
+    /// <param name="amount"></param>
+    private void HealthTakeDamage(float amount)
     {
-        health -= (amount * (1 - (armor / 100.0f)));
+        _health -= (amount * (1 - (_armor / 100.0f)));
+
+        if (_health <= 0)
+        {
+            //Todo: functionality for player death etc
+        }
     }
 
-    private void health_heal(float amount)
+    /// <summary>
+    /// <para>Call when player needs to heal</para>
+    /// </summary>
+    /// <param name="amount"></param>
+    private void HealthHeal(float amount)
     {
-        health += amount;
+        _health += amount;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         //TODO: Replace with actual useful damage stuff
-        if(collision.gameObject.name.Contains("enemy"))
+        if (collision.gameObject.CompareTag("enemy"))
         {
-            health_takeDamage(150);
-        }
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(health <= 0)
-        {
-            //Todo: functionality for player death etc
+            HealthTakeDamage(150);
         }
     }
 }

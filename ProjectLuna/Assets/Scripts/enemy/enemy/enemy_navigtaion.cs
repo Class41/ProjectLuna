@@ -1,50 +1,63 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls enemy movement and movement logic
+ *  
+ */
+
 using UnityEngine;
 using UnityEngine.AI;
 
 public class enemy_navigtaion : MonoBehaviour
 {
 
-    public Transform _goal;
-    public Transform _parent;
+    public Transform _goalTransform,
+                     _parentTransform,
+                     _selfTransform;
+
+    public Animator _goalAnim;
+    public Animator _selfAnim;
+
     NavMeshAgent _agent;
-    public float _stopRadius = 1.0f,
-                 _entityDeathTime = .25f;
+    private float _stopRadius = 3.0f,
+                  _entityDeathTime = .25f;
 
-    bool enemyDeathCalled = false;
-
-    public GameObject ui;
-    public gm_Primary gm;
+    public GameObject _ui;
+    public gm_Primary _gm;
+    enemy_stats_base _selfStatus;
 
     void Start()
     {
-        _goal = GameObject.Find("player_01").transform;
-        _parent = GameObject.FindGameObjectWithTag("epandprefab").transform;
-        gm = GameObject.Find("GameManager").GetComponent <gm_Primary>();
-        this.transform.parent = _parent;
+        _goalTransform = GameObject.Find("player_01").transform;
+        _selfTransform = gameObject.GetComponent<Transform>();
+        _goalAnim = GameObject.Find("player_01").GetComponent<Animator>();
+        _selfAnim = gameObject.GetComponent<Animator>();
+        _parentTransform = GameObject.FindGameObjectWithTag("epandprefab").transform;
+        _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
+        _selfStatus = gameObject.GetComponent<enemy_stats_base>();
+        this.transform.parent = _parentTransform;
         _agent = GetComponent<NavMeshAgent>();
-        _agent.destination = _goal.position;
     }
 
     private void Update()
     {
-        //THIS IS WHERE I HAVE THE DESTRUCTION HAPPEN. CHANGE THIS WHEN WE ACTUALLY HAVE ANIMATIONS INSTALLED
-        if (Vector3.Distance(_goal.position, this.gameObject.transform.position) < _stopRadius)
+      bool walking = (_agent.velocity.magnitude > .5) ? true : false;
+      _selfAnim.SetBool("Moving", walking);
+
+        if (!walking)
+            _selfTransform.LookAt(_goalTransform);
+    }
+
+    private void FixedUpdate()
+    {
+        if (_selfStatus._health <= 0)
         {
             Destroy(gameObject.GetComponent<Rigidbody>());
             Destroy(gameObject.GetComponent<CapsuleCollider>());
-
-            if (!enemyDeathCalled)
-            {
-                gm.EnemyDeath(50, 50);
-                enemyDeathCalled = true;
-            }
-            Destroy(gameObject, .25f);
         }
-        else
+        else if(_goalAnim.GetBool("movekeydown"))
         {
-            _agent.destination = _goal.position;
+            _agent.destination = _goalTransform.position;
         }
     }
 }

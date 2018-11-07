@@ -1,5 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls line from UI to large enemy
+ *  
+ */
+
 using UnityEngine;
 
 public class UI_enemyline : MonoBehaviour
@@ -14,7 +19,8 @@ public class UI_enemyline : MonoBehaviour
     {
         _line = gameObject.GetComponent<LineRenderer>();
     }
-    // Update is called once per frame
+    
+    //draw line between enemy and the UI it is associated with
     void LateUpdate()
     {
         if (_parentObject != null)

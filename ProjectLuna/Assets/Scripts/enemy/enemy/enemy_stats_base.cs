@@ -1,5 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Enemy stats base class
+ *  
+ */
+
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,36 +17,55 @@ public enum MobType
 public class enemy_stats_base : MonoBehaviour
 {
 
-    public float health,
-                 maxHealth,
-                 armor,
-                 speed;
+    public float _health,
+                 _maxHealth,
+                 _armor,
+                 _speed;
 
-    public GameObject ui;
+   public int _scoreOnDeath,
+              _goldOnDeath;
 
-    public MobType mobtype;
+    public GameObject _ui;
+    public gm_Primary _gm;
 
-    private void health_takeDamage(float amount)
+    public MobType _mobtype;
+    
+    /// <summary>
+    /// <para>Called to kill the entity</para>
+    /// </summary>
+    public void EnemyDie()
     {
-        health -= amount * (1 - ((armor / 100) * .5f));
+        _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
+        Destroy(gameObject, .25f);
     }
 
-    private void health_heal(float amount)
+    /// <summary>
+    /// <para>Called to make entity take damage</para>
+    /// </summary>
+    /// <param name="amount">how much damage to take (raw)</param>
+    public void HealthTakeDamage(float amount)
     {
-        health += amount;
+        _health -= amount * (1 - ((_armor / 100) * .5f));
+
+        if (_health <= 0)
+        {
+            EnemyDie();
+        }
+    }
+
+    /// <summary>
+    /// <para>Called to heal entity</para>
+    /// </summary>
+    /// <param name="amount"></param>
+    public void HealthHeal(float amount)
+    {
+        _health += amount;
     }
 
     private void Start()
     {
-        maxHealth = health;
-        gameObject.GetComponent<NavMeshAgent>().speed = speed;
-    }
-
-    private void Update()
-    {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        _maxHealth = _health;
+        gameObject.GetComponent<NavMeshAgent>().speed = _speed;
+        _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
     }
 }

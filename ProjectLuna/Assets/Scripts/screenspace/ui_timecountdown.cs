@@ -1,26 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: Controls UI timer fill
+ *  
+ */
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ui_timecountdown : MonoBehaviour
 {
 
-    public Image time;
-    public gm_Primary gm;
-    public float interspeed;
-    // Use this for initialization
+    public Image _time;
+    public gm_Primary _gm;
+    public float _interspeed;
+
     void Start()
     {
-        time = gameObject.GetComponent<Image>();
+        _time = gameObject.GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnGUI()
     {
-        float currentValue = time.fillAmount;
-        float desiredValue = (gm._waveTimeNext / gm.timeAtStartOfwave);
+        float currentValue = _time.fillAmount;
+        float desiredValue = (_gm._waveTimeNext / _gm._timeAtStartOfwave);
 
-        time.fillAmount = Mathf.Lerp(currentValue, desiredValue, interspeed);
+        _time.fillAmount = Mathf.Lerp(currentValue, desiredValue, _interspeed);
     }
 }

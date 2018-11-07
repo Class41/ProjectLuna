@@ -1,0 +1,13 @@
+{
+    "description": "Core library for Unity render pipelines.", 
+    "displayName": "Render Pipeline Core Library", 
+    "gitHead": "05bab717e944778fea634704d138d299534656b6", 
+    "name": "com.unity.render-pipelines.core", 
+    "repoPackagePath": "com.unity.render-pipelines.core", 
+    "repository": {
+        "type": "git", 
+        "url": "ssh://git@github.com/Unity-Technologies/ScriptableRenderLoop.git"
+    }, 
+    "unity": "2018.3", 
+    "version": "3.3.0-preview"
+}
