@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.373817, g: 0.17438607, b: 3.1218967, a: 1}
+  m_IndirectSpecularColor: {r: 0.2992445, g: 0.13967659, b: 2.4345815, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -56,7 +56,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 3
-    m_BakeResolution: 2
+    m_BakeResolution: 5
     m_AtlasSize: 2048
     m_AO: 1
     m_AOMaxDistance: 0.45
@@ -3702,7 +3702,7 @@ MeshCollider:
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: bacbfafb17ccf584b9404db524628c74, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 8ad562664b1d25f4786087cf80f205d5, type: 3}
 --- !u!4 &1078092800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 321c18d087dd5024f9ed892a10b7f26c, type: 3}
