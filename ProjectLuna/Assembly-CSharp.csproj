@@ -111,6 +111,7 @@
     <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Spinsky.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Surround.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
     <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />

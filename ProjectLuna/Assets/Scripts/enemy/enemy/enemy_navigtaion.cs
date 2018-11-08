@@ -13,6 +13,7 @@ public class enemy_navigtaion : MonoBehaviour
 
     public Transform _goalTransform,
                      _parentTransform,
+                     _subGoalTransform,
                      _selfTransform;
 
     public Animator _goalAnim;
@@ -22,6 +23,8 @@ public class enemy_navigtaion : MonoBehaviour
     private float _stopRadius = 3.0f,
                   _entityDeathTime = .25f;
 
+    gm_Surround _moveLogic;
+
     public GameObject _ui;
     public gm_Primary _gm;
     enemy_stats_base _selfStatus;
@@ -29,6 +32,8 @@ public class enemy_navigtaion : MonoBehaviour
     void Start()
     {
         _goalTransform = GameObject.Find("player_01").transform;
+        _moveLogic = GameObject.Find("GameManager").GetComponent<gm_Surround>();
+        _subGoalTransform = _moveLogic.RequestAIDestination();
         _selfTransform = gameObject.GetComponent<Transform>();
         _goalAnim = GameObject.Find("player_01").GetComponent<Animator>();
         _selfAnim = gameObject.GetComponent<Animator>();
@@ -57,7 +62,7 @@ public class enemy_navigtaion : MonoBehaviour
         }
         else if(_goalAnim.GetBool("movekeydown"))
         {
-            _agent.destination = _goalTransform.position;
+            _agent.destination = _subGoalTransform.position;
         }
     }
 }
