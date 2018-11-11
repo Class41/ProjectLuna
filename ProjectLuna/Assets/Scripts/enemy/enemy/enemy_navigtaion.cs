@@ -19,7 +19,7 @@ public class enemy_navigtaion : MonoBehaviour
     public Animator _goalAnim;
     public Animator _selfAnim;
 
-    NavMeshAgent _agent;
+    public NavMeshAgent _agent;
     private float _stopRadius = 3.0f,
                   _entityDeathTime = .25f;
 

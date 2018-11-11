@@ -1,5 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &5191173011909166366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 8226fc8715bd4a0479c62a53f01759d9, type: 3}
+  m_PrefabInstance: {fileID: 5191173011909566366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502745219547539072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,11 +1012,6 @@ Transform:
   m_Father: {fileID: 502745219548035730}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &5191173011909166366 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 8226fc8715bd4a0479c62a53f01759d9, type: 3}
-  m_PrefabInstance: {fileID: 5191173011909566366}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8994299609659512049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1026,7 @@ GameObject:
   - component: {fileID: 8994299609659512015}
   - component: {fileID: 8994299609659512012}
   - component: {fileID: 7348811617031762242}
+  - component: {fileID: 3621609787180719804}
   m_Layer: 0
   m_Name: enemy_bruiser
   m_TagString: enemy
@@ -1146,6 +1147,18 @@ CapsuleCollider:
   m_Height: 24
   m_Direction: 1
   m_Center: {x: 0, y: 13.3, z: 0}
+--- !u!114 &3621609787180719804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8994299609659512049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7035072a87c83a44aff954245d57eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5191173011909566366
 PrefabInstance:
   m_ObjectHideFlags: 0
