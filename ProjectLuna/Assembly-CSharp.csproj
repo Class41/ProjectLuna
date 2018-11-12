@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant_trailcontrol.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Spinsky.cs" />
