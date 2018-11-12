@@ -12,7 +12,7 @@ public class enemy_knockback : MonoBehaviour
     private bool _knockedback;
     private Transform _self;
     private Vector3 _destination;
-    private float _time = .6f;
+    private float _time = .3f;
     private float _endTime;
 
     private void Start()

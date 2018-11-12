@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 70
+  controlID: 117
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -437,19 +437,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/enemy/enemy/enemy_types/lietenant
+    - Assets/Prefabs/enemies
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/enemy/enemy/enemy_types/lietenant
+  - Assets/Prefabs/enemies
   m_LastFoldersGridSize: -1
   m_LastProjectPath: X:\_Unity\SCHOOL\CS_GDEV_GROUP\ProjectLuna\ProjectLuna
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 348}
-    m_SelectedIDs: 54320000
-    m_LastClickedID: 12884
+    scrollPos: {x: 0, y: 360}
+    m_SelectedIDs: b62c0000
+    m_LastClickedID: 11446
     m_ExpandedIDs: 00000000a62c0000bc2c0000f42d0000b22e0000662f0000f42f00008a300000ac300000bc310000003200001e3200007c320000bc320000083300001834000080340000be340000d83400000e3600009c4000009e400000a0400000a240000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
-  m_DirectoriesAreaWidth: 115
+  m_DirectoriesAreaWidth: 209
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52

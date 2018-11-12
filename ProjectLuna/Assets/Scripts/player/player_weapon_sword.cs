@@ -48,7 +48,7 @@ public class player_weapon_sword : MonoBehaviour
             enemy_stats_base enemyStats = other.GetComponent<enemy_stats_base>();
 
             enemyStats.HealthTakeDamage(750.0f);
-            other.GetComponent<enemy_knockback>().KnockbackThis(other.GetComponent<Transform>().position + gameObject.GetComponent<Transform>().forward * 20);
+            other.GetComponent<enemy_knockback>().KnockbackThis(other.GetComponent<Transform>().position + gameObject.GetComponent<Transform>().forward * 55);
         }
     }
 }

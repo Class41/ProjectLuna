@@ -187,7 +187,21 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.41076487
+        functionName: SetTrailEnabled
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: d9b67e06d710adf47a2b3ff8dd95072c, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.61473083
+        functionName: SetTrailDisabled
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
