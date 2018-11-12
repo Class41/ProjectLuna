@@ -1,5 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4963611308410800206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
+  m_PrefabInstance: {fileID: 4963611308411196110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789933632149083007
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +454,7 @@ GameObject:
   - component: {fileID: 789933633305070411}
   - component: {fileID: 789933633305070410}
   - component: {fileID: 789933633305070413}
+  - component: {fileID: 2115009489949182943}
   m_Layer: 0
   m_Name: anim_enemy_grunt
   m_TagString: enemy
@@ -521,7 +527,7 @@ MonoBehaviour:
   _health: 500
   _maxHealth: 500
   _armor: 20
-  _speed: 3.5
+  _speed: 7
   _scoreOnDeath: 50
   _goldOnDeath: 10
   _ui: {fileID: 0}
@@ -537,11 +543,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 5.5
-  m_Speed: 7
+  m_Speed: 8.5
   m_Acceleration: 20
-  avoidancePriority: 50
+  avoidancePriority: 25
   m_AngularSpeed: 120
-  m_StoppingDistance: 4
+  m_StoppingDistance: 1.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 0
@@ -563,11 +569,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goalTransform: {fileID: 0}
   _parentTransform: {fileID: 0}
+  _subGoalTransform: {fileID: 0}
   _selfTransform: {fileID: 0}
   _goalAnim: {fileID: 0}
   _selfAnim: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+--- !u!114 &2115009489949182943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789933633305070407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7035072a87c83a44aff954245d57eea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &789933633327980452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1140,11 +1159,6 @@ Transform:
   m_Father: {fileID: 789933633670318331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4963611308410800206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
-  m_PrefabInstance: {fileID: 4963611308411196110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4963611308411196110
 PrefabInstance:
   m_ObjectHideFlags: 0

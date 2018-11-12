@@ -103,14 +103,17 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\camera\cam_follow_smooth.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_knockback.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_navigtaion.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_stats_base.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant_trailcontrol.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Spinsky.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Surround.cs" />
     <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
     <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />
