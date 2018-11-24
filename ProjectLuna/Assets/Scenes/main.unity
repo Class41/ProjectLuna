@@ -4873,7 +4873,7 @@ MonoBehaviour:
   enemies_lieutenants:
   - {fileID: 8994299609659512049, guid: 9b017c48e52c296458dfdb8c7d7f4f40, type: 3}
   enemies_generals:
-  - {fileID: 8994299609659512049, guid: 9b017c48e52c296458dfdb8c7d7f4f40, type: 3}
+  - {fileID: 5516148615661146474, guid: c3da46659ffbd024fbb58431f2699e75, type: 3}
   _spawnchanceInfantry: 1
   _spawnchanceLieutentant: 0
   _spawnchanceGeneral: 0

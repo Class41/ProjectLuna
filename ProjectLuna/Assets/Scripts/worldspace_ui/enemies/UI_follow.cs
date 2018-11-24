@@ -26,7 +26,7 @@ public class UI_follow : MonoBehaviour
     {
         if (_parentObject != null)
         {
-            Vector3 comboPos = _parentObject.position + new Vector3(0, 3, 0);
+            Vector3 comboPos = _parentObject.position + new Vector3(-1, 6, 0);
             Vector3 smoothedPos = Vector3.Lerp(transform.position, comboPos, _smoothSpeed * Time.deltaTime);
             transform.position = smoothedPos;
         }

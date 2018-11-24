@@ -11,6 +11,7 @@ public class enemy_knockback : MonoBehaviour
 {
     private bool _knockedback;
     private Transform _self;
+    private Animator _selfAnim;
     private Vector3 _destination;
     private float _time = .3f;
     private float _endTime;
@@ -18,6 +19,7 @@ public class enemy_knockback : MonoBehaviour
     private void Start()
     {
         _self = gameObject.GetComponent<Transform>();
+        _selfAnim = gameObject.GetComponent<Animator>();
     }
 
     /// <summary>
@@ -28,6 +30,7 @@ public class enemy_knockback : MonoBehaviour
     {
         _destination = pos;
         _knockedback = true;
+        _selfAnim.SetBool("Knockback", true);
         _endTime = Time.timeSinceLevelLoad + _time;
     }
 
@@ -40,6 +43,7 @@ public class enemy_knockback : MonoBehaviour
             if (Time.timeSinceLevelLoad - _endTime  > 0)
             {
                 _knockedback = false;
+                _selfAnim.SetBool("Knockback", false);
             }
         }
     }
