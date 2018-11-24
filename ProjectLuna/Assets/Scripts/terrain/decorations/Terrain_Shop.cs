@@ -1,4 +1,11 @@
-﻿using UnityEngine;
+﻿/*
+ *  # Programmer: Vasyl Onufriyev 
+ *  # Date: 8-20-18
+ *  # Purpose: shop controller for world objects that toggle the shop
+ *  
+ */
+
+using UnityEngine;
 
 public class Terrain_Shop : MonoBehaviour
 {
