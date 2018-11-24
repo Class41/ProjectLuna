@@ -43,7 +43,8 @@ public class gm_Primary : MonoBehaviour
                                _waveText,
                                _waveTimeText;
 
-    public GameObject _uiWavePanel;
+
+    public GameObject _uiWavePanel, _uiShop;
 
     [Header("UI Element References")]
     public Animator _spinnywheel,
@@ -65,10 +66,6 @@ public class gm_Primary : MonoBehaviour
     [Header("Enemy Spawn Positions and Wave Details")]
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
-
-    [Header("Puzzle Pieces")]
-    public List<Transform> puzzlePositions = new List<Transform>();
-    public List<GameObject> puzzleEntityList = new List<GameObject>();
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     /// <summary>
@@ -281,7 +278,7 @@ public class gm_Primary : MonoBehaviour
             _fpsAndPCStats.SetActive(!_fpsAndPCStats.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !_uiShop.activeSelf)
         {
             _pauseMenu.SetBool("menuopened", !_pauseMenu.GetBool("menuopened"));
 
