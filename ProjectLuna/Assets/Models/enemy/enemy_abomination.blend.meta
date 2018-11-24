@@ -69,6 +69,8 @@ ModelImporter:
     2100002: Material_008
     2100004: Material_007
     2100006: Material_001
+    2100008: Material_004
+    2100010: Material_005
     4300000: Cube
     7400000: Default Take
     7400002: SWING
@@ -77,6 +79,7 @@ ModelImporter:
     7400008: Knockback
     9500000: //RootNode
     13700000: Cube
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
