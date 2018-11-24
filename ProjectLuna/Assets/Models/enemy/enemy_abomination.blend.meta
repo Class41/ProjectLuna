@@ -73,6 +73,8 @@ ModelImporter:
     7400000: Default Take
     7400002: SWING
     7400004: Walk
+    7400006: IDLE
+    7400008: Knockback
     9500000: //RootNode
     13700000: Cube
   externalObjects: {}
