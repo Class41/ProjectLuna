@@ -1,10 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &4963611308410800206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
-  m_PrefabInstance: {fileID: 4963611308411196110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789933632149083007
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,6 +450,8 @@ GameObject:
   - component: {fileID: 789933633305070410}
   - component: {fileID: 789933633305070413}
   - component: {fileID: 2115009489949182943}
+  - component: {fileID: 5369737382818211589}
+  - component: {fileID: 6166977945049426655}
   m_Layer: 0
   m_Name: anim_enemy_grunt
   m_TagString: enemy
@@ -573,6 +570,7 @@ MonoBehaviour:
   _selfTransform: {fileID: 0}
   _goalAnim: {fileID: 0}
   _selfAnim: {fileID: 0}
+  _agent: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
 --- !u!114 &2115009489949182943
@@ -587,6 +585,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7035072a87c83a44aff954245d57eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5369737382818211589
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789933633305070407}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 13, y: 30, z: 13}
+  m_Center: {x: 0, y: 11, z: 15}
+--- !u!114 &6166977945049426655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789933633305070407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 25
 --- !u!1 &789933633327980452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1183,11 @@ Transform:
   m_Father: {fileID: 789933633670318331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4963611308410800206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
+  m_PrefabInstance: {fileID: 4963611308411196110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4963611308411196110
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 5516148615661146477}
   - component: {fileID: 5516148615661146478}
   - component: {fileID: 2246960237236337849}
+  - component: {fileID: 1068232005228138756}
+  - component: {fileID: 2015173695018117173}
   m_Layer: 0
   m_Name: enemy_abomination
   m_TagString: enemy
@@ -148,6 +150,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7035072a87c83a44aff954245d57eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1068232005228138756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516148615661146474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 150
+--- !u!65 &2015173695018117173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5516148615661146474}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 30, y: 30, z: 30}
+  m_Center: {x: 0, y: 11, z: 22.2}
 --- !u!1 &6085181805371019424
 GameObject:
   m_ObjectHideFlags: 0

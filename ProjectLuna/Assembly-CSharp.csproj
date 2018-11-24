@@ -105,6 +105,7 @@
     <Compile Include="Assets\Scripts\camera\cam_follow_smooth.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_knockback.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_navigtaion.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_playerdamage.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_stats_base.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
