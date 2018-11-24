@@ -61,6 +61,7 @@ public class ui_shoplogic : MonoBehaviour
     {
         PlayerPrefs.SetInt("gold", PlayerPrefs.GetInt("gold") - (int)(_playerStats._maxHealth - _playerStats._health));
         _playerStats._health = _playerStats._maxHealth;
+        DoShopChecks();
     }
 
 }
