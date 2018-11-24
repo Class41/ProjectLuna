@@ -127,6 +127,7 @@
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_enemyline.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_namegen.cs" />
     <Compile Include="Assets\Scripts\worldtriggers\trigger_quadrant.cs" />
     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
