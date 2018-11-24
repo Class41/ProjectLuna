@@ -24,7 +24,7 @@ public class player_health : MonoBehaviour
     /// <para>Call when player needs to take damage (raw)</para>
     /// </summary>
     /// <param name="amount"></param>
-    private void HealthTakeDamage(float amount)
+    public void HealthTakeDamage(float amount)
     {
         _health -= (amount * (1 - (_armor / 100.0f)));
 
@@ -38,7 +38,7 @@ public class player_health : MonoBehaviour
     /// <para>Call when player needs to heal</para>
     /// </summary>
     /// <param name="amount"></param>
-    private void HealthHeal(float amount)
+    public void HealthHeal(float amount)
     {
         _health += amount;
     }

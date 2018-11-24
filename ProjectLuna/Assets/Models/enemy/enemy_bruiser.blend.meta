@@ -202,6 +202,20 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.52925533
+        functionName: EnableStrikeCloseCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.5718085
+        functionName: DisableStrikeCloseCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
