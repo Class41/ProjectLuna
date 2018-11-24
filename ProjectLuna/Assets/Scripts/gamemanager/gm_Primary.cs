@@ -18,7 +18,7 @@ public class gm_Primary : MonoBehaviour
 
     [Header("Essential Game Values")]
     public int _gold = 0,
-               _score = 1,
+               _score = 0,
                _wave = 0,
                _waveTimeNext = 0;
 
@@ -242,6 +242,22 @@ public class gm_Primary : MonoBehaviour
 
     void Start()
     {
+
+        if (!PlayerPrefs.HasKey("gold"))
+            PlayerPrefs.SetInt("gold", 0);
+
+        if (!PlayerPrefs.HasKey("score"))
+            PlayerPrefs.SetInt("score", 0);
+
+        if (!PlayerPrefs.HasKey("healthlevel"))
+            PlayerPrefs.SetInt("healthlevel", 0);
+
+        if (!PlayerPrefs.HasKey("armorlevel"))
+            PlayerPrefs.SetInt("armorlevel", 0);
+
+        _gold = PlayerPrefs.GetInt("gold");
+        _score = PlayerPrefs.GetInt("score");
+
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
@@ -269,6 +285,7 @@ public class gm_Primary : MonoBehaviour
             if (_gold >= endingCoin)
             {
                 interpolingCoins = false;
+                PlayerPrefs.SetInt("gold", _gold);
             }
         }
 
@@ -301,6 +318,7 @@ public class gm_Primary : MonoBehaviour
             {
                 interpolingPoints = false;
                 _spinnywheel.SetBool("coinsgained", false);
+                PlayerPrefs.SetInt("score", _score);
             }
         }
 

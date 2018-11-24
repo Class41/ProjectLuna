@@ -4,6 +4,7 @@ public class Terrain_Shop : MonoBehaviour
 {
     public GameObject _shopUI, _shopPrompt;
     public Animator _shopAnim;
+    public ui_shoplogic _shopLogic;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,8 +16,9 @@ public class Terrain_Shop : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "player" && /*GameObject.FindGameObjectsWithTag("enemy").Length == 0 &&*/ Input.GetKey(KeyCode.E))
+        if (other.tag == "player" && GameObject.FindGameObjectsWithTag("enemy").Length == 0 && Input.GetKey(KeyCode.E))
         {
+            _shopLogic.DoShopChecks();
             _shopUI.SetActive(true);
             _shopPrompt.SetActive(false);
             _shopAnim.SetBool("shopActive", true);
@@ -38,7 +40,7 @@ public class Terrain_Shop : MonoBehaviour
     /// <summary>
     /// <para>Disables the on-screen shop</para>
     /// </summary>
-    public void disableShop()
+    public void DisableShop()
     {
         _shopUI.SetActive(false);
     }

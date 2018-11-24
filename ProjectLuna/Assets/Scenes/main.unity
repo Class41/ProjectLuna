@@ -497,7 +497,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 58818755}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1320067702}
+        m_MethodName: UpgradeHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &58818755
 MonoBehaviour:
@@ -2074,6 +2085,7 @@ Transform:
   - {fileID: 787840681}
   - {fileID: 1897027322}
   - {fileID: 1887003542}
+  - {fileID: 1936856237}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3049,7 +3061,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 739362622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1320067702}
+        m_MethodName: RestoreHealth
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &739362622
 MonoBehaviour:
@@ -3787,7 +3810,7 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Sanity - 0/100
@@ -5536,9 +5559,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c536c50bde994a4bad6fd04c33871ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
-  _max_health: 100
-  _armor: 35
+  _health: 0
+  _maxHealth: 0
+  _armor: 0
+  _baseHP: 1000
+  _baseArmor: 30
 --- !u!136 &1275419299
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5715,6 +5740,7 @@ GameObject:
   - component: {fileID: 1320067699}
   - component: {fileID: 1320067700}
   - component: {fileID: 1320067701}
+  - component: {fileID: 1320067702}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5815,7 +5841,7 @@ MonoBehaviour:
   availableEntitiesList:
   - {fileID: 1554552468464184, guid: 6727cc8b7058a0148b8a11bb6f9a0b1e, type: 3}
   _selectedEntity: {fileID: 0}
-  _player: {fileID: 1275419294}
+  _player: {fileID: 1936856236}
   _entContainer: {fileID: 1380598566}
   _currentCamera: {fileID: 1688314902}
   _lastSelectedWorldPoint: {x: 0, y: 0, z: 0}
@@ -5870,6 +5896,28 @@ MonoBehaviour:
   - {fileID: 933767892}
   - {fileID: 912824204}
   - {fileID: 885807122}
+--- !u!114 &1320067702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320067695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8f727c9ec5562f49a8a54c4187a3d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hpUpgradeButton: {fileID: 58818752}
+  _armorUpgradeButton: {fileID: 2145966979}
+  _shopHPText: {fileID: 884918979}
+  _shopArmorText: {fileID: 978555079}
+  _hpUpgradeButtonText: {fileID: 708946239}
+  _armorUpgradeButtonText: {fileID: 742538273}
+  _restoreSanityText: {fileID: 383602612}
+  _hpUpgradeCost: 0
+  _armorUpgradeCost: 0
+  _playerStats: {fileID: 1275419298}
 --- !u!1 &1325165396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8216,6 +8264,36 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.06}
   m_TimeToStationary: 0.5
+--- !u!1 &1936856236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1936856237}
+  m_Layer: 0
+  m_Name: WORLD ANCHOR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1936856237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936856236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9999, y: 9999, z: 9999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 487392364}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1950168450
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,6 +8524,7 @@ MonoBehaviour:
   _shopUI: {fileID: 1675921637}
   _shopPrompt: {fileID: 1630442956}
   _shopAnim: {fileID: 1675921641}
+  _shopLogic: {fileID: 1320067702}
 --- !u!1 &2128749483
 GameObject:
   m_ObjectHideFlags: 0
@@ -8697,7 +8776,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2145966982}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1320067702}
+        m_MethodName: UpgradeArmor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &2145966982
 MonoBehaviour:

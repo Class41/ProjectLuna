@@ -11,13 +11,23 @@ public class player_health : MonoBehaviour
 {
 
     public float _health,
-                 _max_health,
+                 _maxHealth,
                  _armor;
+
+    public float _baseHP,
+                 _baseArmor;
 
     // Use this for initialization
     void Start()
     {
-        _max_health = _health;
+        CalculateStats();
+        _health = _maxHealth;
+    }
+
+    public void CalculateStats()
+    {
+        _maxHealth = PlayerPrefs.GetInt("healthlevel") * 50 + _baseHP;
+        _armor = PlayerPrefs.GetInt("armorlevel") * .5f + _baseArmor;
     }
 
     /// <summary>
