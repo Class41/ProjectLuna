@@ -51,6 +51,8 @@ public class enemy_navigtaion : MonoBehaviour
 
         if (!walking)
             _selfTransform.LookAt(_goalTransform);
+
+        _selfAnim.SetFloat("Toplayer", Vector3.Distance(_selfTransform.position, _subGoalTransform.position));
     }
 
     private void FixedUpdate()
