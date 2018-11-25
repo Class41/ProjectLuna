@@ -237,7 +237,7 @@ ModelImporter:
       name: Death
       takeName: Death
       firstFrame: 0
-      lastFrame: 20
+      lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

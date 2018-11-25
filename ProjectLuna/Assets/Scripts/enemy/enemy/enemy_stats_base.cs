@@ -27,6 +27,9 @@ public class enemy_stats_base : MonoBehaviour
 
     public GameObject _ui;
     public gm_Primary _gm;
+    public Animator _selfAnim;
+    public NavMeshAgent _nav;
+    public CapsuleCollider _selfCollider;
 
     public MobType _mobtype;
     
@@ -35,8 +38,10 @@ public class enemy_stats_base : MonoBehaviour
     /// </summary>
     public void EnemyDie()
     {
+        _nav.isStopped = true;
         _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
-        Destroy(gameObject, .25f);
+        _selfAnim.SetBool("Dead", true);
+        Destroy(gameObject, 1.5f);
     }
 
     /// <summary>
@@ -65,7 +70,9 @@ public class enemy_stats_base : MonoBehaviour
     private void Start()
     {
         _maxHealth = _health;
-        gameObject.GetComponent<NavMeshAgent>().speed = _speed;
+        _selfAnim = gameObject.GetComponent<Animator>();
+        _nav = gameObject.GetComponent<NavMeshAgent>();
+        _nav.speed = _speed;
         _gm = GameObject.Find("GameManager").GetComponent<gm_Primary>();
     }
 }
