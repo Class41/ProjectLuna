@@ -103,6 +103,7 @@
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
     <Compile Include="Assets\Scripts\camera\cam_follow_smooth.cs" />
+    <Compile Include="Assets\Scripts\camera\cam_healthfx.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_knockback.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_navigtaion.cs" />
     <Compile Include="Assets\Scripts\enemy\enemy\enemy_playerdamage.cs" />
