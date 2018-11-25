@@ -11,7 +11,8 @@ using UnityEngine.UI;
 public class ui_shoplogic : MonoBehaviour
 {
     public GameObject _hpUpgradeButton,
-                      _armorUpgradeButton;
+                      _armorUpgradeButton,
+                      _restoreSanityButton;
 
     public Text _shopHPText, 
                 _shopArmorText;
@@ -25,6 +26,8 @@ public class ui_shoplogic : MonoBehaviour
                _armorUpgradeCost;
 
     public player_health _playerStats;
+
+    public Animator _deathScreenAnimator;
 
     public void DoShopChecks()
     {
@@ -46,6 +49,9 @@ public class ui_shoplogic : MonoBehaviour
         _hpUpgradeButtonText.text = string.Format("Upgrade: {0} coins", _hpUpgradeCost);
         _armorUpgradeButtonText.text = string.Format("Upgrade: {0} coins", _armorUpgradeCost);
         _restoreSanityText.text = string.Format("Restore Sanity\n{0} coins", _playerStats._maxHealth - _playerStats._health);
+
+        if (_deathScreenAnimator.GetBool("Dead"))
+            _restoreSanityButton.SetActive(false);
     }
 
     public void UpgradeArmor()

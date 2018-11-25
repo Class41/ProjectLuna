@@ -5889,6 +5889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _hpUpgradeButton: {fileID: 58818752}
   _armorUpgradeButton: {fileID: 2145966979}
+  _restoreSanityButton: {fileID: 739362619}
   _shopHPText: {fileID: 884918979}
   _shopArmorText: {fileID: 978555079}
   _hpUpgradeButtonText: {fileID: 708946239}
@@ -5897,6 +5898,7 @@ MonoBehaviour:
   _hpUpgradeCost: 0
   _armorUpgradeCost: 0
   _playerStats: {fileID: 1275419298}
+  _deathScreenAnimator: {fileID: 759270908}
 --- !u!114 &1320067703
 MonoBehaviour:
   m_ObjectHideFlags: 0
