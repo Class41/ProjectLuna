@@ -18,7 +18,7 @@ public class gm_Primary : MonoBehaviour
 
     [Header("Essential Game Values")]
     public int _gold = 0,
-               _score = 1,
+               _score = 0,
                _wave = 0,
                _waveTimeNext = 0;
 
@@ -43,7 +43,8 @@ public class gm_Primary : MonoBehaviour
                                _waveText,
                                _waveTimeText;
 
-    public GameObject _uiWavePanel;
+
+    public GameObject _uiWavePanel, _uiShop;
 
     [Header("UI Element References")]
     public Animator _spinnywheel,
@@ -65,10 +66,6 @@ public class gm_Primary : MonoBehaviour
     [Header("Enemy Spawn Positions and Wave Details")]
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
-
-    [Header("Puzzle Pieces")]
-    public List<Transform> puzzlePositions = new List<Transform>();
-    public List<GameObject> puzzleEntityList = new List<GameObject>();
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     /// <summary>
@@ -186,13 +183,13 @@ public class gm_Primary : MonoBehaviour
         SpawnEnemyWave((int)_calculatedEnemySpawns);
     }
 
-    public int endingCoin,
-               endingPoints;
+    public int _endingCoin,
+               _endingPoints;
 
-    public bool interpolingCoins = false,
-                interpolingPoints = false;
-    public float goldIntertime,
-                 scoreIntertime;
+    public bool _interpolingCoins = false,
+                _interpolingPoints = false;
+    public float _goldIntertime,
+                 _scoreIntertime;
 
     /// <summary>
     /// <para>Called by dying entities to give player gold and score</para>
@@ -202,12 +199,12 @@ public class gm_Primary : MonoBehaviour
     public void EnemyDeath(int value_coins, int value_points)
     {
         _enemyLastKillTime = Time.timeSinceLevelLoad;
-        endingCoin += value_coins;
-        endingPoints += value_points;
+        _endingCoin += value_coins;
+        _endingPoints += value_points;
         _spinnywheel.SetBool("coinsgained", true);
 
-        Invoke("SetGoldInter", goldIntertime);
-        Invoke("SetScoreInter", scoreIntertime);
+        Invoke("SetGoldInter", _goldIntertime);
+        Invoke("SetScoreInter", _scoreIntertime);
 
     }
 
@@ -216,7 +213,7 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void SetGoldInter()
     {
-        interpolingCoins = true;
+        _interpolingCoins = true;
     }
 
     /// <summary>
@@ -224,7 +221,7 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void SetScoreInter()
     {
-        interpolingPoints = true;
+        _interpolingPoints = true;
     }
 
     /// <summary>
@@ -245,6 +242,25 @@ public class gm_Primary : MonoBehaviour
 
     void Start()
     {
+
+        if (!PlayerPrefs.HasKey("gold"))
+            PlayerPrefs.SetInt("gold", 0);
+
+        if (!PlayerPrefs.HasKey("score"))
+            PlayerPrefs.SetInt("score", 0);
+
+        if (!PlayerPrefs.HasKey("healthlevel"))
+            PlayerPrefs.SetInt("healthlevel", 0);
+
+        if (!PlayerPrefs.HasKey("armorlevel"))
+            PlayerPrefs.SetInt("armorlevel", 0);
+
+        _gold = PlayerPrefs.GetInt("gold");
+        _score = PlayerPrefs.GetInt("score");
+        _endingCoin = _gold;
+        _endingPoints = _score;
+        
+
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
@@ -265,13 +281,14 @@ public class gm_Primary : MonoBehaviour
         AnimatorClipInfo[] m_CurrentClipInfo;
         m_CurrentClipInfo = _spinnywheel.GetCurrentAnimatorClipInfo(0);
 
-        if (interpolingCoins && m_CurrentClipInfo[0].clip.name == "idlewithgold")
+        if (_interpolingCoins && m_CurrentClipInfo[0].clip.name == "idlewithgold")
         {
             _gold++;
 
-            if (_gold >= endingCoin)
+            if (_gold >= _endingCoin)
             {
-                interpolingCoins = false;
+                _interpolingCoins = false;
+                PlayerPrefs.SetInt("gold", _gold);
             }
         }
 
@@ -281,7 +298,7 @@ public class gm_Primary : MonoBehaviour
             _fpsAndPCStats.SetActive(!_fpsAndPCStats.activeSelf);
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !_uiShop.activeSelf)
         {
             _pauseMenu.SetBool("menuopened", !_pauseMenu.GetBool("menuopened"));
 
@@ -295,15 +312,16 @@ public class gm_Primary : MonoBehaviour
             }
         }
 
-        if (interpolingPoints && m_CurrentClipInfo[0].clip.name == "idlewithscore")
+        if (_interpolingPoints && m_CurrentClipInfo[0].clip.name == "idlewithscore")
         {
             _score++;
-            _spinnywheel.SetInteger("scorecountremaining", endingPoints - _score);
+            _spinnywheel.SetInteger("scorecountremaining", _endingPoints - _score);
 
-            if (_score >= endingPoints)
+            if (_score >= _endingPoints)
             {
-                interpolingPoints = false;
+                _interpolingPoints = false;
                 _spinnywheel.SetBool("coinsgained", false);
+                PlayerPrefs.SetInt("score", _score);
             }
         }
 

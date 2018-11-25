@@ -71,10 +71,11 @@ ModelImporter:
     2100006: Material_003
     2100008: Material_002
     4300000: Cube
-    7400000: Default Take
+    7400000: Death
     7400002: IDLE
     7400004: RUN
     7400006: SWING
+    7400008: DEATH
     9500000: //RootNode
     13700000: Cube
   externalObjects: {}
@@ -109,7 +110,7 @@ ModelImporter:
       name: IDLE
       takeName: IDLE
       firstFrame: 0
-      lastFrame: 17
+      lastFrame: 37
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -215,6 +216,41 @@ ModelImporter:
         messageOptions: 0
       - time: 0.18351063
         functionName: ToggleShortCollider
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: f7178d9374323c544baf496dba678e55, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: DEATH
+      takeName: DEATH
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.9273799
+        functionName: GameOver
         data: 
         objectReferenceParameter: {fileID: 11500000, guid: f7178d9374323c544baf496dba678e55, type: 3}
         floatParameter: 0
