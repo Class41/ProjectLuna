@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.20642504, g: 0.09613711, b: 1.6556008, a: 1}
+  m_IndirectSpecularColor: {r: 0.4680171, g: 0.2174504, b: 4.0023913, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -56,7 +56,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 3
-    m_BakeResolution: 5
+    m_BakeResolution: 20
     m_AtlasSize: 2048
     m_AO: 1
     m_AOMaxDistance: 0.45
@@ -8522,7 +8522,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2093197722
 Transform:
