@@ -10,7 +10,7 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
     public float _forcemod, _attackAvailable, _attackCD;
-    public Animator _anim;
+    public Animator _anim, _deathUI;
 
     public Material _barrierMat;
     public float _barrierVisibility = 0,
@@ -44,6 +44,12 @@ public class player_movement : MonoBehaviour
         }
     }
 
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        _deathUI.SetBool("Dead", true);
+    }
+
     private void Start()
     {
         _plyRigidbody = gameObject.GetComponent<Rigidbody>();
@@ -69,39 +75,41 @@ public class player_movement : MonoBehaviour
         }
 
         _anim.SetBool("movekeydown", false);
-
-        if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !_attacking)
+        if (!_anim.GetBool("Dead"))
         {
-            _plyRigidbody.AddForce(Vector3.forward * _forcemod * Time.deltaTime * 100, ForceMode.Force);
-            if (_plyRigidbody.velocity.magnitude > 1)
-                _anim.SetBool("movekeydown", true);
-        }
+            if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !_attacking)
+            {
+                _plyRigidbody.AddForce(Vector3.forward * _forcemod * Time.deltaTime * 100, ForceMode.Force);
+                if (_plyRigidbody.velocity.magnitude > 1)
+                    _anim.SetBool("movekeydown", true);
+            }
 
-        if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W) && !_attacking)
-        {
-            _plyRigidbody.AddForce(Vector3.back * _forcemod * Time.deltaTime * 100, ForceMode.Force);
-            if (_plyRigidbody.velocity.magnitude > 1)
-                _anim.SetBool("movekeydown", true);
-        }
+            if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W) && !_attacking)
+            {
+                _plyRigidbody.AddForce(Vector3.back * _forcemod * Time.deltaTime * 100, ForceMode.Force);
+                if (_plyRigidbody.velocity.magnitude > 1)
+                    _anim.SetBool("movekeydown", true);
+            }
 
-        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !_attacking)
-        {
-            _plyRigidbody.AddForce(Vector3.left * _forcemod * Time.deltaTime * 100, ForceMode.Force);
-            if (_plyRigidbody.velocity.magnitude > 1)
-                _anim.SetBool("movekeydown", true);
-        }
+            if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !_attacking)
+            {
+                _plyRigidbody.AddForce(Vector3.left * _forcemod * Time.deltaTime * 100, ForceMode.Force);
+                if (_plyRigidbody.velocity.magnitude > 1)
+                    _anim.SetBool("movekeydown", true);
+            }
 
-        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !_attacking)
-        {
-            _plyRigidbody.AddForce(Vector3.right * _forcemod * Time.deltaTime * 100, ForceMode.Force);
-            if (_plyRigidbody.velocity.magnitude > 1)
-                _anim.SetBool("movekeydown", true);
-        }
+            if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !_attacking)
+            {
+                _plyRigidbody.AddForce(Vector3.right * _forcemod * Time.deltaTime * 100, ForceMode.Force);
+                if (_plyRigidbody.velocity.magnitude > 1)
+                    _anim.SetBool("movekeydown", true);
+            }
 
-        if (Input.GetKey(KeyCode.Space) && !_attacking && !_anim.GetBool("attackdown") && (_attackAvailable - Time.timeSinceLevelLoad) <= 0)
-        {
-            _anim.SetBool("attackdown", true);
-            _attacking = true;
+            if (Input.GetKey(KeyCode.Space) && !_attacking && !_anim.GetBool("attackdown") && (_attackAvailable - Time.timeSinceLevelLoad) <= 0)
+            {
+                _anim.SetBool("attackdown", true);
+                _attacking = true;
+            }
         }
 
         if (_plyRigidbody.velocity.magnitude > 1)

@@ -12,6 +12,7 @@ public class Terrain_Shop : MonoBehaviour
     public GameObject _shopUI, _shopPrompt;
     public Animator _shopAnim;
     public ui_shoplogic _shopLogic;
+    public Animator _deadAnim;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -25,12 +26,17 @@ public class Terrain_Shop : MonoBehaviour
     {
         if (other.tag == "player" && GameObject.FindGameObjectsWithTag("enemy").Length == 0 && Input.GetKey(KeyCode.E))
         {
-            _shopLogic.DoShopChecks();
-            _shopUI.SetActive(true);
-            _shopPrompt.SetActive(false);
-            _shopAnim.SetBool("shopActive", true);
-            Time.timeScale = 0;
+            ShowShop();
         }
+    }
+
+    public void ShowShop()
+    {
+        _shopLogic.DoShopChecks();
+        _shopUI.SetActive(true);
+        _shopPrompt.SetActive(false);
+        _shopAnim.SetBool("shopActive", true);
+        Time.timeScale = 0;
     }
 
     /// <summary>
@@ -39,7 +45,8 @@ public class Terrain_Shop : MonoBehaviour
     public void CloseShop()
     {
         _shopAnim.SetBool("shopActive", false);
-        _shopPrompt.SetActive(true);
+        if(!_deadAnim.GetBool("Dead"))
+            _shopPrompt.SetActive(true);
         Invoke("DisableShop", 1);
         Time.timeScale = 1;
     }

@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class player_health : MonoBehaviour
 {
+    public Animator _selfAnim;
 
     public float _health,
                  _maxHealth,
@@ -22,12 +23,13 @@ public class player_health : MonoBehaviour
     {
         CalculateStats();
         _health = _maxHealth;
+        _selfAnim = gameObject.GetComponent<Animator>();
     }
 
     public void CalculateStats()
     {
-        _maxHealth = PlayerPrefs.GetInt("healthlevel") * 50 + _baseHP;
-        _armor = PlayerPrefs.GetInt("armorlevel") * .5f + _baseArmor;
+        _maxHealth = PlayerPrefs.GetInt("healthlevel") * 25 + _baseHP;
+        _armor = PlayerPrefs.GetInt("armorlevel") * .375f + _baseArmor;
     }
 
     /// <summary>
@@ -40,7 +42,8 @@ public class player_health : MonoBehaviour
 
         if (_health <= 0)
         {
-            //Todo: functionality for player death etc
+            _selfAnim.SetBool("Dead", true);
+            Time.timeScale = .2f;
         }
     }
 
