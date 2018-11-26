@@ -1,5 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4963611308410800206 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
+  m_PrefabInstance: {fileID: 4963611308411196110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &789933632149083007
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,9 +531,12 @@ MonoBehaviour:
   _armor: 20
   _speed: 7
   _scoreOnDeath: 50
-  _goldOnDeath: 10
+  _goldOnDeath: 15
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+  _selfAnim: {fileID: 0}
+  _nav: {fileID: 0}
+  _selfCollider: {fileID: 0}
   _mobtype: 0
 --- !u!195 &789933633305070410
 NavMeshAgent:
@@ -1183,11 +1191,6 @@ Transform:
   m_Father: {fileID: 789933633670318331}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4963611308410800206 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: e261da9f5fc050042b3941e05f9180d6, type: 3}
-  m_PrefabInstance: {fileID: 4963611308411196110}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4963611308411196110
 PrefabInstance:
   m_ObjectHideFlags: 0

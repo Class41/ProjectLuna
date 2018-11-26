@@ -48,7 +48,8 @@ public class gm_Primary : MonoBehaviour
 
     [Header("UI Element References")]
     public Animator _spinnywheel,
-                    _pauseMenu;
+                    _pauseMenu,
+                    _deathUI;
 
     [Header("Enemy Spawn Controlpanel")]
     public List<GameObject> enemies_infantry = new List<GameObject>();
@@ -201,11 +202,13 @@ public class gm_Primary : MonoBehaviour
         _enemyLastKillTime = Time.timeSinceLevelLoad;
         _endingCoin += value_coins;
         _endingPoints += value_points;
-        _spinnywheel.SetBool("coinsgained", true);
 
+        PlayerPrefs.SetInt("gold", _endingCoin);
+        PlayerPrefs.SetInt("score", _endingPoints);
+
+        _spinnywheel.SetBool("coinsgained", true);
         Invoke("SetGoldInter", _goldIntertime);
         Invoke("SetScoreInter", _scoreIntertime);
-
     }
 
     /// <summary>
@@ -237,29 +240,24 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void LoadMenu()
     {
-        SceneManager.LoadScene("menu");
+        if(_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
+            SceneManager.LoadScene("menu");
     }
 
     void Start()
     {
+        /*
+        #region Debug
+        PlayerPrefs.SetInt("gold", 1);
+        PlayerPrefs.SetInt("score", 1);
+        PlayerPrefs.SetInt("healthlevel", 1);
+        PlayerPrefs.SetInt("armorlevel", 1);
+        #endregion
+        */
 
-        if (!PlayerPrefs.HasKey("gold"))
-            PlayerPrefs.SetInt("gold", 0);
+        PullConfigValues();
 
-        if (!PlayerPrefs.HasKey("score"))
-            PlayerPrefs.SetInt("score", 0);
 
-        if (!PlayerPrefs.HasKey("healthlevel"))
-            PlayerPrefs.SetInt("healthlevel", 0);
-
-        if (!PlayerPrefs.HasKey("armorlevel"))
-            PlayerPrefs.SetInt("armorlevel", 0);
-
-        _gold = PlayerPrefs.GetInt("gold");
-        _score = PlayerPrefs.GetInt("score");
-        _endingCoin = _gold;
-        _endingPoints = _score;
-        
 
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
@@ -267,13 +265,36 @@ public class gm_Primary : MonoBehaviour
         //TESTING DATA. REMOVE LATER
         //TESTING DATA. REMOVE LATER
 
-        _spawnchanceGeneral = .33f;
-        _spawnchanceLieutentant = .33f;
-        _spawnchanceInfantry = .33f;
+        /* _spawnchanceGeneral = .33f;
+         _spawnchanceLieutentant = .33f;
+         _spawnchanceInfantry = .33f;*/
 
         StartWaveCalculations();
         _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
 
+    }
+
+    /// <summary>
+    /// <para>Updates gold and score from config</para>
+    /// </summary>
+    public void PullConfigValues()
+    {
+        if (!PlayerPrefs.HasKey("gold"))
+            PlayerPrefs.SetInt("gold", 1);
+
+        if (!PlayerPrefs.HasKey("score"))
+            PlayerPrefs.SetInt("score", 1);
+
+        if (!PlayerPrefs.HasKey("healthlevel"))
+            PlayerPrefs.SetInt("healthlevel", 1);
+
+        if (!PlayerPrefs.HasKey("armorlevel"))
+            PlayerPrefs.SetInt("armorlevel", 1);
+
+        _gold = PlayerPrefs.GetInt("gold");
+        _score = PlayerPrefs.GetInt("score");
+        _endingCoin = _gold + 1;
+        _endingPoints = _score + 1;
     }
 
     void LateUpdate()
@@ -288,7 +309,6 @@ public class gm_Primary : MonoBehaviour
             if (_gold >= _endingCoin)
             {
                 _interpolingCoins = false;
-                PlayerPrefs.SetInt("gold", _gold);
             }
         }
 
@@ -321,7 +341,6 @@ public class gm_Primary : MonoBehaviour
             {
                 _interpolingPoints = false;
                 _spinnywheel.SetBool("coinsgained", false);
-                PlayerPrefs.SetInt("score", _score);
             }
         }
 

@@ -1746,9 +1746,9 @@ RectTransform:
   - {fileID: 1199012992}
   - {fileID: 788627112}
   - {fileID: 1441307065}
-  - {fileID: 1822359898}
   - {fileID: 759270905}
   - {fileID: 1909573644}
+  - {fileID: 1822359898}
   m_Father: {fileID: 528707882}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3044,7 +3044,7 @@ RectTransform:
   - {fileID: 1894625300}
   - {fileID: 2075689097}
   m_Father: {fileID: 449576125}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5778,6 +5778,7 @@ MonoBehaviour:
   _uiShop: {fileID: 1675921637}
   _spinnywheel: {fileID: 1441307068}
   _pauseMenu: {fileID: 1822359901}
+  _deathUI: {fileID: 759270908}
   enemies_infantry:
   - {fileID: 789933633305070407, guid: dc23e5f112dbccb40903e244d1125967, type: 3}
   enemies_lieutenants:
@@ -5899,6 +5900,7 @@ MonoBehaviour:
   _armorUpgradeCost: 0
   _playerStats: {fileID: 1275419298}
   _deathScreenAnimator: {fileID: 759270908}
+  _gamemanagerPrimary: {fileID: 1320067697}
 --- !u!114 &1320067703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7942,7 +7944,7 @@ RectTransform:
   m_Children:
   - {fileID: 1772487897}
   m_Father: {fileID: 449576125}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -8240,7 +8242,7 @@ RectTransform:
   - {fileID: 1675921640}
   - {fileID: 1630442957}
   m_Father: {fileID: 449576125}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

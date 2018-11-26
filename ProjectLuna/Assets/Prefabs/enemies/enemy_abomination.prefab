@@ -91,9 +91,12 @@ MonoBehaviour:
   _armor: 45
   _speed: 5
   _scoreOnDeath: 75
-  _goldOnDeath: 18
+  _goldOnDeath: 150
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+  _selfAnim: {fileID: 0}
+  _nav: {fileID: 0}
+  _selfCollider: {fileID: 0}
   _mobtype: 1
 --- !u!195 &5516148615661146477
 NavMeshAgent:

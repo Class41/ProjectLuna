@@ -1255,10 +1255,13 @@ MonoBehaviour:
   _maxHealth: 750
   _armor: 50
   _speed: 5.5
-  _scoreOnDeath: 25
-  _goldOnDeath: 5
+  _scoreOnDeath: 50
+  _goldOnDeath: 80
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+  _selfAnim: {fileID: 0}
+  _nav: {fileID: 0}
+  _selfCollider: {fileID: 0}
   _mobtype: 0
 --- !u!114 &1082902620762664938
 MonoBehaviour:
