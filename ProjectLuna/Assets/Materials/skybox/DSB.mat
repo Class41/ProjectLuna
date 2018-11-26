@@ -50,7 +50,11 @@ Material:
     m_Floats:
     - _Exposure: 3.15
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - _Rotation: 54.85669
+=======
+    - _Rotation: 97.08644
+>>>>>>> Stashed changes
 =======
     - _Rotation: 97.08644
 >>>>>>> Stashed changes
