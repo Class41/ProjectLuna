@@ -4,15 +4,30 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Bone
+    100006: Cube_001
+    100008: Eyeball
     400000: //RootNode
+    400002: Armature
+    400004: Bone
+    400006: Cube_001
+    400008: Eyeball
     2100000: Material_001
     2100002: Material_003
     2100004: Material_004
     2100006: Material_005
     2100008: Material_002
+    2100010: Material_008
     2300000: //RootNode
+    2300002: Cube_001
+    2300004: Eyeball
     3300000: //RootNode
+    3300002: Cube_001
+    3300004: Eyeball
     4300000: Cube
+    4300002: Eyeball
+    4300004: Cube_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}
