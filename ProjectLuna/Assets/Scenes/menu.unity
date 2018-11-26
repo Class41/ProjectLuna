@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.01430329, g: 0.006205871, b: 0.1289135, a: 1}
+  m_IndirectSpecularColor: {r: 0.52249074, g: 0.24269843, b: 4.4886446, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3428,15 +3428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3448,7 +3448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90.00001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -3464,15 +3464,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8000007
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.8000005
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8000005
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1936429eb0066064780a0388b182475d, type: 3}
       propertyPath: m_StaticEditorFlags
