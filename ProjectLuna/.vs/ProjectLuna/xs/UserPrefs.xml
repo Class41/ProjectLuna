@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{8C293DBD-187D-F1B0-C214-50BEB5299F1C}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs">
+    <Files>
+      <File FileName="Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs" Line="114" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
