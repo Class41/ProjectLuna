@@ -6203,7 +6203,7 @@ MonoBehaviour:
   _calculatedWaveTime: 30
   _calculatedWaveEndTime: 0
   _calculatedEnemySpawns: 2
-  _difficultyMultiplier: 0.75
+  _difficultyMultiplier: 0.3
   _enemySpawntimeBetweenEnemySpawnsBase: 0.25
   _enemySpawningEnemiesPerSet: 3
   _enemySpawningTimeBetweenSets: 5
@@ -6676,7 +6676,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.27333334
+  m_VoxelSize: 0.14999999
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: 598d2a9a63bf6b64ea37843a981c8d10, type: 2}
 --- !u!1001 &1435272654

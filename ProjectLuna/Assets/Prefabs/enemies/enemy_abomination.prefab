@@ -89,7 +89,7 @@ MonoBehaviour:
   _health: 1250
   _maxHealth: 1250
   _armor: 45
-  _speed: 5
+  _speed: 4
   _scoreOnDeath: 75
   _goldOnDeath: 150
   _healthOnDeath: 200

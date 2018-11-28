@@ -1229,7 +1229,7 @@ NavMeshAgent:
   m_Radius: 6
   m_Speed: 8
   m_Acceleration: 20
-  avoidancePriority: 50
+  avoidancePriority: 35
   m_AngularSpeed: 120
   m_StoppingDistance: 2.6
   m_AutoTraverseOffMeshLink: 1
