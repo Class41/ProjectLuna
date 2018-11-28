@@ -6203,7 +6203,7 @@ MonoBehaviour:
   _calculatedWaveTime: 30
   _calculatedWaveEndTime: 0
   _calculatedEnemySpawns: 2
-  _difficultyMultiplier: 1.4
+  _difficultyMultiplier: 0.75
   _enemySpawntimeBetweenEnemySpawnsBase: 0.25
   _enemySpawningEnemiesPerSet: 3
   _enemySpawningTimeBetweenSets: 5

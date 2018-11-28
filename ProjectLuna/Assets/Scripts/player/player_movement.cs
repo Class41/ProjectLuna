@@ -24,7 +24,7 @@ public class player_movement : MonoBehaviour
 
     public void ToggleShortCollider()
     {
-        if(_shortColliderStatus)
+        if (_shortColliderStatus)
         {
             _weaponBoxScript.DisableStrikeCloseCollider();
             _shortColliderStatus = !_shortColliderStatus;
@@ -114,6 +114,26 @@ public class player_movement : MonoBehaviour
 
         if (_plyRigidbody.velocity.magnitude > 1)
             _plyTranform.forward = Vector3.Slerp(_plyTranform.forward, new Vector3(_plyRigidbody.velocity.normalized.x, 0, _plyRigidbody.velocity.normalized.z), 10.0f * Time.deltaTime);
+        else if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A) && !_attacking)
+        {
+            _plyTranform.forward = Vector3.Slerp(_plyTranform.forward, Vector3.right, 5.0f * Time.deltaTime);
+            _anim.SetBool("movekeydown", true);
+        }
+        else if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && !_attacking)
+        {
+            _plyTranform.forward = Vector3.Slerp(_plyTranform.forward, -Vector3.right, 5.0f * Time.deltaTime);
+            _anim.SetBool("movekeydown", true);
+        }
+        else if (Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) && !_attacking)
+        {
+            _plyTranform.forward = Vector3.Slerp(_plyTranform.forward, Vector3.forward, 5.0f * Time.deltaTime);
+            _anim.SetBool("movekeydown", true);
+        }
+        else if (Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W) && !_attacking)
+        {
+            _plyTranform.forward = Vector3.Slerp(_plyTranform.forward, -Vector3.forward, 5.0f * Time.deltaTime);
+            _anim.SetBool("movekeydown", true);
+        }
 
     }
 }
