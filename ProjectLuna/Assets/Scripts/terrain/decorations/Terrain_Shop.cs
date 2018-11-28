@@ -13,6 +13,7 @@ public class Terrain_Shop : MonoBehaviour
     public Animator _shopAnim;
     public ui_shoplogic _shopLogic;
     public Animator _deadAnim;
+    public Animator _worldShopAnim;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +38,7 @@ public class Terrain_Shop : MonoBehaviour
         _shopPrompt.SetActive(false);
         _shopAnim.SetBool("shopActive", true);
         Time.timeScale = 0;
+        _worldShopAnim.SetBool("shopopen", true);
     }
 
     /// <summary>
@@ -49,6 +51,7 @@ public class Terrain_Shop : MonoBehaviour
             _shopPrompt.SetActive(true);
         Invoke("DisableShop", 1);
         Time.timeScale = 1;
+        _worldShopAnim.SetBool("shopopen", false);
     }
 
     /// <summary>
