@@ -99,6 +99,7 @@ public class gm_Primary : MonoBehaviour
     /// <param name="count"></param>
     private void BuildEnemyWaveWave(int count)
     {
+        RecalcEnemySpawnChances();
         for (int i = 0; i < count; i++)
         {
             float rng = Random.value;
@@ -116,8 +117,6 @@ public class gm_Primary : MonoBehaviour
                 waveEntityList.Add(enemies_generals[Random.Range(0, enemies_generals.Capacity)]);
             }
         }
-
-        RecalcEnemySpawnChances();
     }
 
     /// <summary>
@@ -176,9 +175,9 @@ public class gm_Primary : MonoBehaviour
         _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
         _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
 
-        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase +
+        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase*2 +
                              (_calculatedEnemySpawns % _enemySpawningEnemiesPerSet) *
-                             _enemySpawningTimeBetweenSets + 30.0f;
+                             (_enemySpawningTimeBetweenSets*2) + 30.0f;
 
         _calculatedWaveEndTime = Time.timeSinceLevelLoad + _calculatedWaveTime;
 
@@ -249,22 +248,25 @@ public class gm_Primary : MonoBehaviour
 
     void Start()
     {
-        /*
-        #region Debug
-        PlayerPrefs.SetInt("gold", 1);
-        PlayerPrefs.SetInt("score", 1);
-        PlayerPrefs.SetInt("healthlevel", 1);
-        PlayerPrefs.SetInt("armorlevel", 1);
-        PlayerPrefs.SetInt("wave", 1);
-        #endregion
-        */
-
         _waveSpawnMultiplierMax = 1.0f / _spawnchance_infantry_delta;
         PullConfigValues();
 
         StartWaveCalculations();
         _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
 
+    }
+
+    /// <summary>
+    /// <para>Used to reset the gamestate to initial state</para>
+    /// </summary>
+    public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("gold", 1);
+        PlayerPrefs.SetInt("score", 1);
+        PlayerPrefs.SetInt("healthlevel", 1);
+        PlayerPrefs.SetInt("armorlevel", 1);
+        PlayerPrefs.SetInt("wave", 1);
+        LoadMenu();
     }
 
     /// <summary>

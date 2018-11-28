@@ -1231,10 +1231,10 @@ NavMeshAgent:
   m_Acceleration: 20
   avoidancePriority: 35
   m_AngularSpeed: 120
-  m_StoppingDistance: 2.6
+  m_StoppingDistance: 2.7
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 1
   m_Height: 27.6
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   _speed: 5.5
   _scoreOnDeath: 50
   _goldOnDeath: 80
-  _healthOnDeath: 100
+  _healthOnDeath: 30
   _ui: {fileID: 0}
   _gm: {fileID: 0}
   _selfAnim: {fileID: 0}
@@ -1296,6 +1296,7 @@ MonoBehaviour:
   _goalAnim: {fileID: 0}
   _selfAnim: {fileID: 0}
   _agent: {fileID: 0}
+  _selfObstacle: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
 --- !u!136 &7348811617031762242
@@ -1349,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 50
+  _damage: 125
 --- !u!1001 &5191173011909566366
 PrefabInstance:
   m_ObjectHideFlags: 0

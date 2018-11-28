@@ -20,8 +20,7 @@ public class enemy_navigtaion : MonoBehaviour
     public Animator _selfAnim;
 
     public NavMeshAgent _agent;
-    private float _stopRadius = 3.0f,
-                  _entityDeathTime = .25f;
+    public NavMeshObstacle _selfObstacle;
 
     gm_Surround _moveLogic;
 
@@ -32,6 +31,7 @@ public class enemy_navigtaion : MonoBehaviour
     void Start()
     {
         _goalTransform = GameObject.Find("player_01").transform;
+        _selfObstacle = gameObject.GetComponent<NavMeshObstacle>();
         _moveLogic = GameObject.Find("GameManager").GetComponent<gm_Surround>();
         _subGoalTransform = _moveLogic.RequestAIDestination();
         _selfTransform = gameObject.GetComponent<Transform>();
@@ -62,7 +62,7 @@ public class enemy_navigtaion : MonoBehaviour
             Destroy(gameObject.GetComponent<Rigidbody>());
             Destroy(gameObject.GetComponent<CapsuleCollider>());
         }
-        else if(_goalAnim.GetBool("movekeydown"))
+        else if(_goalAnim.GetBool("movekeydown") || _goalAnim.GetBool("attackdown"))
         {
             _agent.destination = _subGoalTransform.position;
         }
