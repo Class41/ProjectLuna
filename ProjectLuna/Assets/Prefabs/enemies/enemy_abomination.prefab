@@ -92,6 +92,7 @@ MonoBehaviour:
   _speed: 5
   _scoreOnDeath: 75
   _goldOnDeath: 150
+  _healthOnDeath: 200
   _ui: {fileID: 0}
   _gm: {fileID: 0}
   _selfAnim: {fileID: 0}

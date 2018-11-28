@@ -532,6 +532,7 @@ MonoBehaviour:
   _speed: 7
   _scoreOnDeath: 50
   _goldOnDeath: 15
+  _healthOnDeath: 50
   _ui: {fileID: 0}
   _gm: {fileID: 0}
   _selfAnim: {fileID: 0}

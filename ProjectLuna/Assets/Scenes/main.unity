@@ -6237,6 +6237,7 @@ MonoBehaviour:
   - {fileID: 2091906629}
   - {fileID: 628952569}
   waveEntityList: []
+  _playerHp: {fileID: 1275419298}
   _endingCoin: 0
   _endingPoints: 0
   _interpolingCoins: 0

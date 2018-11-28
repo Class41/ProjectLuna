@@ -64,9 +64,14 @@ public class gm_Primary : MonoBehaviour
                  _spawnchance_lieutentant_delta = 0.03f,
                  _spawnchance_general_delta = 0.02f;
 
+    float _waveSpawnMultiplierMax;
+
     [Header("Enemy Spawn Positions and Wave Details")]
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
+
+    [Header("Player reference")]
+    public player_health _playerHp;
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     /// <summary>
@@ -74,22 +79,18 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     private void RecalcEnemySpawnChances()
     {
-        if (_spawnchanceInfantry != 0)
+        if(_wave <= _waveSpawnMultiplierMax)
         {
-            _spawnchanceLieutentant += _spawnchance_lieutentant_delta;
-            _spawnchanceGeneral += _spawnchance_general_delta;
-        }
-
-        if (_spawnchanceInfantry >= _spawnchance_infantry_delta)
-        {
-            _spawnchanceInfantry -= _spawnchance_infantry_delta;
+            _spawnchanceInfantry = 1.0f - (_spawnchance_infantry_delta * _wave);
+            _spawnchanceLieutentant = _spawnchance_lieutentant_delta * _wave;
+            _spawnchanceGeneral = _spawnchance_general_delta * _wave;
         }
         else
         {
-            _spawnchanceInfantry = 0;
+            _spawnchanceInfantry -= _spawnchance_infantry_delta * _waveSpawnMultiplierMax;
+            _spawnchanceLieutentant += _spawnchance_lieutentant_delta * _waveSpawnMultiplierMax;
+            _spawnchanceGeneral += _spawnchance_general_delta * _waveSpawnMultiplierMax;
         }
-
-
     }
 
     /// <summary>
@@ -184,6 +185,7 @@ public class gm_Primary : MonoBehaviour
         SpawnEnemyWave((int)_calculatedEnemySpawns);
     }
 
+    [Header("Coins and Score")]
     public int _endingCoin,
                _endingPoints;
 
@@ -197,11 +199,12 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     /// <param name="value_coins"></param>
     /// <param name="value_points"></param>
-    public void EnemyDeath(int value_coins, int value_points)
+    public void EnemyDeath(int value_coins, int value_points, int value_health)
     {
         _enemyLastKillTime = Time.timeSinceLevelLoad;
         _endingCoin += value_coins;
         _endingPoints += value_points;
+        _playerHp.HealthHeal(value_health);
 
         PlayerPrefs.SetInt("gold", _endingCoin);
         PlayerPrefs.SetInt("score", _endingPoints);
@@ -252,22 +255,12 @@ public class gm_Primary : MonoBehaviour
         PlayerPrefs.SetInt("score", 1);
         PlayerPrefs.SetInt("healthlevel", 1);
         PlayerPrefs.SetInt("armorlevel", 1);
+        PlayerPrefs.SetInt("wave", 1);
         #endregion
         */
 
+        _waveSpawnMultiplierMax = 1.0f / _spawnchance_infantry_delta;
         PullConfigValues();
-
-
-
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-
-        /* _spawnchanceGeneral = .33f;
-         _spawnchanceLieutentant = .33f;
-         _spawnchanceInfantry = .33f;*/
 
         StartWaveCalculations();
         _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
@@ -291,6 +284,10 @@ public class gm_Primary : MonoBehaviour
         if (!PlayerPrefs.HasKey("armorlevel"))
             PlayerPrefs.SetInt("armorlevel", 1);
 
+        if (!PlayerPrefs.HasKey("wave"))
+            PlayerPrefs.SetInt("wave", 1);
+
+        _wave = PlayerPrefs.GetInt("wave");
         _gold = PlayerPrefs.GetInt("gold");
         _score = PlayerPrefs.GetInt("score");
         _endingCoin = _gold + 1;
@@ -355,6 +352,7 @@ public class gm_Primary : MonoBehaviour
         if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
         {
             _wave++;
+            PlayerPrefs.SetInt("wave", _wave);
             _usedTime += _calculatedWaveTime;
             StartWaveCalculations();
             _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
