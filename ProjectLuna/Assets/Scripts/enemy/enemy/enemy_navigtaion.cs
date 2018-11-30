@@ -46,11 +46,14 @@ public class enemy_navigtaion : MonoBehaviour
 
     private void Update()
     {
-      bool walking = (_agent.velocity.magnitude > .5) ? true : false;
-      _selfAnim.SetBool("Moving", walking);
+        bool walking = (_agent.velocity.magnitude > .5) ? true : false;
+        _selfAnim.SetBool("Moving", walking);
 
         if (!walking)
-            _selfTransform.LookAt(_goalTransform);
+        {
+            Quaternion facePlayerRot = Quaternion.LookRotation(_goalTransform.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, facePlayerRot, 5 * Time.deltaTime);
+        }
 
         _selfAnim.SetFloat("Toplayer", Vector3.Distance(_selfTransform.position, _subGoalTransform.position));
     }
@@ -62,7 +65,7 @@ public class enemy_navigtaion : MonoBehaviour
             Destroy(gameObject.GetComponent<Rigidbody>());
             Destroy(gameObject.GetComponent<CapsuleCollider>());
         }
-        else if(_goalAnim.GetBool("movekeydown") || _goalAnim.GetBool("attackdown"))
+        else if (_goalAnim.GetBool("movekeydown") || _goalAnim.GetBool("attackdown"))
         {
             _agent.destination = _subGoalTransform.position;
         }
