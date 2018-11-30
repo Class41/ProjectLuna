@@ -23,7 +23,8 @@ public class enemy_stats_base : MonoBehaviour
                  _speed;
 
    public int _scoreOnDeath,
-              _goldOnDeath;
+              _goldOnDeath,
+              _healthOnDeath;
 
     public GameObject _ui;
     public gm_Primary _gm;
@@ -39,7 +40,7 @@ public class enemy_stats_base : MonoBehaviour
     public void EnemyDie()
     {
         _nav.isStopped = true;
-        _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath);
+        _gm.EnemyDeath(_goldOnDeath, _scoreOnDeath, _healthOnDeath);
         _selfAnim.SetBool("Dead", true);
         Destroy(gameObject, 1.5f);
     }

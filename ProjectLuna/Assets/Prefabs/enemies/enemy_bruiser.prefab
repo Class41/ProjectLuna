@@ -1,5 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &5191173011909166366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 8226fc8715bd4a0479c62a53f01759d9, type: 3}
+  m_PrefabInstance: {fileID: 5191173011909566366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &502745219547539072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,11 +1012,6 @@ Transform:
   m_Father: {fileID: 502745219548035730}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &5191173011909166366 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 8226fc8715bd4a0479c62a53f01759d9, type: 3}
-  m_PrefabInstance: {fileID: 5191173011909566366}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8914643536354280521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,12 +1229,12 @@ NavMeshAgent:
   m_Radius: 6
   m_Speed: 8
   m_Acceleration: 20
-  avoidancePriority: 50
+  avoidancePriority: 35
   m_AngularSpeed: 120
-  m_StoppingDistance: 2.6
+  m_StoppingDistance: 2.7
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 1
   m_Height: 27.6
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
@@ -1255,10 +1255,14 @@ MonoBehaviour:
   _maxHealth: 750
   _armor: 50
   _speed: 5.5
-  _scoreOnDeath: 25
-  _goldOnDeath: 5
+  _scoreOnDeath: 50
+  _goldOnDeath: 80
+  _healthOnDeath: 30
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+  _selfAnim: {fileID: 0}
+  _nav: {fileID: 0}
+  _selfCollider: {fileID: 0}
   _mobtype: 0
 --- !u!114 &1082902620762664938
 MonoBehaviour:
@@ -1292,6 +1296,7 @@ MonoBehaviour:
   _goalAnim: {fileID: 0}
   _selfAnim: {fileID: 0}
   _agent: {fileID: 0}
+  _selfObstacle: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
 --- !u!136 &7348811617031762242
@@ -1345,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 50
+  _damage: 125
 --- !u!1001 &5191173011909566366
 PrefabInstance:
   m_ObjectHideFlags: 0

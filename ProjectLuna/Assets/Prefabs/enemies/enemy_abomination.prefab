@@ -89,11 +89,15 @@ MonoBehaviour:
   _health: 1250
   _maxHealth: 1250
   _armor: 45
-  _speed: 5
+  _speed: 4
   _scoreOnDeath: 75
-  _goldOnDeath: 18
+  _goldOnDeath: 150
+  _healthOnDeath: 50
   _ui: {fileID: 0}
   _gm: {fileID: 0}
+  _selfAnim: {fileID: 0}
+  _nav: {fileID: 0}
+  _selfCollider: {fileID: 0}
   _mobtype: 1
 --- !u!195 &5516148615661146477
 NavMeshAgent:
@@ -108,11 +112,11 @@ NavMeshAgent:
   m_Speed: 4
   m_Acceleration: 20
   avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 5
+  m_AngularSpeed: 50
+  m_StoppingDistance: 4.7
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 0
+  m_AutoBraking: 0
+  m_AutoRepath: 1
   m_Height: 8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
@@ -136,6 +140,7 @@ MonoBehaviour:
   _goalAnim: {fileID: 0}
   _selfAnim: {fileID: 0}
   _agent: {fileID: 0}
+  _selfObstacle: {fileID: 0}
   _ui: {fileID: 0}
   _gm: {fileID: 0}
 --- !u!114 &2246960237236337849
@@ -162,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3986cf72599c0f4992128f9bb113fa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 150
+  _damage: 200
 --- !u!65 &2015173695018117173
 BoxCollider:
   m_ObjectHideFlags: 0

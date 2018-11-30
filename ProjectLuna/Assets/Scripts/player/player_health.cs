@@ -53,15 +53,9 @@ public class player_health : MonoBehaviour
     /// <param name="amount"></param>
     public void HealthHeal(float amount)
     {
-        _health += amount;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        //TODO: Replace with actual useful damage stuff
-        if (collision.gameObject.CompareTag("enemy"))
-        {
-            HealthTakeDamage(150);
-        }
+        if (_health + amount < _maxHealth)
+            _health += amount;
+        else
+            _health = _maxHealth;
     }
 }

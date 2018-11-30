@@ -20,8 +20,7 @@ public class enemy_navigtaion : MonoBehaviour
     public Animator _selfAnim;
 
     public NavMeshAgent _agent;
-    private float _stopRadius = 3.0f,
-                  _entityDeathTime = .25f;
+    public NavMeshObstacle _selfObstacle;
 
     gm_Surround _moveLogic;
 
@@ -32,6 +31,7 @@ public class enemy_navigtaion : MonoBehaviour
     void Start()
     {
         _goalTransform = GameObject.Find("player_01").transform;
+        _selfObstacle = gameObject.GetComponent<NavMeshObstacle>();
         _moveLogic = GameObject.Find("GameManager").GetComponent<gm_Surround>();
         _subGoalTransform = _moveLogic.RequestAIDestination();
         _selfTransform = gameObject.GetComponent<Transform>();
@@ -46,11 +46,14 @@ public class enemy_navigtaion : MonoBehaviour
 
     private void Update()
     {
-      bool walking = (_agent.velocity.magnitude > .5) ? true : false;
-      _selfAnim.SetBool("Moving", walking);
+        bool walking = (_agent.velocity.magnitude > .5) ? true : false;
+        _selfAnim.SetBool("Moving", walking);
 
         if (!walking)
-            _selfTransform.LookAt(_goalTransform);
+        {
+            Quaternion facePlayerRot = Quaternion.LookRotation(_goalTransform.transform.position - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, facePlayerRot, 5 * Time.deltaTime);
+        }
 
         _selfAnim.SetFloat("Toplayer", Vector3.Distance(_selfTransform.position, _subGoalTransform.position));
     }
@@ -62,7 +65,7 @@ public class enemy_navigtaion : MonoBehaviour
             Destroy(gameObject.GetComponent<Rigidbody>());
             Destroy(gameObject.GetComponent<CapsuleCollider>());
         }
-        else if(_goalAnim.GetBool("movekeydown"))
+        else if (_goalAnim.GetBool("movekeydown") || _goalAnim.GetBool("attackdown"))
         {
             _agent.destination = _subGoalTransform.position;
         }

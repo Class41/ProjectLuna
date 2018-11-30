@@ -48,7 +48,8 @@ public class gm_Primary : MonoBehaviour
 
     [Header("UI Element References")]
     public Animator _spinnywheel,
-                    _pauseMenu;
+                    _pauseMenu,
+                    _deathUI;
 
     [Header("Enemy Spawn Controlpanel")]
     public List<GameObject> enemies_infantry = new List<GameObject>();
@@ -63,9 +64,14 @@ public class gm_Primary : MonoBehaviour
                  _spawnchance_lieutentant_delta = 0.03f,
                  _spawnchance_general_delta = 0.02f;
 
+    float _waveSpawnMultiplierMax;
+
     [Header("Enemy Spawn Positions and Wave Details")]
     public List<Transform> enemySpawnPositions = new List<Transform>();
     public List<GameObject> waveEntityList = new List<GameObject>();
+
+    [Header("Player reference")]
+    public player_health _playerHp;
 
     //has to be a multiple of 1, ex: .05, .1, .15 etc
     /// <summary>
@@ -73,22 +79,18 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     private void RecalcEnemySpawnChances()
     {
-        if (_spawnchanceInfantry != 0)
+        if(_wave <= _waveSpawnMultiplierMax)
         {
-            _spawnchanceLieutentant += _spawnchance_lieutentant_delta;
-            _spawnchanceGeneral += _spawnchance_general_delta;
-        }
-
-        if (_spawnchanceInfantry >= _spawnchance_infantry_delta)
-        {
-            _spawnchanceInfantry -= _spawnchance_infantry_delta;
+            _spawnchanceInfantry = 1.0f - (_spawnchance_infantry_delta * _wave);
+            _spawnchanceLieutentant = _spawnchance_lieutentant_delta * _wave;
+            _spawnchanceGeneral = _spawnchance_general_delta * _wave;
         }
         else
         {
-            _spawnchanceInfantry = 0;
+            _spawnchanceInfantry -= _spawnchance_infantry_delta * _waveSpawnMultiplierMax;
+            _spawnchanceLieutentant += _spawnchance_lieutentant_delta * _waveSpawnMultiplierMax;
+            _spawnchanceGeneral += _spawnchance_general_delta * _waveSpawnMultiplierMax;
         }
-
-
     }
 
     /// <summary>
@@ -97,6 +99,7 @@ public class gm_Primary : MonoBehaviour
     /// <param name="count"></param>
     private void BuildEnemyWaveWave(int count)
     {
+        RecalcEnemySpawnChances();
         for (int i = 0; i < count; i++)
         {
             float rng = Random.value;
@@ -114,8 +117,6 @@ public class gm_Primary : MonoBehaviour
                 waveEntityList.Add(enemies_generals[Random.Range(0, enemies_generals.Capacity)]);
             }
         }
-
-        RecalcEnemySpawnChances();
     }
 
     /// <summary>
@@ -174,15 +175,16 @@ public class gm_Primary : MonoBehaviour
         _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
         _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
 
-        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase +
+        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase*2 +
                              (_calculatedEnemySpawns % _enemySpawningEnemiesPerSet) *
-                             _enemySpawningTimeBetweenSets + 30.0f;
+                             (_enemySpawningTimeBetweenSets*2) + 30.0f;
 
         _calculatedWaveEndTime = Time.timeSinceLevelLoad + _calculatedWaveTime;
 
         SpawnEnemyWave((int)_calculatedEnemySpawns);
     }
 
+    [Header("Coins and Score")]
     public int _endingCoin,
                _endingPoints;
 
@@ -196,16 +198,19 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     /// <param name="value_coins"></param>
     /// <param name="value_points"></param>
-    public void EnemyDeath(int value_coins, int value_points)
+    public void EnemyDeath(int value_coins, int value_points, int value_health)
     {
         _enemyLastKillTime = Time.timeSinceLevelLoad;
         _endingCoin += value_coins;
         _endingPoints += value_points;
-        _spinnywheel.SetBool("coinsgained", true);
+        _playerHp.HealthHeal(value_health);
 
+        PlayerPrefs.SetInt("gold", _endingCoin);
+        PlayerPrefs.SetInt("score", _endingPoints);
+
+        _spinnywheel.SetBool("coinsgained", true);
         Invoke("SetGoldInter", _goldIntertime);
         Invoke("SetScoreInter", _scoreIntertime);
-
     }
 
     /// <summary>
@@ -237,43 +242,58 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void LoadMenu()
     {
-        SceneManager.LoadScene("menu");
+        if(_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
+            SceneManager.LoadScene("menu");
     }
 
     void Start()
     {
-
-        if (!PlayerPrefs.HasKey("gold"))
-            PlayerPrefs.SetInt("gold", 0);
-
-        if (!PlayerPrefs.HasKey("score"))
-            PlayerPrefs.SetInt("score", 0);
-
-        if (!PlayerPrefs.HasKey("healthlevel"))
-            PlayerPrefs.SetInt("healthlevel", 0);
-
-        if (!PlayerPrefs.HasKey("armorlevel"))
-            PlayerPrefs.SetInt("armorlevel", 0);
-
-        _gold = PlayerPrefs.GetInt("gold");
-        _score = PlayerPrefs.GetInt("score");
-        _endingCoin = _gold;
-        _endingPoints = _score;
-        
-
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-        //TESTING DATA. REMOVE LATER
-
-        _spawnchanceGeneral = .33f;
-        _spawnchanceLieutentant = .33f;
-        _spawnchanceInfantry = .33f;
+        _waveSpawnMultiplierMax = 1.0f / _spawnchance_infantry_delta;
+        PullConfigValues();
 
         StartWaveCalculations();
         _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
 
+    }
+
+    /// <summary>
+    /// <para>Used to reset the gamestate to initial state</para>
+    /// </summary>
+    public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("gold", 1);
+        PlayerPrefs.SetInt("score", 1);
+        PlayerPrefs.SetInt("healthlevel", 1);
+        PlayerPrefs.SetInt("armorlevel", 1);
+        PlayerPrefs.SetInt("wave", 1);
+        LoadMenu();
+    }
+
+    /// <summary>
+    /// <para>Updates gold and score from config</para>
+    /// </summary>
+    public void PullConfigValues()
+    {
+        if (!PlayerPrefs.HasKey("gold"))
+            PlayerPrefs.SetInt("gold", 1);
+
+        if (!PlayerPrefs.HasKey("score"))
+            PlayerPrefs.SetInt("score", 1);
+
+        if (!PlayerPrefs.HasKey("healthlevel"))
+            PlayerPrefs.SetInt("healthlevel", 1);
+
+        if (!PlayerPrefs.HasKey("armorlevel"))
+            PlayerPrefs.SetInt("armorlevel", 1);
+
+        if (!PlayerPrefs.HasKey("wave"))
+            PlayerPrefs.SetInt("wave", 1);
+
+        _wave = PlayerPrefs.GetInt("wave");
+        _gold = PlayerPrefs.GetInt("gold");
+        _score = PlayerPrefs.GetInt("score");
+        _endingCoin = _gold + 1;
+        _endingPoints = _score + 1;
     }
 
     void LateUpdate()
@@ -288,7 +308,6 @@ public class gm_Primary : MonoBehaviour
             if (_gold >= _endingCoin)
             {
                 _interpolingCoins = false;
-                PlayerPrefs.SetInt("gold", _gold);
             }
         }
 
@@ -321,7 +340,6 @@ public class gm_Primary : MonoBehaviour
             {
                 _interpolingPoints = false;
                 _spinnywheel.SetBool("coinsgained", false);
-                PlayerPrefs.SetInt("score", _score);
             }
         }
 
@@ -336,6 +354,7 @@ public class gm_Primary : MonoBehaviour
         if (_calculatedWaveEndTime < Time.timeSinceLevelLoad)
         {
             _wave++;
+            PlayerPrefs.SetInt("wave", _wave);
             _usedTime += _calculatedWaveTime;
             StartWaveCalculations();
             _timeAtStartOfwave = (Mathf.Abs(Time.timeSinceLevelLoad - _calculatedWaveTime - _usedTime));
