@@ -27,6 +27,14 @@ public class cam_follow_smooth : MonoBehaviour
         _targetRigidBody = _target.GetComponent<Rigidbody>();
     }
 
+    /// <summary>
+    /// <para>Shakes camera on player attack</para>
+    /// </summary>
+    public void ShakeCamera()
+    {
+        transform.Translate(new Vector3(0, Random.Range(-.25f, 0), 0), Space.Self);
+    }
+
     //smooth camera movement when following player
     void FixedUpdate()
     {

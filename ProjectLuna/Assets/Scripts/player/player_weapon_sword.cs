@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class player_weapon_sword : MonoBehaviour
 {
+    public cam_follow_smooth _playerCam;
+
     BoxCollider _colliderStrikeClose;
 
     public void Start()
@@ -22,6 +24,7 @@ public class player_weapon_sword : MonoBehaviour
     public void EnableStrikeCloseCollider()
     {
         _colliderStrikeClose.enabled = true;
+        _playerCam.ShakeCamera();
     }
 
     /// <summary>
