@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 #!/bin/bash
 
+=======
+#!/bin/bash
+
+>>>>>>> development
 git pull origin development

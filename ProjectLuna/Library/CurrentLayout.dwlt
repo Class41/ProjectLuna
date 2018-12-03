@@ -114,7 +114,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 121
+  controlID: 118
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 53
+  controlID: 51
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 224}
   m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 54
+  controlID: 52
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 408
     height: 580
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -210,8 +210,8 @@ MonoBehaviour:
     y: 0
     width: 924
     height: 580
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 14}
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 588
     height: 957
-  m_MinSize: {x: 277, y: 74}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -697,34 +697,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Music/Sample Music (move when appropriate)
+    - Assets/Music
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Music/Sample Music (move when appropriate)
+  - Assets/Music
   m_LastFoldersGridSize: -1
   m_LastProjectPath: X:\_Unity\SCHOOL\CS_GDEV_GROUP\ProjectLuna\ProjectLuna
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 516}
-    m_SelectedIDs: b2310000
-    m_LastClickedID: 12722
-    m_ExpandedIDs: 00000000142d0000722d0000f22d00006a2e0000782e0000c22e0000222f0000322f0000982f0000f02f0000863000003231000054310000823200009a320000e0320000f8320000fc320000023300008c330000d0330000263400002e3400003e350000a4350000e4350000fe350000f03c0000f23c0000f43c0000f63c0000f83c0000fa3c0000fc3c000000ca9a3b
+    m_SelectedIDs: ba2f0000
+    m_LastClickedID: 12218
+    m_ExpandedIDs: 000000003c2d00009a2d0000162e00008c2e00009a2e0000e22e0000422f0000522f0000ba2f00000e300000a23000004c3100006e3100009a320000b2320000f83200000e3300001233000018330000a0330000e4330000363400003e3400004a350000b0350000ee350000083600003e44000040440000424400004444000046440000484400004a44000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ground
-      m_OriginalName: ground
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13350
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -738,7 +738,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000142d0000722d0000f22d00006a2e0000782e0000c22e0000222f0000322f0000982f0000f02f0000863000003231000054310000823200009a320000e0320000f8320000fc320000023300008c330000d0330000263400002e3400003e350000a4350000e4350000fe350000f03c0000f23c0000f43c0000f63c0000f83c0000fa3c0000fc3c0000
+    m_ExpandedIDs: 000000003c2d00009a2d0000162e00008c2e00009a2e0000e22e0000422f0000522f0000ba2f00000e300000a23000004c3100006e3100009a320000b2320000f83200000e3300001233000018330000a0330000e4330000363400003e3400004a350000b0350000ee350000083600003e44000040440000424400004444000046440000484400004a440000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git pull origin development
+git add *
+read -p "Commit description: " desc 
+git commit -am $desc
+git push origin development
