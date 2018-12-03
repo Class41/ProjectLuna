@@ -6,15 +6,18 @@
  */
 
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AI;
 
 public class ui_funccontroller : MonoBehaviour
 {
     public Animator _menuAnim;
+    public Animator _playerAnim;
     public Text _tutText;
+    public GameObject _loadAnim;
+    public NavMeshAgent _playerAgent;
 
     public void Start()
     {
@@ -23,7 +26,28 @@ public class ui_funccontroller : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneManager.LoadScene("main");
+        StartCoroutine(AsyncLoad());
+    }
+
+    IEnumerator AsyncLoad()
+    {
+        AsyncOperation asyncScene = SceneManager.LoadSceneAsync("main", LoadSceneMode.Single);
+        asyncScene.allowSceneActivation = false;
+        _loadAnim.SetActive(true);
+        while (asyncScene.progress < .9f)
+            yield return null;
+
+
+        _menuAnim.SetBool("Loaded", true);
+        _playerAgent.SetDestination(new Vector3(0.0f, -.75f, -6.93f));
+        _playerAnim.SetBool("movekeydown", true);
+
+        while (_menuAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 3.0f)
+        {
+            yield return null;
+        }
+
+        asyncScene.allowSceneActivation = true;
     }
 
     public void ExitGame()
