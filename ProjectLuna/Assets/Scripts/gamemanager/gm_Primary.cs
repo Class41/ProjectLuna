@@ -262,12 +262,15 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void ResetProgress()
     {
-        PlayerPrefs.SetInt("gold", 1);
-        PlayerPrefs.SetInt("score", 1);
-        PlayerPrefs.SetInt("healthlevel", 1);
-        PlayerPrefs.SetInt("armorlevel", 1);
-        PlayerPrefs.SetInt("wave", 1);
-        LoadMenu();
+        if (_pauseMenu.GetBool("menuopened"))
+        {
+            PlayerPrefs.SetInt("gold", 1);
+            PlayerPrefs.SetInt("score", 1);
+            PlayerPrefs.SetInt("healthlevel", 1);
+            PlayerPrefs.SetInt("armorlevel", 1);
+            PlayerPrefs.SetInt("wave", 1);
+            LoadMenu();
+        }
     }
 
     /// <summary>
