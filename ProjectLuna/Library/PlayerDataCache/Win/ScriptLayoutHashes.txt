@@ -158,6 +158,7 @@ a96c90af399a8ff5810db585659e79b0 Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 a8d4b17bd48b9ae0cecee180d800ebc7 Assembly-CSharp.dll:.world_entitybase
 61b9d9b6f4b6a222dfea8b131b3d3227 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ChromaticAberration
 a0e295c178906c196e77d973f6320e2e Unity.RenderPipelines.Lightweight.Runtime.dll:UnityEngine.Experimental.Rendering.LightweightPipeline.LightweightPipelineAsset
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ui_setanimbool
 bd060a0b99a922db609eb27d84147135 Assembly-CSharp.dll:.enemy_lieutenant_trailcontrol
 a90cee4dcb31baeec00a1126ffb6e94e Assembly-CSharp.dll:.UI_healthbar
 51b05e403ce1da1805851f42af02f4bb Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerGroup
@@ -270,4 +271,3 @@ be3793efdd72cdd3aa963814d025d4c7 Assembly-CSharp.dll:Tayx.Graphy.CustomizationSc
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Tayx.Graphy.Audio.AudioMonitor
 2388eb9e99b86b3813e7b6dbfe4b3e0c Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.ui_setanimbool

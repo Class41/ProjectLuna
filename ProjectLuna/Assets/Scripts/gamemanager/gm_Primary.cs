@@ -234,7 +234,8 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void ExitGame()
     {
-        Application.Quit();
+        if (_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
+            Application.Quit();
     }
 
     /// <summary>
