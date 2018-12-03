@@ -18,6 +18,7 @@ public class ui_funccontroller : MonoBehaviour
     public Text _tutText;
     public GameObject _loadAnim;
     public NavMeshAgent _playerAgent;
+    public static bool _finished;
 
     public void Start()
     {
@@ -42,10 +43,9 @@ public class ui_funccontroller : MonoBehaviour
         _playerAgent.SetDestination(new Vector3(0.0f, -.75f, -6.93f));
         _playerAnim.SetBool("movekeydown", true);
 
-        while (_menuAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 3.0f)
-        {
+        while (!_finished)
             yield return null;
-        }
+
 
         asyncScene.allowSceneActivation = true;
     }

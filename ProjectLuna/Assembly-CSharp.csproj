@@ -124,6 +124,7 @@
     <Compile Include="Assets\Scripts\player\player_health.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
     <Compile Include="Assets\Scripts\player\player_weapon_sword.cs" />
+    <Compile Include="Assets\Scripts\screenspace\ui_setanimbool.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_shoplogic.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
     <Compile Include="Assets\Scripts\terrain\decorations\Terrain_Shop.cs" />
