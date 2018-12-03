@@ -240,7 +240,7 @@ f69dfc6409fbbd89d3689368e99688a8 Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerValue
 26e36eed48e1a1257dd86180f5c38bba Assembly-CSharp.dll:.cam_healthfx
-087accbdf674fe20d3aae6ffd6ef33af Assembly-CSharp.dll:.ui_funccontroller
+29b1ca2ca753510c1eeabc28f44dba88 Assembly-CSharp.dll:.ui_funccontroller
 c8c672fee8a258266e51b55a210b8083 Assembly-CSharp.dll:UnityEngine.AI.NavMeshLink
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerUIntField
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
@@ -260,6 +260,7 @@ fe59e56e4650a7d9bb90105d7489fc12 Assembly-CSharp.dll:.gm_Worldtrigger
 abc9fe2464c522b05ed67f165b7aeda2 Assembly-CSharp.dll:.player_clamps
 66bd002c922c0fc9d40c47db68c46594 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.AdditionalShadowData
 bb6b9a25e695d7981ce2d853a697a828 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVector4
+498cfb486024c7f9fb6022fde653d127 Assembly-CSharp.dll:.music_controller
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIntField
 ca0b8ad3987cd33b3209a508b6e1562e Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.FreeCamera
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:Tayx.Graphy.Ram.RamMonitor
