@@ -293,6 +293,10 @@ public class gm_Primary : MonoBehaviour
         if (!PlayerPrefs.HasKey("wave"))
             PlayerPrefs.SetInt("wave", 1);
 
+        if (!PlayerPrefs.HasKey("volume"))
+            PlayerPrefs.SetFloat("volume", 1.0f);
+
+
         _wave = PlayerPrefs.GetInt("wave");
         _gold = PlayerPrefs.GetInt("gold");
         _score = PlayerPrefs.GetInt("score");

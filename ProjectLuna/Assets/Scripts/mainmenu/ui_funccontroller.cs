@@ -19,6 +19,7 @@ public class ui_funccontroller : MonoBehaviour
     public GameObject _loadAnim;
     public NavMeshAgent _playerAgent;
     public static bool _finished;
+    public bool _lockout;
 
     public void Start()
     {
@@ -27,7 +28,9 @@ public class ui_funccontroller : MonoBehaviour
 
     public void LoadGame()
     {
-        StartCoroutine(AsyncLoad());
+        if(!_lockout)
+            StartCoroutine(AsyncLoad());
+        _lockout = true;
     }
 
     IEnumerator AsyncLoad()
@@ -68,8 +71,11 @@ public class ui_funccontroller : MonoBehaviour
     /// </summary>
     public void TutToggle()
     {
-        _menuAnim.SetBool("TutorialMode", !_menuAnim.GetBool("TutorialMode"));
-        Invoke("SwapTutText", .55f);
+        if (!_lockout)
+        {
+            _menuAnim.SetBool("TutorialMode", !_menuAnim.GetBool("TutorialMode"));
+            Invoke("SwapTutText", .55f);
+        }
     }
 
 }
