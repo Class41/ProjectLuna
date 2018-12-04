@@ -476,10 +476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: bd53f5cf5b0703840993c90f71d253a8, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 6e5dde794a81fe445a6fb39a70cfa1d0, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.661
+  weight: 0.3
   priority: 0
 --- !u!114 &30975220
 MonoBehaviour:
@@ -5922,6 +5922,7 @@ MonoBehaviour:
   _tutText: {fileID: 937049920}
   _loadAnim: {fileID: 1905236078}
   _playerAgent: {fileID: 985496914}
+  _lockout: 0
 --- !u!4 &1540537500
 Transform:
   m_ObjectHideFlags: 0
