@@ -79,7 +79,7 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     private void RecalcEnemySpawnChances()
     {
-        if(_wave <= _waveSpawnMultiplierMax)
+        if (_wave <= _waveSpawnMultiplierMax)
         {
             _spawnchanceInfantry = 1.0f - (_spawnchance_infantry_delta * _wave);
             _spawnchanceLieutentant = _spawnchance_lieutentant_delta * _wave;
@@ -175,9 +175,9 @@ public class gm_Primary : MonoBehaviour
         _uiWavePanel.GetComponent<Animator>().SetTrigger("WaveChanged");
         _calculatedEnemySpawns = Mathf.Floor((_difficultyMultiplier * Mathf.Log10(_wave * 5) * _wave) + 5);
 
-        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase*2 +
+        _calculatedWaveTime = _calculatedEnemySpawns * _enemySpawntimeBetweenEnemySpawnsBase * 2 +
                              (_calculatedEnemySpawns % _enemySpawningEnemiesPerSet) *
-                             (_enemySpawningTimeBetweenSets*2) + 30.0f;
+                             (_enemySpawningTimeBetweenSets * 2) + 30.0f;
 
         _calculatedWaveEndTime = Time.timeSinceLevelLoad + _calculatedWaveTime;
 
@@ -243,7 +243,7 @@ public class gm_Primary : MonoBehaviour
     /// </summary>
     public void LoadMenu()
     {
-        if(_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
+        if (_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
             SceneManager.LoadScene("menu");
     }
 
@@ -311,10 +311,11 @@ public class gm_Primary : MonoBehaviour
 
         if (_interpolingCoins && m_CurrentClipInfo[0].clip.name == "idlewithgold")
         {
-            _gold++;
+            _gold += (_endingCoin - _gold) / 30;
 
-            if (_gold >= _endingCoin)
+            if (_gold >= _endingCoin || _endingCoin - _gold < 30)
             {
+                _gold = _endingCoin;
                 _interpolingCoins = false;
             }
         }
@@ -341,12 +342,14 @@ public class gm_Primary : MonoBehaviour
 
         if (_interpolingPoints && m_CurrentClipInfo[0].clip.name == "idlewithscore")
         {
-            _score++;
+            _score += (_endingPoints - _score) / 20;
             _spinnywheel.SetInteger("scorecountremaining", _endingPoints - _score);
 
-            if (_score >= _endingPoints)
+            if (_score >= _endingPoints || _endingPoints - _score < 20)
             {
+                _score = _endingPoints;
                 _interpolingPoints = false;
+                _spinnywheel.SetInteger("scorecountremaining", 0);
                 _spinnywheel.SetBool("coinsgained", false);
             }
         }

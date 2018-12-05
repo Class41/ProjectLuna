@@ -4262,7 +4262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -7594,7 +7594,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 652b2d1680e1dea44b840fb58015160a, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -10398,6 +10398,7 @@ MonoBehaviour:
   _shopAnim: {fileID: 1675921641}
   _shopLogic: {fileID: 1320067702}
   _deadAnim: {fileID: 759270908}
+  _spinMenuAnim: {fileID: 1441307068}
   _worldShopAnim: {fileID: 2013439128}
 --- !u!1001 &2038279351
 PrefabInstance:

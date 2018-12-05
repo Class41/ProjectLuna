@@ -13,6 +13,7 @@ public class Terrain_Shop : MonoBehaviour
     public Animator _shopAnim;
     public ui_shoplogic _shopLogic;
     public Animator _deadAnim;
+    public Animator _spinMenuAnim;
     public Animator _worldShopAnim;
 
     private void OnTriggerEnter(Collider other)
@@ -33,6 +34,7 @@ public class Terrain_Shop : MonoBehaviour
 
     public void ShowShop()
     {
+        _spinMenuAnim.SetBool("shopopen", true);
         _shopLogic.DoShopChecks();
         _shopUI.SetActive(true);
         _shopPrompt.SetActive(false);
@@ -46,6 +48,7 @@ public class Terrain_Shop : MonoBehaviour
     /// </summary>
     public void CloseShop()
     {
+        _spinMenuAnim.SetBool("shopopen", false);
         _shopAnim.SetBool("shopActive", false);
         if(!_deadAnim.GetBool("Dead"))
             _shopPrompt.SetActive(true);

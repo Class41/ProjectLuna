@@ -49,7 +49,7 @@ public class ui_shoplogic : MonoBehaviour
         else
             _armorUpgradeButton.SetActive(true);
 
-        if (PlayerPrefs.GetInt("gold") - (int)(_playerStats._maxHealth - _playerStats._health) < 0 || _deathScreenAnimator.GetBool("Dead"))
+        if ((int)(_playerStats._maxHealth - _playerStats._health) > PlayerPrefs.GetInt("gold") - 10 || _deathScreenAnimator.GetBool("Dead"))
             _restoreSanityButton.SetActive(false);
         else
             _restoreSanityButton.SetActive(true);
@@ -59,7 +59,7 @@ public class ui_shoplogic : MonoBehaviour
         _shopArmorText.text = string.Format("Devotion - {0}/100", PlayerPrefs.GetInt("armorlevel"));
         _hpUpgradeButtonText.text = string.Format("Upgrade: {0} coins", _hpUpgradeCost);
         _armorUpgradeButtonText.text = string.Format("Upgrade: {0} coins", _armorUpgradeCost);
-        _restoreSanityText.text = string.Format("Restore Sanity\n{0} coins", _playerStats._maxHealth - _playerStats._health);
+        _restoreSanityText.text = string.Format("Restore Sanity\n{0} coins", (int)(_playerStats._maxHealth - _playerStats._health));
     }
 
     /// <summary>
