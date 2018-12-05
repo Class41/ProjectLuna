@@ -119,7 +119,6 @@
     <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
     <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />
-    <Compile Include="Assets\Scripts\music\music_controller.cs" />
     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
     <Compile Include="Assets\Scripts\player\player_health.cs" />
     <Compile Include="Assets\Scripts\player\player_movement.cs" />
@@ -127,6 +126,8 @@
     <Compile Include="Assets\Scripts\screenspace\ui_setanimbool.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_shoplogic.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
+    <Compile Include="Assets\Scripts\sound\effects\walking\sound_entwalking.cs" />
+    <Compile Include="Assets\Scripts\sound\music\music_controller.cs" />
     <Compile Include="Assets\Scripts\terrain\decorations\Terrain_Shop.cs" />
     <Compile Include="Assets\Scripts\worldentity\entity_torchplaceable\ent_torch.cs" />
     <Compile Include="Assets\Scripts\worldentity\world_entitybase.cs" />
