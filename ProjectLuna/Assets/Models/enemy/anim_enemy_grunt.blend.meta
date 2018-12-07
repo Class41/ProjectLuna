@@ -173,6 +173,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.36131388
+        functionName: PlayAttackSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: 8ebc4e59d2126414c8f389168429f205, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}

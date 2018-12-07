@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\screenspace\ui_setanimbool.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_shoplogic.cs" />
     <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
+    <Compile Include="Assets\Scripts\sound\effects\attack\enemy\sound_enemysound.cs" />
     <Compile Include="Assets\Scripts\sound\effects\attack\player\sound_plyattack.cs" />
     <Compile Include="Assets\Scripts\sound\effects\walking\sound_entwalking.cs" />
     <Compile Include="Assets\Scripts\sound\music\music_controller.cs" />
