@@ -10,6 +10,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class ui_funccontroller : MonoBehaviour
 {
@@ -20,6 +21,31 @@ public class ui_funccontroller : MonoBehaviour
     public NavMeshAgent _playerAgent;
     public static bool _finished;
     public bool _lockout;
+
+
+    private Animator _currentTutorialButtonAnim;
+    private int _currentIndex = -1;
+    public List<GameObject> _tutPages = new List<GameObject>();
+
+    public void SetTutorialButtonPressed(Animator anim)
+    {
+        if (_currentTutorialButtonAnim != null)
+            _currentTutorialButtonAnim.SetBool("selected", false);
+
+        anim.SetBool("selected", true);
+        _currentTutorialButtonAnim = anim;
+    }
+
+    public void SetTutorialIndexOpen(int index)
+    {
+        if(_currentIndex > 0)
+        {
+            _tutPages[_currentIndex].SetActive(false);
+        }
+            
+        _tutPages[index].SetActive(true);
+        _currentIndex = index;
+    }
 
     public void Start()
     {
@@ -71,10 +97,35 @@ public class ui_funccontroller : MonoBehaviour
     /// </summary>
     public void TutToggle()
     {
+        if (_currentTutorialButtonAnim != null)
+        {
+            _currentTutorialButtonAnim.SetBool("selected", false);
+
+            StartCoroutine(TutMenuAsync());
+        }
+        else
+        {
+            if (!_lockout)
+            {
+                _menuAnim.SetBool("TutorialMode", !_menuAnim.GetBool("TutorialMode"));
+                Invoke("SwapTutText", .55f);
+            }
+        }
+    }
+
+    IEnumerator TutMenuAsync()
+    {
+        while (!_currentTutorialButtonAnim.GetCurrentAnimatorStateInfo(0).IsName("btnidle"))
+            yield return null;
+
+        _tutPages[_currentIndex].SetActive(false);
+        _currentIndex = -1;
+
         if (!_lockout)
         {
             _menuAnim.SetBool("TutorialMode", !_menuAnim.GetBool("TutorialMode"));
             Invoke("SwapTutText", .55f);
+            _currentTutorialButtonAnim = null;
         }
     }
 
