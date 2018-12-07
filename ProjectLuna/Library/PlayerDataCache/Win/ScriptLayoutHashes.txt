@@ -177,6 +177,7 @@ cc10e6749eb30ec8a25405260f9836d5 Unity.Postprocessing.Runtime.dll:UnityEngine.Re
 e95b5849b54502016fabc01a9ec4ad29 Assembly-CSharp.dll:Tayx.Graphy.Ram.RamText
 a53651ee3996fbba20dfe0fce02f0b23 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.AutoExposure
 3b81451eb3daf1cb0bb59ecbaf9bc966 Assembly-CSharp.dll:.enemy_playerdamage
+9ebb82d5bfe251304cb00c6860546d8f Assembly-CSharp.dll:.sound_plyattack
 50c443b12ccc0b475183318b5088bcc5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessDebug
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 4d51d5ccf37d2089bdfe827617b784ff Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.VolumeProfile
@@ -190,6 +191,7 @@ ec9b943c63de453a4aaf9e04bc5e7ee0 Assembly-CSharp.dll:.gm_Primary
 1f0602e7bad1e0a9cba31ce292eee8bb Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerWidget
 1b92988a55396830baca92f66cfd570f Assembly-CSharp.dll:Tayx.Graphy.Audio.AudioGraph
 150d2705ec079b79d52ccce665aab8e1 Assembly-CSharp.dll:IngameDebugConsole.DebugLogPopup
+48ca965dcfe7a67f6193d3329fd2fcaa Assembly-CSharp.dll:.sound_enemysound
 e6ae40841db498b6e673877ac45ad208 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 1dcb82730d983b77cec736c6ef19f814 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -244,7 +246,7 @@ f69dfc6409fbbd89d3689368e99688a8 Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerValue
 26e36eed48e1a1257dd86180f5c38bba Assembly-CSharp.dll:.cam_healthfx
-58b985a68f4151e9aebab70feb8d0d8f Assembly-CSharp.dll:.ui_funccontroller
+5e46ad9ca53e3bebdae346bb74700f03 Assembly-CSharp.dll:.ui_funccontroller
 c8c672fee8a258266e51b55a210b8083 Assembly-CSharp.dll:UnityEngine.AI.NavMeshLink
 8d35f16c5022311c6f4d9432be73bfcf Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerUIntField
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
