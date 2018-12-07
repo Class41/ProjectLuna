@@ -235,6 +235,27 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.1350365
+        functionName: PlayAttackSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cb93e22867ae08f4dab14ec321cafe12, type: 3}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      - time: 0.38686132
+        functionName: PlayAttackSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cb93e22867ae08f4dab14ec321cafe12, type: 3}
+        floatParameter: 0
+        intParameter: 1
+        messageOptions: 0
+      - time: 0.68065697
+        functionName: PlayAttackSound
+        data: 
+        objectReferenceParameter: {fileID: 11500000, guid: cb93e22867ae08f4dab14ec321cafe12, type: 3}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
