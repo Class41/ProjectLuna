@@ -6,11 +6,11 @@
  */
 
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.AI;
-using System.Collections.Generic;
 
 public class ui_funccontroller : MonoBehaviour
 {
@@ -38,11 +38,11 @@ public class ui_funccontroller : MonoBehaviour
 
     public void SetTutorialIndexOpen(int index)
     {
-        if(_currentIndex > 0)
+        if (_currentIndex > 0)
         {
             _tutPages[_currentIndex].SetActive(false);
         }
-            
+
         _tutPages[index].SetActive(true);
         _currentIndex = index;
     }
@@ -54,7 +54,7 @@ public class ui_funccontroller : MonoBehaviour
 
     public void LoadGame()
     {
-        if(!_lockout)
+        if (!_lockout)
             StartCoroutine(AsyncLoad());
         _lockout = true;
     }
@@ -107,6 +107,12 @@ public class ui_funccontroller : MonoBehaviour
         {
             if (!_lockout)
             {
+                if (_currentTutorialButtonAnim != null)
+                    _currentTutorialButtonAnim.SetBool("selected", false);
+
+                if (_currentIndex > 0)
+                    _tutPages[_currentIndex].SetActive(false);
+
                 _menuAnim.SetBool("TutorialMode", !_menuAnim.GetBool("TutorialMode"));
                 Invoke("SwapTutText", .55f);
             }
