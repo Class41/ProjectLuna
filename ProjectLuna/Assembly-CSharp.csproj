@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{8C293DBD-187D-F1B0-C214-50BEB5299F1C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -44,373 +45,381 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>2018.3.0b1</UnityVersion>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity 2018.3.0b1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+      <HintPath>Z:\Programs\Unity\2018.3.0b1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity 2018.3.0b1\Editor\Data\Managed/UnityEditor.dll</HintPath>
+      <HintPath>Z:\Programs\Unity\2018.3.0b1\Editor\Data\Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogIndexList.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogItem.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogLogcatListener.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogManager.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
-     <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Color Picker\CUIColorPicker.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\CustomizeGraphy.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToMultipleOf3.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToPowerOf2.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\UpdateTextWithSliderValue.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Advanced\AdvancedData.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioGraph.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioManager.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioMonitor.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioText.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsGraph.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsManager.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsMonitor.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsText.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Graph\Graph.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyDebugger.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyManager.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamGraph.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamManager.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamMonitor.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamText.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Shader\ShaderGraph.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IModifiableState.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IMovable.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\ExtensionMethods.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\NumString.cs" />
-     <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\Singleton.cs" />
-     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
-     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
-     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
-     <Compile Include="Assets\Scripts\camera\cam_follow_smooth.cs" />
-     <Compile Include="Assets\Scripts\camera\cam_healthfx.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_knockback.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_navigtaion.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_playerdamage.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_stats_base.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
-     <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant_trailcontrol.cs" />
-     <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
-     <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
-     <Compile Include="Assets\Scripts\gamemanager\gm_Spinsky.cs" />
-     <Compile Include="Assets\Scripts\gamemanager\gm_Surround.cs" />
-     <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
-     <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
-     <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />
-     <Compile Include="Assets\Scripts\player\player_clamps.cs" />
-     <Compile Include="Assets\Scripts\player\player_health.cs" />
-     <Compile Include="Assets\Scripts\player\player_movement.cs" />
-     <Compile Include="Assets\Scripts\player\player_weapon_sword.cs" />
-     <Compile Include="Assets\Scripts\screenspace\ui_setanimbool.cs" />
-     <Compile Include="Assets\Scripts\screenspace\ui_shoplogic.cs" />
-     <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
-     <Compile Include="Assets\Scripts\sound\effects\attack\enemy\sound_enemysound.cs" />
-     <Compile Include="Assets\Scripts\sound\effects\attack\player\sound_plyattack.cs" />
-     <Compile Include="Assets\Scripts\sound\effects\walking\sound_entwalking.cs" />
-     <Compile Include="Assets\Scripts\sound\music\music_controller.cs" />
-     <Compile Include="Assets\Scripts\terrain\decorations\Terrain_Shop.cs" />
-     <Compile Include="Assets\Scripts\worldentity\entity_torchplaceable\ent_torch.cs" />
-     <Compile Include="Assets\Scripts\worldentity\world_entitybase.cs" />
-     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_enemyline.cs" />
-     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
-     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
-     <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_namegen.cs" />
-     <Compile Include="Assets\Scripts\worldtriggers\trigger_quadrant.cs" />
-     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
-     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
-     <None Include="Assets\Debugging\IngameDebugConsole\README.txt" />
-     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
-     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
-     <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
- <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Android.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.IncludePaths">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.IncludePaths.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AIModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ARModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AccessibilityModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AnimationModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AssetBundleModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.AudioModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.BaselibModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClothModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClusterInputModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ClusterRendererModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.CoreModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.CrashReportingModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.DirectorModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.FileSystemHttpModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GameCenterModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GridModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HotReloadModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.IMGUIModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ImageConversionModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.InputModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.JSONSerializeModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.LocalizationModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ParticleSystemModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PerformanceReportingModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PhysicsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Physics2DModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ProfilerModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.ScreenCaptureModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SharedInternalsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpriteMaskModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpriteShapeModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.StreamingModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.StyleSheetsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SubstanceModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TLSModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TerrainPhysicsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TextCoreModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TextRenderingModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TilemapModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TimelineModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIElementsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UNETModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UmbraModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityAnalyticsModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityConnectModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityTestProtocolModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestAudioModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestTextureModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UnityWebRequestWWWModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VFXModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VRModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VehiclesModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VideoModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.WindModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.XRModule">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Locator">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Editor">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics.Tracker">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.Tracker.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Analytics">
- <HintPath>C:/Users/crud4/Documents/Project Luna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Android/Unity.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="mscorlib">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
- </Reference>
- <Reference Include="System">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
- </Reference>
- <Reference Include="System.Core">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
- </Reference>
- <Reference Include="System.Runtime.Serialization">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
- </Reference>
- <Reference Include="System.Xml.Linq">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
- </Reference>
- <Reference Include="UnityScript">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
- </Reference>
- <Reference Include="UnityScript.Lang">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
- </Reference>
- <Reference Include="Boo.Lang">
- <HintPath>C:/Program Files/Unity 2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\ConsoleMethodAttribute.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogConsole.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogEntry.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogIndexList.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogItem.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogLogcatListener.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogManager.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogPopup.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugLogRecycledListView.cs" />
+    <Compile Include="Assets\Debugging\IngameDebugConsole\Scripts\DebugsOnScrollListener.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Color Picker\CUIColorPicker.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\CustomizeGraphy.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToMultipleOf3.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\ForceSliderToPowerOf2.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scene\Customization Scripts\UpdateTextWithSliderValue.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Advanced\AdvancedData.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Audio\AudioText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Fps\FpsText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Graph\Graph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyDebugger.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\GraphyManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamManager.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamMonitor.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Ram\RamText.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Shader\ShaderGraph.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IModifiableState.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\UI\IMovable.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\ExtensionMethods.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\NumString.cs" />
+    <Compile Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Scripts\Util\Singleton.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\Scripts\camera\cam_follow_smooth.cs" />
+    <Compile Include="Assets\Scripts\camera\cam_healthfx.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_knockback.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_navigtaion.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_playerdamage.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_stats_base.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\general\enemy_general.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\infantry\enemy_infantry.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant.cs" />
+    <Compile Include="Assets\Scripts\enemy\enemy\enemy_types\lietenant\enemy_lieutenant_trailcontrol.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_EntityManager.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Primary.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Spinsky.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Surround.cs" />
+    <Compile Include="Assets\Scripts\gamemanager\gm_Worldtrigger.cs" />
+    <Compile Include="Assets\Scripts\lighting\light_followplayer.cs" />
+    <Compile Include="Assets\Scripts\mainmenu\ui_funccontroller.cs" />
+    <Compile Include="Assets\Scripts\player\player_clamps.cs" />
+    <Compile Include="Assets\Scripts\player\player_health.cs" />
+    <Compile Include="Assets\Scripts\player\player_movement.cs" />
+    <Compile Include="Assets\Scripts\player\player_weapon_sword.cs" />
+    <Compile Include="Assets\Scripts\screenspace\ui_setanimbool.cs" />
+    <Compile Include="Assets\Scripts\screenspace\ui_shoplogic.cs" />
+    <Compile Include="Assets\Scripts\screenspace\ui_timecountdown.cs" />
+    <Compile Include="Assets\Scripts\sound\effects\attack\enemy\sound_enemysound.cs" />
+    <Compile Include="Assets\Scripts\sound\effects\attack\player\sound_plyattack.cs" />
+    <Compile Include="Assets\Scripts\sound\effects\walking\sound_entwalking.cs" />
+    <Compile Include="Assets\Scripts\sound\music\music_controller.cs" />
+    <Compile Include="Assets\Scripts\terrain\decorations\Terrain_Shop.cs" />
+    <Compile Include="Assets\Scripts\worldentity\entity_torchplaceable\ent_torch.cs" />
+    <Compile Include="Assets\Scripts\worldentity\world_entitybase.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_enemyline.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_follow.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_healthbar.cs" />
+    <Compile Include="Assets\Scripts\worldspace_ui\enemies\UI_namegen.cs" />
+    <Compile Include="Assets\Scripts\worldtriggers\trigger_quadrant.cs" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Changelog.txt" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Roboto\LICENSE.txt" />
+    <None Include="Assets\Debugging\IngameDebugConsole\README.txt" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Font\Northwest-Bold\ERIC-TIRADO-NORTHWEST-LICENSE.txt" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphStandard.shader" />
+    <None Include="Assets\Debugging\Tayx\Graphy - Ultimate Stats Monitor\Shaders\GraphMobile.shader" />
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Runtime">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Lightweight.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Lightweight.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Android.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.Analytics.Android.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.PackageManagerUI.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.CollabProxy.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.IncludePaths">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/ScriptAssemblies/Unity.RenderPipelines.Core.IncludePaths.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.BaselibModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.BaselibModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.FileSystemHttpModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.FileSystemHttpModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ProfilerModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TimelineModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.TimelineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Locator">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics">
+      <HintPath>X:/_Unity/SCHOOL/CS_GDEV_GROUP/ProjectLuna/ProjectLuna/Library/PackageCache/com.unity.analytics@3.0.9/Android/Unity.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityScript.Lang">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="Boo.Lang">
+      <HintPath>Z:/Programs/Unity/2018.3.0b1/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -418,5 +427,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
