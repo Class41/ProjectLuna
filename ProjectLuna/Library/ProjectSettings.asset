@@ -257,7 +257,10 @@ PlayerSettings:
   m_BuildTargetIcons: []
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
-  m_BuildTargetGraphicsAPIs: []
+  m_BuildTargetGraphicsAPIs:
+  - m_BuildTarget: WindowsStandaloneSupport
+    m_APIs: 15000000
+    m_Automatic: 1
   m_BuildTargetVRSettings: []
   m_BuildTargetEnableVuforiaSettings: []
   openGLRequireES31: 0

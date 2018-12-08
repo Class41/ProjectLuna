@@ -244,7 +244,7 @@ public class gm_Primary : MonoBehaviour
     public void LoadMenu()
     {
         if (_pauseMenu.GetBool("menuopened") || _deathUI.GetBool("Dead"))
-            SceneManager.LoadScene("menu");
+            SceneManager.LoadScene("menu", LoadSceneMode.Single);
     }
 
     void Start()
